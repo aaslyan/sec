@@ -1,0 +1,802 @@
+[
+  {
+    "motif": "mov pop pop pop pop pop pop ret",
+    "frequency": 592,
+    "total_occurrences": 2126,
+    "function_count": 592,
+    "function_coverage": 0.09845335107267587,
+    "annotation": "Function epilogue \u2014 pop/ret"
+  },
+  {
+    "motif": "add mov pop pop pop pop pop pop",
+    "frequency": 502,
+    "total_occurrences": 1937,
+    "function_count": 502,
+    "function_coverage": 0.0834857808082488,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "mov mov mov mov mov call mov mov",
+    "frequency": 461,
+    "total_occurrences": 3223,
+    "function_count": 461,
+    "function_coverage": 0.0766672210211209,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov call mov test je mov mov mov",
+    "frequency": 458,
+    "total_occurrences": 2105,
+    "function_count": 458,
+    "function_coverage": 0.07616830201230666,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov call mov test je mov mov",
+    "frequency": 444,
+    "total_occurrences": 2149,
+    "function_count": 444,
+    "function_coverage": 0.0738400133045069,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "add pop pop pop pop pop pop ret",
+    "frequency": 433,
+    "total_occurrences": 2581,
+    "function_count": 433,
+    "function_coverage": 0.07201064360552137,
+    "annotation": "Function epilogue \u2014 pop/ret"
+  },
+  {
+    "motif": "pop pop pop pop pop pop ret nop",
+    "frequency": 414,
+    "total_occurrences": 3079,
+    "function_count": 414,
+    "function_coverage": 0.06885082321636454,
+    "annotation": "Function epilogue \u2014 pop/ret"
+  },
+  {
+    "motif": "mov mov mov mov call mov mov mov",
+    "frequency": 408,
+    "total_occurrences": 2915,
+    "function_count": 408,
+    "function_coverage": 0.06785298519873607,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov mov call mov test je mov",
+    "frequency": 390,
+    "total_occurrences": 1754,
+    "function_count": 390,
+    "function_coverage": 0.06485947114585065,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov mov mov mov mov call mov",
+    "frequency": 381,
+    "total_occurrences": 2406,
+    "function_count": 381,
+    "function_coverage": 0.06336271411940796,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov mov call mov mov mov mov",
+    "frequency": 379,
+    "total_occurrences": 2546,
+    "function_count": 379,
+    "function_coverage": 0.06303010144686512,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov mov mov call mov mov test",
+    "frequency": 369,
+    "total_occurrences": 1706,
+    "function_count": 369,
+    "function_coverage": 0.061367038084151004,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "endbr64 push mov push push push push push",
+    "frequency": 364,
+    "total_occurrences": 1226,
+    "function_count": 364,
+    "function_coverage": 0.06053550640279395,
+    "annotation": "Stack \u2014 multiple pushes"
+  },
+  {
+    "motif": "pop pop pop pop pop pop ret mov",
+    "frequency": 343,
+    "total_occurrences": 1004,
+    "function_count": 343,
+    "function_coverage": 0.0570430733410943,
+    "annotation": "Function epilogue \u2014 pop/ret"
+  },
+  {
+    "motif": "mov test js sub mov jne mov call",
+    "frequency": 318,
+    "total_occurrences": 1956,
+    "function_count": 318,
+    "function_coverage": 0.052885414934309,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "push mov push push push push push sub",
+    "frequency": 313,
+    "total_occurrences": 1226,
+    "function_count": 313,
+    "function_coverage": 0.05205388325295194,
+    "annotation": "Function prologue \u2014 stack frame setup"
+  },
+  {
+    "motif": "mov mov mov mov mov mov mov mov",
+    "frequency": 302,
+    "total_occurrences": 7297,
+    "function_count": 302,
+    "function_coverage": 0.050224513553966406,
+    "annotation": "Data movement \u2014 bulk register/memory transfers"
+  },
+  {
+    "motif": "mov mov mov call mov mov test mov",
+    "frequency": 297,
+    "total_occurrences": 1161,
+    "function_count": 297,
+    "function_coverage": 0.04939298187260935,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov call mov mov mov mov mov",
+    "frequency": 294,
+    "total_occurrences": 1772,
+    "function_count": 294,
+    "function_coverage": 0.048894062863795114,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov test je mov mov mov call mov",
+    "frequency": 293,
+    "total_occurrences": 1504,
+    "function_count": 293,
+    "function_coverage": 0.048727756527523695,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov push push push push push sub mov",
+    "frequency": 293,
+    "total_occurrences": 1261,
+    "function_count": 293,
+    "function_coverage": 0.048727756527523695,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "call mov test je mov mov mov mov",
+    "frequency": 278,
+    "total_occurrences": 812,
+    "function_count": 278,
+    "function_coverage": 0.04623316148345252,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "call mov test je mov mov mov call",
+    "frequency": 277,
+    "total_occurrences": 1321,
+    "function_count": 277,
+    "function_coverage": 0.046066855147181104,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov test je mov mov mov mov mov",
+    "frequency": 265,
+    "total_occurrences": 1091,
+    "function_count": 265,
+    "function_coverage": 0.044071179111924166,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov mov mov mov mov mov call",
+    "frequency": 262,
+    "total_occurrences": 1581,
+    "function_count": 262,
+    "function_coverage": 0.04357226010310993,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov mov mov call mov test je",
+    "frequency": 262,
+    "total_occurrences": 1087,
+    "function_count": 262,
+    "function_coverage": 0.04357226010310993,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov test js sub mov jne mov",
+    "frequency": 258,
+    "total_occurrences": 604,
+    "function_count": 258,
+    "function_coverage": 0.04290703475802428,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "pop pop pop pop pop ret nop mov",
+    "frequency": 246,
+    "total_occurrences": 1877,
+    "function_count": 246,
+    "function_coverage": 0.04091135872276734,
+    "annotation": "Function epilogue \u2014 pop/ret"
+  },
+  {
+    "motif": "endbr64 push mov push mov push mov push",
+    "frequency": 243,
+    "total_occurrences": 600,
+    "function_count": 243,
+    "function_coverage": 0.0404124397139531,
+    "annotation": "Data movement \u2014 bulk register/memory transfers"
+  },
+  {
+    "motif": "mov call mov mov test js sub mov",
+    "frequency": 242,
+    "total_occurrences": 672,
+    "function_count": 242,
+    "function_coverage": 0.04024613337768169,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov mov mov mov call mov test",
+    "frequency": 241,
+    "total_occurrences": 846,
+    "function_count": 241,
+    "function_coverage": 0.040079827041410276,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov add pop pop pop pop pop pop",
+    "frequency": 237,
+    "total_occurrences": 819,
+    "function_count": 237,
+    "function_coverage": 0.03941460169632463,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "jne add mov pop pop pop pop pop",
+    "frequency": 230,
+    "total_occurrences": 1121,
+    "function_count": 230,
+    "function_coverage": 0.03825045734242474,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "mov call mov test je mov mov call",
+    "frequency": 225,
+    "total_occurrences": 740,
+    "function_count": 225,
+    "function_coverage": 0.037418925661067685,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test je mov mov mov call mov mov",
+    "frequency": 225,
+    "total_occurrences": 1101,
+    "function_count": 225,
+    "function_coverage": 0.037418925661067685,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "push push push push push sub mov mov",
+    "frequency": 217,
+    "total_occurrences": 1055,
+    "function_count": 217,
+    "function_coverage": 0.03608847497089639,
+    "annotation": "Function prologue \u2014 save register"
+  },
+  {
+    "motif": "mov mov call test je mov mov mov",
+    "frequency": 215,
+    "total_occurrences": 872,
+    "function_count": 215,
+    "function_coverage": 0.03575586229835357,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov mov call test je mov mov",
+    "frequency": 215,
+    "total_occurrences": 845,
+    "function_count": 215,
+    "function_coverage": 0.03575586229835357,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "je mov mov mov mov call mov mov",
+    "frequency": 207,
+    "total_occurrences": 818,
+    "function_count": 207,
+    "function_coverage": 0.03442541160818227,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "call mov test je mov mov call mov",
+    "frequency": 207,
+    "total_occurrences": 580,
+    "function_count": 207,
+    "function_coverage": 0.03442541160818227,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test je mov mov mov mov call mov",
+    "frequency": 207,
+    "total_occurrences": 795,
+    "function_count": 207,
+    "function_coverage": 0.03442541160818227,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "push mov push mov push mov push mov",
+    "frequency": 205,
+    "total_occurrences": 880,
+    "function_count": 205,
+    "function_coverage": 0.03409279893563945,
+    "annotation": "Function prologue \u2014 stack frame setup"
+  },
+  {
+    "motif": "test je mov mov mov mov mov mov",
+    "frequency": 203,
+    "total_occurrences": 806,
+    "function_count": 203,
+    "function_coverage": 0.033760186263096625,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov call mov test je mov call mov",
+    "frequency": 202,
+    "total_occurrences": 615,
+    "function_count": 202,
+    "function_coverage": 0.033593879926825214,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "pop pop pop pop pop ret mov mov",
+    "frequency": 197,
+    "total_occurrences": 457,
+    "function_count": 197,
+    "function_coverage": 0.03276234824546815,
+    "annotation": "Function epilogue \u2014 pop/ret"
+  },
+  {
+    "motif": "mov mov call mov mov test mov mov",
+    "frequency": 188,
+    "total_occurrences": 686,
+    "function_count": 188,
+    "function_coverage": 0.031265591219025446,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "je mov mov call mov test je mov",
+    "frequency": 187,
+    "total_occurrences": 458,
+    "function_count": 187,
+    "function_coverage": 0.031099284882754034,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "lea mov pop pop pop pop pop pop",
+    "frequency": 186,
+    "total_occurrences": 555,
+    "function_count": 186,
+    "function_coverage": 0.03093297854648262,
+    "annotation": "Memory access \u2014 address calculation and load"
+  },
+  {
+    "motif": "mov call mov mov mov mov mov mov",
+    "frequency": 186,
+    "total_occurrences": 1094,
+    "function_count": 186,
+    "function_coverage": 0.03093297854648262,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "je mov mov mov mov mov call mov",
+    "frequency": 186,
+    "total_occurrences": 563,
+    "function_count": 186,
+    "function_coverage": 0.03093297854648262,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "test js sub mov jne mov call mov",
+    "frequency": 186,
+    "total_occurrences": 381,
+    "function_count": 186,
+    "function_coverage": 0.03093297854648262,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov call mov mov test js sub",
+    "frequency": 185,
+    "total_occurrences": 524,
+    "function_count": 185,
+    "function_coverage": 0.030766672210211208,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov call test je mov mov mov mov",
+    "frequency": 183,
+    "total_occurrences": 561,
+    "function_count": 183,
+    "function_coverage": 0.030434059537668385,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "call mov mov test js sub mov jne",
+    "frequency": 183,
+    "total_occurrences": 325,
+    "function_count": 183,
+    "function_coverage": 0.030434059537668385,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov call mov test mov je mov",
+    "frequency": 182,
+    "total_occurrences": 446,
+    "function_count": 182,
+    "function_coverage": 0.030267753201396973,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov test je mov test je mov mov",
+    "frequency": 182,
+    "total_occurrences": 1063,
+    "function_count": 182,
+    "function_coverage": 0.030267753201396973,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test je mov mov call mov test je",
+    "frequency": 178,
+    "total_occurrences": 449,
+    "function_count": 178,
+    "function_coverage": 0.029602527856311324,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test je mov call mov test je mov",
+    "frequency": 177,
+    "total_occurrences": 528,
+    "function_count": 177,
+    "function_coverage": 0.029436221520039912,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "endbr64 push mov push push push push mov",
+    "frequency": 175,
+    "total_occurrences": 409,
+    "function_count": 175,
+    "function_coverage": 0.02910360884749709,
+    "annotation": "Stack \u2014 multiple pushes"
+  },
+  {
+    "motif": "mov mov mov call mov mov test js",
+    "frequency": 175,
+    "total_occurrences": 533,
+    "function_count": 175,
+    "function_coverage": 0.02910360884749709,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov test je mov mov mov mov call",
+    "frequency": 174,
+    "total_occurrences": 711,
+    "function_count": 174,
+    "function_coverage": 0.028937302511225678,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "jmp mov mov mov mov call mov mov",
+    "frequency": 174,
+    "total_occurrences": 428,
+    "function_count": 174,
+    "function_coverage": 0.028937302511225678,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov test js sub mov jne mov mov",
+    "frequency": 171,
+    "total_occurrences": 389,
+    "function_count": 171,
+    "function_coverage": 0.028438383502411443,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov push mov push mov push mov push",
+    "frequency": 169,
+    "total_occurrences": 510,
+    "function_count": 169,
+    "function_coverage": 0.028105770829868617,
+    "annotation": "Data movement \u2014 bulk register/memory transfers"
+  },
+  {
+    "motif": "je mov mov mov mov mov mov mov",
+    "frequency": 168,
+    "total_occurrences": 664,
+    "function_count": 168,
+    "function_coverage": 0.027939464493597205,
+    "annotation": "Data movement \u2014 bulk register/memory transfers"
+  },
+  {
+    "motif": "mov mov call mov mov test mov je",
+    "frequency": 166,
+    "total_occurrences": 419,
+    "function_count": 166,
+    "function_coverage": 0.027606851821054382,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov test je mov mov call mov mov",
+    "frequency": 166,
+    "total_occurrences": 599,
+    "function_count": 166,
+    "function_coverage": 0.027606851821054382,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "jmp mov mov mov mov mov call mov",
+    "frequency": 165,
+    "total_occurrences": 455,
+    "function_count": 165,
+    "function_coverage": 0.02744054548478297,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov call mov test mov je mov mov",
+    "frequency": 165,
+    "total_occurrences": 385,
+    "function_count": 165,
+    "function_coverage": 0.02744054548478297,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov pop pop pop pop pop pop jmp",
+    "frequency": 164,
+    "total_occurrences": 755,
+    "function_count": 164,
+    "function_coverage": 0.02727423914851156,
+    "annotation": "Stack \u2014 multiple pops"
+  },
+  {
+    "motif": "mov mov mov call mov mov mov jmp",
+    "frequency": 164,
+    "total_occurrences": 546,
+    "function_count": 164,
+    "function_coverage": 0.02727423914851156,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov test js sub mov je mov test",
+    "frequency": 164,
+    "total_occurrences": 590,
+    "function_count": 164,
+    "function_coverage": 0.02727423914851156,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov sub jne add mov pop pop pop",
+    "frequency": 163,
+    "total_occurrences": 1153,
+    "function_count": 163,
+    "function_coverage": 0.027107932812240148,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "mov mov mov call mov mov test je",
+    "frequency": 162,
+    "total_occurrences": 637,
+    "function_count": 162,
+    "function_coverage": 0.026941626475968733,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov test je mov mov call mov test",
+    "frequency": 162,
+    "total_occurrences": 378,
+    "function_count": 162,
+    "function_coverage": 0.026941626475968733,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov test js sub mov je mov",
+    "frequency": 161,
+    "total_occurrences": 421,
+    "function_count": 161,
+    "function_coverage": 0.02677532013969732,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "call add mov pop pop pop pop pop",
+    "frequency": 160,
+    "total_occurrences": 253,
+    "function_count": 160,
+    "function_coverage": 0.02660901380342591,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "sub jne add mov pop pop pop pop",
+    "frequency": 159,
+    "total_occurrences": 1060,
+    "function_count": 159,
+    "function_coverage": 0.0264427074671545,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "mov add mov pop pop pop pop pop",
+    "frequency": 159,
+    "total_occurrences": 370,
+    "function_count": 159,
+    "function_coverage": 0.0264427074671545,
+    "annotation": "Arithmetic \u2014 integer operations"
+  },
+  {
+    "motif": "mov mov mov mov call test je mov",
+    "frequency": 155,
+    "total_occurrences": 618,
+    "function_count": 155,
+    "function_coverage": 0.025777482122068852,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov mov call mov mov mov test",
+    "frequency": 154,
+    "total_occurrences": 456,
+    "function_count": 154,
+    "function_coverage": 0.025611175785797437,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov test je mov call mov test je",
+    "frequency": 154,
+    "total_occurrences": 471,
+    "function_count": 154,
+    "function_coverage": 0.025611175785797437,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "nop endbr64 push mov push push push push",
+    "frequency": 154,
+    "total_occurrences": 769,
+    "function_count": 154,
+    "function_coverage": 0.025611175785797437,
+    "annotation": "Stack \u2014 multiple pushes"
+  },
+  {
+    "motif": "push push push push sub mov mov mov",
+    "frequency": 153,
+    "total_occurrences": 928,
+    "function_count": 153,
+    "function_coverage": 0.025444869449526026,
+    "annotation": "Function prologue \u2014 save register"
+  },
+  {
+    "motif": "mov mov call mov mov test je mov",
+    "frequency": 149,
+    "total_occurrences": 688,
+    "function_count": 149,
+    "function_coverage": 0.02477964410444038,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test js sub mov jne mov call jmp",
+    "frequency": 148,
+    "total_occurrences": 849,
+    "function_count": 148,
+    "function_coverage": 0.02461333776816897,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "call mov mov test js sub mov je",
+    "frequency": 148,
+    "total_occurrences": 437,
+    "function_count": 148,
+    "function_coverage": 0.02461333776816897,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "push mov push push mov push mov push",
+    "frequency": 146,
+    "total_occurrences": 364,
+    "function_count": 146,
+    "function_coverage": 0.024280725095626142,
+    "annotation": "Function prologue \u2014 stack frame setup"
+  },
+  {
+    "motif": "call mov test je mov call mov mov",
+    "frequency": 146,
+    "total_occurrences": 263,
+    "function_count": 146,
+    "function_coverage": 0.024280725095626142,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov call add mov pop pop pop pop",
+    "frequency": 146,
+    "total_occurrences": 241,
+    "function_count": 146,
+    "function_coverage": 0.024280725095626142,
+    "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov test je mov mov test je mov",
+    "frequency": 146,
+    "total_occurrences": 494,
+    "function_count": 146,
+    "function_coverage": 0.024280725095626142,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "endbr64 push mov push push push mov push",
+    "frequency": 145,
+    "total_occurrences": 391,
+    "function_count": 145,
+    "function_coverage": 0.02411441875935473,
+    "annotation": "Stack \u2014 multiple pushes"
+  },
+  {
+    "motif": "mov mov test je mov mov mov mov",
+    "frequency": 145,
+    "total_occurrences": 727,
+    "function_count": 145,
+    "function_coverage": 0.02411441875935473,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "jmp nop endbr64 push mov push push push",
+    "frequency": 144,
+    "total_occurrences": 543,
+    "function_count": 144,
+    "function_coverage": 0.02394811242308332,
+    "annotation": "Stack \u2014 multiple pushes"
+  },
+  {
+    "motif": "lea mov call mov test je mov mov",
+    "frequency": 143,
+    "total_occurrences": 589,
+    "function_count": 143,
+    "function_coverage": 0.023781806086811907,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov call mov test je mov call",
+    "frequency": 142,
+    "total_occurrences": 355,
+    "function_count": 142,
+    "function_coverage": 0.023615499750540496,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov mov call mov mov test jne",
+    "frequency": 142,
+    "total_occurrences": 440,
+    "function_count": 142,
+    "function_coverage": 0.023615499750540496,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test je mov mov mov call mov test",
+    "frequency": 142,
+    "total_occurrences": 407,
+    "function_count": 142,
+    "function_coverage": 0.023615499750540496,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "je mov call mov test je mov mov",
+    "frequency": 140,
+    "total_occurrences": 288,
+    "function_count": 140,
+    "function_coverage": 0.023282887077997673,
+    "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "mov mov call mov mov mov mov jmp",
+    "frequency": 139,
+    "total_occurrences": 433,
+    "function_count": 139,
+    "function_coverage": 0.02311658074172626,
+    "annotation": "Function call \u2014 subroutine invocation"
+  }
+]

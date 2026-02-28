@@ -1,0 +1,574 @@
+{
+  "summary": {
+    "n_binaries": 23,
+    "total_train_tokens": 11493002,
+    "total_test_tokens": 2873263,
+    "vocab_size": 448,
+    "test_fraction": 0.2,
+    "smoothing": "Laplace add-1"
+  },
+  "comparison_table": [
+    {
+      "n": 1,
+      "lm_ce": 4.2896,
+      "lm_ppl": 19.557,
+      "emp_ce": 3.9858,
+      "emp_ppl": 15.843,
+      "gap": 0.3038
+    },
+    {
+      "n": 2,
+      "lm_ce": 3.0847,
+      "lm_ppl": 8.484,
+      "emp_ce": 3.0159,
+      "emp_ppl": 8.088,
+      "gap": 0.0689
+    },
+    {
+      "n": 3,
+      "lm_ce": 2.7919,
+      "lm_ppl": 6.926,
+      "emp_ce": 2.7201,
+      "emp_ppl": 6.589,
+      "gap": 0.0718
+    },
+    {
+      "n": 4,
+      "lm_ce": 2.8354,
+      "lm_ppl": 7.137,
+      "emp_ce": 2.4533,
+      "emp_ppl": 5.477,
+      "gap": 0.3821
+    },
+    {
+      "n": 5,
+      "lm_ce": 3.1348,
+      "lm_ppl": 8.784,
+      "emp_ce": 2.1615,
+      "emp_ppl": 4.474,
+      "gap": 0.9733
+    }
+  ],
+  "lm_by_n": {
+    "1": {
+      "n": 1,
+      "model": "1-gram Laplace (k=1)",
+      "cross_entropy_bits": 4.2896,
+      "perplexity": 19.557,
+      "empirical_conditional_entropy_bits": 3.9858,
+      "empirical_expected_perplexity": 15.843,
+      "smoothing_gap_bits": 0.3038,
+      "per_binary": {
+        "bash": {
+          "cross_entropy_bits": 4.3331,
+          "perplexity": 20.155
+        },
+        "bzip2": {
+          "cross_entropy_bits": 4.1255,
+          "perplexity": 17.454
+        },
+        "cat": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "curl": {
+          "cross_entropy_bits": 4.3047,
+          "perplexity": 19.763
+        },
+        "cut": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "find": {
+          "cross_entropy_bits": 4.2092,
+          "perplexity": 18.497
+        },
+        "gcc": {
+          "cross_entropy_bits": 4.3986,
+          "perplexity": 21.092
+        },
+        "git": {
+          "cross_entropy_bits": 4.1618,
+          "perplexity": 17.899
+        },
+        "grep": {
+          "cross_entropy_bits": 4.4213,
+          "perplexity": 21.426
+        },
+        "gzip": {
+          "cross_entropy_bits": 4.3304,
+          "perplexity": 20.118
+        },
+        "head": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "ls": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "nano": {
+          "cross_entropy_bits": 4.1621,
+          "perplexity": 17.903
+        },
+        "objdump": {
+          "cross_entropy_bits": 4.0665,
+          "perplexity": 16.754
+        },
+        "python3": {
+          "cross_entropy_bits": 4.4593,
+          "perplexity": 21.998
+        },
+        "sed": {
+          "cross_entropy_bits": 4.2799,
+          "perplexity": 19.426
+        },
+        "sort": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "tail": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "tar": {
+          "cross_entropy_bits": 4.3335,
+          "perplexity": 20.162
+        },
+        "tr": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "vim": {
+          "cross_entropy_bits": 4.2485,
+          "perplexity": 19.007
+        },
+        "wc": {
+          "cross_entropy_bits": 4.2876,
+          "perplexity": 19.53
+        },
+        "xz": {
+          "cross_entropy_bits": 4.1714,
+          "perplexity": 18.019
+        }
+      }
+    },
+    "2": {
+      "n": 2,
+      "model": "2-gram Laplace (k=1)",
+      "cross_entropy_bits": 3.0847,
+      "perplexity": 8.484,
+      "empirical_conditional_entropy_bits": 3.0159,
+      "empirical_expected_perplexity": 8.088,
+      "smoothing_gap_bits": 0.0689,
+      "per_binary": {
+        "bash": {
+          "cross_entropy_bits": 3.3648,
+          "perplexity": 10.302
+        },
+        "bzip2": {
+          "cross_entropy_bits": 3.2304,
+          "perplexity": 9.385
+        },
+        "cat": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "curl": {
+          "cross_entropy_bits": 3.2726,
+          "perplexity": 9.664
+        },
+        "cut": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "find": {
+          "cross_entropy_bits": 3.2923,
+          "perplexity": 9.797
+        },
+        "gcc": {
+          "cross_entropy_bits": 3.4057,
+          "perplexity": 10.598
+        },
+        "git": {
+          "cross_entropy_bits": 3.291,
+          "perplexity": 9.788
+        },
+        "grep": {
+          "cross_entropy_bits": 3.4643,
+          "perplexity": 11.037
+        },
+        "gzip": {
+          "cross_entropy_bits": 3.5211,
+          "perplexity": 11.481
+        },
+        "head": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "ls": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "nano": {
+          "cross_entropy_bits": 3.27,
+          "perplexity": 9.646
+        },
+        "objdump": {
+          "cross_entropy_bits": 3.4253,
+          "perplexity": 10.743
+        },
+        "python3": {
+          "cross_entropy_bits": 3.4222,
+          "perplexity": 10.72
+        },
+        "sed": {
+          "cross_entropy_bits": 3.3925,
+          "perplexity": 10.502
+        },
+        "sort": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "tail": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "tar": {
+          "cross_entropy_bits": 3.3474,
+          "perplexity": 10.178
+        },
+        "tr": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "vim": {
+          "cross_entropy_bits": 3.2687,
+          "perplexity": 9.638
+        },
+        "wc": {
+          "cross_entropy_bits": 3.014,
+          "perplexity": 8.078
+        },
+        "xz": {
+          "cross_entropy_bits": 3.3553,
+          "perplexity": 10.234
+        }
+      }
+    },
+    "3": {
+      "n": 3,
+      "model": "3-gram Laplace (k=1)",
+      "cross_entropy_bits": 2.7919,
+      "perplexity": 6.926,
+      "empirical_conditional_entropy_bits": 2.7201,
+      "empirical_expected_perplexity": 6.589,
+      "smoothing_gap_bits": 0.0718,
+      "per_binary": {
+        "bash": {
+          "cross_entropy_bits": 3.2612,
+          "perplexity": 9.588
+        },
+        "bzip2": {
+          "cross_entropy_bits": 3.2447,
+          "perplexity": 9.479
+        },
+        "cat": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "curl": {
+          "cross_entropy_bits": 3.1707,
+          "perplexity": 9.005
+        },
+        "cut": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "find": {
+          "cross_entropy_bits": 3.2123,
+          "perplexity": 9.268
+        },
+        "gcc": {
+          "cross_entropy_bits": 3.298,
+          "perplexity": 9.836
+        },
+        "git": {
+          "cross_entropy_bits": 3.1776,
+          "perplexity": 9.048
+        },
+        "grep": {
+          "cross_entropy_bits": 3.3903,
+          "perplexity": 10.485
+        },
+        "gzip": {
+          "cross_entropy_bits": 3.5385,
+          "perplexity": 11.62
+        },
+        "head": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "ls": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "nano": {
+          "cross_entropy_bits": 3.1982,
+          "perplexity": 9.178
+        },
+        "objdump": {
+          "cross_entropy_bits": 3.1318,
+          "perplexity": 8.765
+        },
+        "python3": {
+          "cross_entropy_bits": 3.2522,
+          "perplexity": 9.528
+        },
+        "sed": {
+          "cross_entropy_bits": 3.3732,
+          "perplexity": 10.362
+        },
+        "sort": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "tail": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "tar": {
+          "cross_entropy_bits": 3.2645,
+          "perplexity": 9.61
+        },
+        "tr": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "vim": {
+          "cross_entropy_bits": 3.1546,
+          "perplexity": 8.905
+        },
+        "wc": {
+          "cross_entropy_bits": 2.6755,
+          "perplexity": 6.389
+        },
+        "xz": {
+          "cross_entropy_bits": 3.2665,
+          "perplexity": 9.623
+        }
+      }
+    },
+    "4": {
+      "n": 4,
+      "model": "4-gram Laplace (k=1)",
+      "cross_entropy_bits": 2.8354,
+      "perplexity": 7.137,
+      "empirical_conditional_entropy_bits": 2.4533,
+      "empirical_expected_perplexity": 5.477,
+      "smoothing_gap_bits": 0.3821,
+      "per_binary": {
+        "bash": {
+          "cross_entropy_bits": 3.5561,
+          "perplexity": 11.762
+        },
+        "bzip2": {
+          "cross_entropy_bits": 3.4905,
+          "perplexity": 11.24
+        },
+        "cat": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "curl": {
+          "cross_entropy_bits": 3.4223,
+          "perplexity": 10.721
+        },
+        "cut": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "find": {
+          "cross_entropy_bits": 3.4861,
+          "perplexity": 11.205
+        },
+        "gcc": {
+          "cross_entropy_bits": 3.5733,
+          "perplexity": 11.903
+        },
+        "git": {
+          "cross_entropy_bits": 3.3732,
+          "perplexity": 10.362
+        },
+        "grep": {
+          "cross_entropy_bits": 3.7328,
+          "perplexity": 13.295
+        },
+        "gzip": {
+          "cross_entropy_bits": 4.0428,
+          "perplexity": 16.481
+        },
+        "head": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "ls": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "nano": {
+          "cross_entropy_bits": 3.4666,
+          "perplexity": 11.054
+        },
+        "objdump": {
+          "cross_entropy_bits": 3.2387,
+          "perplexity": 9.44
+        },
+        "python3": {
+          "cross_entropy_bits": 3.4268,
+          "perplexity": 10.754
+        },
+        "sed": {
+          "cross_entropy_bits": 3.7218,
+          "perplexity": 13.193
+        },
+        "sort": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "tail": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "tar": {
+          "cross_entropy_bits": 3.5659,
+          "perplexity": 11.842
+        },
+        "tr": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "vim": {
+          "cross_entropy_bits": 3.3919,
+          "perplexity": 10.497
+        },
+        "wc": {
+          "cross_entropy_bits": 2.6704,
+          "perplexity": 6.366
+        },
+        "xz": {
+          "cross_entropy_bits": 3.4836,
+          "perplexity": 11.186
+        }
+      }
+    },
+    "5": {
+      "n": 5,
+      "model": "5-gram Laplace (k=1)",
+      "cross_entropy_bits": 3.1348,
+      "perplexity": 8.784,
+      "empirical_conditional_entropy_bits": 2.1615,
+      "empirical_expected_perplexity": 4.474,
+      "smoothing_gap_bits": 0.9733,
+      "per_binary": {
+        "bash": {
+          "cross_entropy_bits": 4.2605,
+          "perplexity": 19.167
+        },
+        "bzip2": {
+          "cross_entropy_bits": 4.137,
+          "perplexity": 17.593
+        },
+        "cat": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "curl": {
+          "cross_entropy_bits": 3.9823,
+          "perplexity": 15.805
+        },
+        "cut": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "find": {
+          "cross_entropy_bits": 4.2152,
+          "perplexity": 18.574
+        },
+        "gcc": {
+          "cross_entropy_bits": 4.2805,
+          "perplexity": 19.434
+        },
+        "git": {
+          "cross_entropy_bits": 3.9004,
+          "perplexity": 14.933
+        },
+        "grep": {
+          "cross_entropy_bits": 4.4289,
+          "perplexity": 21.539
+        },
+        "gzip": {
+          "cross_entropy_bits": 4.9318,
+          "perplexity": 30.521
+        },
+        "head": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "ls": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "nano": {
+          "cross_entropy_bits": 4.0928,
+          "perplexity": 17.063
+        },
+        "objdump": {
+          "cross_entropy_bits": 3.7999,
+          "perplexity": 13.928
+        },
+        "python3": {
+          "cross_entropy_bits": 3.9106,
+          "perplexity": 15.038
+        },
+        "sed": {
+          "cross_entropy_bits": 4.5633,
+          "perplexity": 23.642
+        },
+        "sort": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "tail": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "tar": {
+          "cross_entropy_bits": 4.238,
+          "perplexity": 18.869
+        },
+        "tr": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "vim": {
+          "cross_entropy_bits": 4.0037,
+          "perplexity": 16.041
+        },
+        "wc": {
+          "cross_entropy_bits": 2.8943,
+          "perplexity": 7.435
+        },
+        "xz": {
+          "cross_entropy_bits": 4.2024,
+          "perplexity": 18.41
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "headline": "Unigram LM perplexity 19.6 vs vocabulary 448 \u2014 opcode sequences are already 18x more predictable than random.",
+    "bigram": "Bigram LM perplexity 8.5: knowing the previous opcode halves the uncertainty.",
+    "llm_connection": "The thin structured manifold (d\u2089\u2085=8 dimensions, 4% space coverage) means any LLM trained on opcodes faces a dramatically simpler prediction problem than one trained on natural language. Low perplexity follows directly from the high structural regularity induced by ABI conventions, compiler idioms, and algorithm patterns."
+  }
+}

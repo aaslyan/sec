@@ -1,0 +1,94 @@
+# Binary DNA – central experiment configuration
+# All pipeline commands read defaults from here; CLI flags override.
+
+# ──────────────────────────────────────────────
+# Corpus definitions
+# ──────────────────────────────────────────────
+corpora:
+
+  # 15-binary smoke test: fast end-to-end validation
+  smoke:
+    description: "Smoke test corpus (15 distinct system binaries, verified unique inodes)"
+    binaries:
+      # text processing
+      - grep
+      - sed
+      # compression
+      - gzip
+      - bzip2
+      - xz
+      # filesystem
+      - find
+      - tar
+      # shells / interpreters
+      - bash
+      - python3
+      # networking
+      - curl
+      # version control
+      - git
+      # editors
+      - vim
+      - nano
+      # compilers / binary tools
+      - gcc
+      - objdump
+    output_dir: results/smoke
+
+  # Full system corpus drawn from /usr/bin categories (~24 unique binaries after inode dedup)
+  coreutils_system:
+    description: "System coreutils corpus — diverse small-to-medium utilities"
+    limit: 40
+    output_dir: results/system
+
+  # Mixed corpus: high-level runtimes, compilers, binary-analysis tools
+  mixed_system:
+    description: "Mixed system tools — runtimes, compilers, debuggers"
+    binaries:
+      - bash       # shell
+      - python3    # interpreter
+      - perl       # interpreter
+      - gcc        # compiler
+      - git        # version control
+      - vim        # editor
+      - curl       # networking
+      - tar        # archive
+      - xz         # compression
+      - strace     # debugging
+      - objdump    # binary analysis
+      - nm         # binary analysis
+      - readelf    # binary analysis
+      - addr2line  # binary analysis
+      - gdb        # debugger
+    output_dir: results/mixed_system
+
+  # GitHub-compiled binaries (requires network + optional token)
+  github_compiled:
+    description: "GitHub-compiled binaries corpus"
+    languages: [C, C++, Rust, Go, Zig]
+    repos_per_language: 10
+    min_stars: 100
+    output_dir: results/github
+
+# ──────────────────────────────────────────────
+# Pipeline parameters
+# ──────────────────────────────────────────────
+pipeline:
+  objdump_timeout: 60      # seconds per binary
+  max_workers: 4           # parallel workers for fast mode
+  sample_size: null        # max opcode sequence length (null = no limit)
+
+# ──────────────────────────────────────────────
+# Results layout  (created automatically on first run)
+# ──────────────────────────────────────────────
+# results/
+#   smoke/
+#     corpus/          ← extracted Binary objects + sequences
+#     results/         ← analysis JSON + plots
+#   system/
+#     corpus/
+#     results/
+#   github/
+#     corpus/
+#     results/
+results_root: results

@@ -1,0 +1,1868 @@
+{
+  "ncd_zlib": {
+    "methods": {
+      "ward": {
+        "linkage_method": "ward",
+        "distance_threshold": 0.5,
+        "linkage_matrix": [
+          [
+            3.0,
+            4.0,
+            0.9628135414839502,
+            2.0
+          ],
+          [
+            1.0,
+            2.0,
+            0.9663381685306167,
+            2.0
+          ],
+          [
+            5.0,
+            9.0,
+            0.9794713353930655,
+            2.0
+          ],
+          [
+            0.0,
+            16.0,
+            0.9812455268746523,
+            3.0
+          ],
+          [
+            7.0,
+            11.0,
+            0.9881933871477406,
+            2.0
+          ],
+          [
+            6.0,
+            12.0,
+            0.9884476219538777,
+            2.0
+          ],
+          [
+            10.0,
+            19.0,
+            0.9895193531036058,
+            3.0
+          ],
+          [
+            17.0,
+            18.0,
+            0.9897364402262255,
+            5.0
+          ],
+          [
+            8.0,
+            21.0,
+            0.9912515602451839,
+            4.0
+          ],
+          [
+            15.0,
+            22.0,
+            0.9928531418578884,
+            7.0
+          ],
+          [
+            14.0,
+            20.0,
+            0.9947546910425904,
+            3.0
+          ],
+          [
+            13.0,
+            25.0,
+            1.0006111395292123,
+            4.0
+          ],
+          [
+            24.0,
+            26.0,
+            1.0146798328487563,
+            11.0
+          ],
+          [
+            23.0,
+            27.0,
+            1.045589876727203,
+            15.0
+          ]
+        ],
+        "cluster_labels": [
+          11,
+          9,
+          10,
+          5,
+          6,
+          7,
+          12,
+          1,
+          4,
+          8,
+          3,
+          2,
+          13,
+          15,
+          14
+        ],
+        "binary_names": [
+          "grep",
+          "sed",
+          "gzip",
+          "bzip2",
+          "xz",
+          "find",
+          "tar",
+          "bash",
+          "python3",
+          "curl",
+          "git",
+          "vim",
+          "nano",
+          "gcc",
+          "objdump"
+        ],
+        "cluster_analysis": {
+          "num_clusters": 15,
+          "cluster_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "largest_cluster_size": 1,
+          "smallest_cluster_size": 1,
+          "mean_cluster_size": 1.0,
+          "singleton_clusters": 15,
+          "clusters": {
+            "cluster_11": [
+              "grep"
+            ],
+            "cluster_9": [
+              "sed"
+            ],
+            "cluster_10": [
+              "gzip"
+            ],
+            "cluster_5": [
+              "bzip2"
+            ],
+            "cluster_6": [
+              "xz"
+            ],
+            "cluster_7": [
+              "find"
+            ],
+            "cluster_12": [
+              "tar"
+            ],
+            "cluster_1": [
+              "bash"
+            ],
+            "cluster_4": [
+              "python3"
+            ],
+            "cluster_8": [
+              "curl"
+            ],
+            "cluster_3": [
+              "git"
+            ],
+            "cluster_2": [
+              "vim"
+            ],
+            "cluster_13": [
+              "nano"
+            ],
+            "cluster_15": [
+              "gcc"
+            ],
+            "cluster_14": [
+              "objdump"
+            ]
+          }
+        },
+        "cophenetic_correlation": 0.0,
+        "dendrogram_info": {
+          "max_distance": 1.045589876727203,
+          "min_distance": 0.9628135414839502,
+          "height_range": 0.08277633524325279,
+          "num_merges": 14
+        },
+        "silhouette_score": null,
+        "category_purity": {
+          "mean_purity": 1.0,
+          "per_cluster_purity": {
+            "cluster_11": 1.0,
+            "cluster_9": 1.0,
+            "cluster_10": 1.0,
+            "cluster_5": 1.0,
+            "cluster_6": 1.0,
+            "cluster_7": 1.0,
+            "cluster_12": 1.0,
+            "cluster_1": 1.0,
+            "cluster_4": 1.0,
+            "cluster_8": 1.0,
+            "cluster_3": 1.0,
+            "cluster_2": 1.0,
+            "cluster_13": 1.0,
+            "cluster_15": 1.0,
+            "cluster_14": 1.0
+          },
+          "interpretation": "High category purity (100.00% mean)"
+        }
+      },
+      "complete": {
+        "linkage_method": "complete",
+        "distance_threshold": 0.5,
+        "linkage_matrix": [
+          [
+            3.0,
+            4.0,
+            0.9628135414839502,
+            2.0
+          ],
+          [
+            1.0,
+            2.0,
+            0.9663381685306167,
+            2.0
+          ],
+          [
+            0.0,
+            16.0,
+            0.97873945545573,
+            3.0
+          ],
+          [
+            5.0,
+            9.0,
+            0.9794713353930655,
+            2.0
+          ],
+          [
+            17.0,
+            18.0,
+            0.9842773772742877,
+            5.0
+          ],
+          [
+            7.0,
+            11.0,
+            0.9881933871477406,
+            2.0
+          ],
+          [
+            6.0,
+            12.0,
+            0.9884476219538777,
+            2.0
+          ],
+          [
+            10.0,
+            20.0,
+            0.9897478605479295,
+            3.0
+          ],
+          [
+            15.0,
+            19.0,
+            0.9903298813524449,
+            7.0
+          ],
+          [
+            8.0,
+            22.0,
+            0.9912941521324931,
+            4.0
+          ],
+          [
+            21.0,
+            23.0,
+            0.9921095078251013,
+            9.0
+          ],
+          [
+            14.0,
+            25.0,
+            0.9943677982741694,
+            10.0
+          ],
+          [
+            13.0,
+            24.0,
+            0.9973325516634911,
+            5.0
+          ],
+          [
+            26.0,
+            27.0,
+            1.0,
+            15.0
+          ]
+        ],
+        "cluster_labels": [
+          7,
+          5,
+          6,
+          3,
+          4,
+          8,
+          1,
+          11,
+          14,
+          9,
+          13,
+          12,
+          2,
+          15,
+          10
+        ],
+        "binary_names": [
+          "grep",
+          "sed",
+          "gzip",
+          "bzip2",
+          "xz",
+          "find",
+          "tar",
+          "bash",
+          "python3",
+          "curl",
+          "git",
+          "vim",
+          "nano",
+          "gcc",
+          "objdump"
+        ],
+        "cluster_analysis": {
+          "num_clusters": 15,
+          "cluster_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "largest_cluster_size": 1,
+          "smallest_cluster_size": 1,
+          "mean_cluster_size": 1.0,
+          "singleton_clusters": 15,
+          "clusters": {
+            "cluster_7": [
+              "grep"
+            ],
+            "cluster_5": [
+              "sed"
+            ],
+            "cluster_6": [
+              "gzip"
+            ],
+            "cluster_3": [
+              "bzip2"
+            ],
+            "cluster_4": [
+              "xz"
+            ],
+            "cluster_8": [
+              "find"
+            ],
+            "cluster_1": [
+              "tar"
+            ],
+            "cluster_11": [
+              "bash"
+            ],
+            "cluster_14": [
+              "python3"
+            ],
+            "cluster_9": [
+              "curl"
+            ],
+            "cluster_13": [
+              "git"
+            ],
+            "cluster_12": [
+              "vim"
+            ],
+            "cluster_2": [
+              "nano"
+            ],
+            "cluster_15": [
+              "gcc"
+            ],
+            "cluster_10": [
+              "objdump"
+            ]
+          }
+        },
+        "cophenetic_correlation": 0.0,
+        "dendrogram_info": {
+          "max_distance": 1.0,
+          "min_distance": 0.9628135414839502,
+          "height_range": 0.03718645851604985,
+          "num_merges": 14
+        },
+        "silhouette_score": null,
+        "category_purity": {
+          "mean_purity": 1.0,
+          "per_cluster_purity": {
+            "cluster_7": 1.0,
+            "cluster_5": 1.0,
+            "cluster_6": 1.0,
+            "cluster_3": 1.0,
+            "cluster_4": 1.0,
+            "cluster_8": 1.0,
+            "cluster_1": 1.0,
+            "cluster_11": 1.0,
+            "cluster_14": 1.0,
+            "cluster_9": 1.0,
+            "cluster_13": 1.0,
+            "cluster_12": 1.0,
+            "cluster_2": 1.0,
+            "cluster_15": 1.0,
+            "cluster_10": 1.0
+          },
+          "interpretation": "High category purity (100.00% mean)"
+        }
+      },
+      "average": {
+        "linkage_method": "average",
+        "distance_threshold": 0.5,
+        "linkage_matrix": [
+          [
+            3.0,
+            4.0,
+            0.9628135414839502,
+            2.0
+          ],
+          [
+            1.0,
+            2.0,
+            0.9663381685306167,
+            2.0
+          ],
+          [
+            15.0,
+            16.0,
+            0.9746153110913082,
+            4.0
+          ],
+          [
+            9.0,
+            17.0,
+            0.9794318469189918,
+            5.0
+          ],
+          [
+            0.0,
+            18.0,
+            0.9816199163294698,
+            6.0
+          ],
+          [
+            5.0,
+            19.0,
+            0.9834910654019097,
+            7.0
+          ],
+          [
+            7.0,
+            11.0,
+            0.9881933871477406,
+            2.0
+          ],
+          [
+            6.0,
+            12.0,
+            0.9884476219538777,
+            2.0
+          ],
+          [
+            20.0,
+            22.0,
+            0.9890615838831806,
+            9.0
+          ],
+          [
+            10.0,
+            21.0,
+            0.9891878697375223,
+            3.0
+          ],
+          [
+            8.0,
+            24.0,
+            0.9904537003837142,
+            4.0
+          ],
+          [
+            14.0,
+            23.0,
+            0.9918249132752235,
+            10.0
+          ],
+          [
+            13.0,
+            25.0,
+            0.996978974374529,
+            5.0
+          ],
+          [
+            26.0,
+            27.0,
+            0.9983143029640511,
+            15.0
+          ]
+        ],
+        "cluster_labels": [
+          6,
+          3,
+          4,
+          1,
+          2,
+          7,
+          8,
+          11,
+          14,
+          5,
+          13,
+          12,
+          9,
+          15,
+          10
+        ],
+        "binary_names": [
+          "grep",
+          "sed",
+          "gzip",
+          "bzip2",
+          "xz",
+          "find",
+          "tar",
+          "bash",
+          "python3",
+          "curl",
+          "git",
+          "vim",
+          "nano",
+          "gcc",
+          "objdump"
+        ],
+        "cluster_analysis": {
+          "num_clusters": 15,
+          "cluster_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "largest_cluster_size": 1,
+          "smallest_cluster_size": 1,
+          "mean_cluster_size": 1.0,
+          "singleton_clusters": 15,
+          "clusters": {
+            "cluster_6": [
+              "grep"
+            ],
+            "cluster_3": [
+              "sed"
+            ],
+            "cluster_4": [
+              "gzip"
+            ],
+            "cluster_1": [
+              "bzip2"
+            ],
+            "cluster_2": [
+              "xz"
+            ],
+            "cluster_7": [
+              "find"
+            ],
+            "cluster_8": [
+              "tar"
+            ],
+            "cluster_11": [
+              "bash"
+            ],
+            "cluster_14": [
+              "python3"
+            ],
+            "cluster_5": [
+              "curl"
+            ],
+            "cluster_13": [
+              "git"
+            ],
+            "cluster_12": [
+              "vim"
+            ],
+            "cluster_9": [
+              "nano"
+            ],
+            "cluster_15": [
+              "gcc"
+            ],
+            "cluster_10": [
+              "objdump"
+            ]
+          }
+        },
+        "cophenetic_correlation": 0.0,
+        "dendrogram_info": {
+          "max_distance": 0.9983143029640511,
+          "min_distance": 0.9628135414839502,
+          "height_range": 0.03550076148010095,
+          "num_merges": 14
+        },
+        "silhouette_score": null,
+        "category_purity": {
+          "mean_purity": 1.0,
+          "per_cluster_purity": {
+            "cluster_6": 1.0,
+            "cluster_3": 1.0,
+            "cluster_4": 1.0,
+            "cluster_1": 1.0,
+            "cluster_2": 1.0,
+            "cluster_7": 1.0,
+            "cluster_8": 1.0,
+            "cluster_11": 1.0,
+            "cluster_14": 1.0,
+            "cluster_5": 1.0,
+            "cluster_13": 1.0,
+            "cluster_12": 1.0,
+            "cluster_9": 1.0,
+            "cluster_15": 1.0,
+            "cluster_10": 1.0
+          },
+          "interpretation": "High category purity (100.00% mean)"
+        }
+      }
+    },
+    "best_method": "ward",
+    "best_result": {
+      "linkage_method": "ward",
+      "distance_threshold": 0.5,
+      "linkage_matrix": [
+        [
+          3.0,
+          4.0,
+          0.9628135414839502,
+          2.0
+        ],
+        [
+          1.0,
+          2.0,
+          0.9663381685306167,
+          2.0
+        ],
+        [
+          5.0,
+          9.0,
+          0.9794713353930655,
+          2.0
+        ],
+        [
+          0.0,
+          16.0,
+          0.9812455268746523,
+          3.0
+        ],
+        [
+          7.0,
+          11.0,
+          0.9881933871477406,
+          2.0
+        ],
+        [
+          6.0,
+          12.0,
+          0.9884476219538777,
+          2.0
+        ],
+        [
+          10.0,
+          19.0,
+          0.9895193531036058,
+          3.0
+        ],
+        [
+          17.0,
+          18.0,
+          0.9897364402262255,
+          5.0
+        ],
+        [
+          8.0,
+          21.0,
+          0.9912515602451839,
+          4.0
+        ],
+        [
+          15.0,
+          22.0,
+          0.9928531418578884,
+          7.0
+        ],
+        [
+          14.0,
+          20.0,
+          0.9947546910425904,
+          3.0
+        ],
+        [
+          13.0,
+          25.0,
+          1.0006111395292123,
+          4.0
+        ],
+        [
+          24.0,
+          26.0,
+          1.0146798328487563,
+          11.0
+        ],
+        [
+          23.0,
+          27.0,
+          1.045589876727203,
+          15.0
+        ]
+      ],
+      "cluster_labels": [
+        11,
+        9,
+        10,
+        5,
+        6,
+        7,
+        12,
+        1,
+        4,
+        8,
+        3,
+        2,
+        13,
+        15,
+        14
+      ],
+      "binary_names": [
+        "grep",
+        "sed",
+        "gzip",
+        "bzip2",
+        "xz",
+        "find",
+        "tar",
+        "bash",
+        "python3",
+        "curl",
+        "git",
+        "vim",
+        "nano",
+        "gcc",
+        "objdump"
+      ],
+      "cluster_analysis": {
+        "num_clusters": 15,
+        "cluster_sizes": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "largest_cluster_size": 1,
+        "smallest_cluster_size": 1,
+        "mean_cluster_size": 1.0,
+        "singleton_clusters": 15,
+        "clusters": {
+          "cluster_11": [
+            "grep"
+          ],
+          "cluster_9": [
+            "sed"
+          ],
+          "cluster_10": [
+            "gzip"
+          ],
+          "cluster_5": [
+            "bzip2"
+          ],
+          "cluster_6": [
+            "xz"
+          ],
+          "cluster_7": [
+            "find"
+          ],
+          "cluster_12": [
+            "tar"
+          ],
+          "cluster_1": [
+            "bash"
+          ],
+          "cluster_4": [
+            "python3"
+          ],
+          "cluster_8": [
+            "curl"
+          ],
+          "cluster_3": [
+            "git"
+          ],
+          "cluster_2": [
+            "vim"
+          ],
+          "cluster_13": [
+            "nano"
+          ],
+          "cluster_15": [
+            "gcc"
+          ],
+          "cluster_14": [
+            "objdump"
+          ]
+        }
+      },
+      "cophenetic_correlation": 0.0,
+      "dendrogram_info": {
+        "max_distance": 1.045589876727203,
+        "min_distance": 0.9628135414839502,
+        "height_range": 0.08277633524325279,
+        "num_merges": 14
+      },
+      "silhouette_score": null,
+      "category_purity": {
+        "mean_purity": 1.0,
+        "per_cluster_purity": {
+          "cluster_11": 1.0,
+          "cluster_9": 1.0,
+          "cluster_10": 1.0,
+          "cluster_5": 1.0,
+          "cluster_6": 1.0,
+          "cluster_7": 1.0,
+          "cluster_12": 1.0,
+          "cluster_1": 1.0,
+          "cluster_4": 1.0,
+          "cluster_8": 1.0,
+          "cluster_3": 1.0,
+          "cluster_2": 1.0,
+          "cluster_13": 1.0,
+          "cluster_15": 1.0,
+          "cluster_14": 1.0
+        },
+        "interpretation": "High category purity (100.00% mean)"
+      }
+    },
+    "method_comparison": {
+      "ward": {
+        "num_clusters": 15,
+        "cophenetic_correlation": 0.0,
+        "silhouette_score": null,
+        "category_purity": 1.0,
+        "largest_cluster_fraction": 0.06666666666666667
+      },
+      "complete": {
+        "num_clusters": 15,
+        "cophenetic_correlation": 0.0,
+        "silhouette_score": null,
+        "category_purity": 1.0,
+        "largest_cluster_fraction": 0.06666666666666667
+      },
+      "average": {
+        "num_clusters": 15,
+        "cophenetic_correlation": 0.0,
+        "silhouette_score": null,
+        "category_purity": 1.0,
+        "largest_cluster_fraction": 0.06666666666666667
+      },
+      "recommendation": {
+        "best_method": null,
+        "score": 0.0,
+        "reasoning": "None provides the best balance of clustering quality and structure"
+      }
+    }
+  },
+  "ncd_lzma": {
+    "methods": {
+      "ward": {
+        "linkage_method": "ward",
+        "distance_threshold": 0.5,
+        "linkage_matrix": [
+          [
+            0.0,
+            1.0,
+            0.8833063209076175,
+            2.0
+          ],
+          [
+            5.0,
+            6.0,
+            0.9127249895353704,
+            2.0
+          ],
+          [
+            2.0,
+            4.0,
+            0.9300239234449761,
+            2.0
+          ],
+          [
+            9.0,
+            17.0,
+            0.9451275774485073,
+            3.0
+          ],
+          [
+            12.0,
+            14.0,
+            0.9537624660018132,
+            2.0
+          ],
+          [
+            3.0,
+            18.0,
+            0.9554142565061547,
+            4.0
+          ],
+          [
+            16.0,
+            19.0,
+            0.9651913069052591,
+            4.0
+          ],
+          [
+            7.0,
+            10.0,
+            0.9661829134720701,
+            2.0
+          ],
+          [
+            11.0,
+            22.0,
+            0.9684208693692737,
+            3.0
+          ],
+          [
+            8.0,
+            23.0,
+            0.9692011422042504,
+            4.0
+          ],
+          [
+            13.0,
+            24.0,
+            0.9777278870486623,
+            5.0
+          ],
+          [
+            15.0,
+            21.0,
+            0.9801255188296143,
+            6.0
+          ],
+          [
+            20.0,
+            26.0,
+            1.0110346069257634,
+            10.0
+          ],
+          [
+            25.0,
+            27.0,
+            1.1095622132081417,
+            15.0
+          ]
+        ],
+        "cluster_labels": [
+          10,
+          11,
+          6,
+          9,
+          7,
+          12,
+          13,
+          1,
+          4,
+          8,
+          2,
+          3,
+          14,
+          5,
+          15
+        ],
+        "binary_names": [
+          "grep",
+          "sed",
+          "gzip",
+          "bzip2",
+          "xz",
+          "find",
+          "tar",
+          "bash",
+          "python3",
+          "curl",
+          "git",
+          "vim",
+          "nano",
+          "gcc",
+          "objdump"
+        ],
+        "cluster_analysis": {
+          "num_clusters": 15,
+          "cluster_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "largest_cluster_size": 1,
+          "smallest_cluster_size": 1,
+          "mean_cluster_size": 1.0,
+          "singleton_clusters": 15,
+          "clusters": {
+            "cluster_10": [
+              "grep"
+            ],
+            "cluster_11": [
+              "sed"
+            ],
+            "cluster_6": [
+              "gzip"
+            ],
+            "cluster_9": [
+              "bzip2"
+            ],
+            "cluster_7": [
+              "xz"
+            ],
+            "cluster_12": [
+              "find"
+            ],
+            "cluster_13": [
+              "tar"
+            ],
+            "cluster_1": [
+              "bash"
+            ],
+            "cluster_4": [
+              "python3"
+            ],
+            "cluster_8": [
+              "curl"
+            ],
+            "cluster_2": [
+              "git"
+            ],
+            "cluster_3": [
+              "vim"
+            ],
+            "cluster_14": [
+              "nano"
+            ],
+            "cluster_5": [
+              "gcc"
+            ],
+            "cluster_15": [
+              "objdump"
+            ]
+          }
+        },
+        "cophenetic_correlation": 0.0,
+        "dendrogram_info": {
+          "max_distance": 1.1095622132081417,
+          "min_distance": 0.8833063209076175,
+          "height_range": 0.22625589230052423,
+          "num_merges": 14
+        },
+        "silhouette_score": null,
+        "category_purity": {
+          "mean_purity": 1.0,
+          "per_cluster_purity": {
+            "cluster_10": 1.0,
+            "cluster_11": 1.0,
+            "cluster_6": 1.0,
+            "cluster_9": 1.0,
+            "cluster_7": 1.0,
+            "cluster_12": 1.0,
+            "cluster_13": 1.0,
+            "cluster_1": 1.0,
+            "cluster_4": 1.0,
+            "cluster_8": 1.0,
+            "cluster_2": 1.0,
+            "cluster_3": 1.0,
+            "cluster_14": 1.0,
+            "cluster_5": 1.0,
+            "cluster_15": 1.0
+          },
+          "interpretation": "High category purity (100.00% mean)"
+        }
+      },
+      "complete": {
+        "linkage_method": "complete",
+        "distance_threshold": 0.5,
+        "linkage_matrix": [
+          [
+            0.0,
+            1.0,
+            0.8833063209076175,
+            2.0
+          ],
+          [
+            5.0,
+            6.0,
+            0.9127249895353704,
+            2.0
+          ],
+          [
+            2.0,
+            4.0,
+            0.9300239234449761,
+            2.0
+          ],
+          [
+            9.0,
+            15.0,
+            0.939384116693679,
+            3.0
+          ],
+          [
+            12.0,
+            16.0,
+            0.9480954374215153,
+            3.0
+          ],
+          [
+            3.0,
+            17.0,
+            0.9497607655502392,
+            3.0
+          ],
+          [
+            14.0,
+            19.0,
+            0.9562578484721641,
+            4.0
+          ],
+          [
+            18.0,
+            21.0,
+            0.9603252833908329,
+            7.0
+          ],
+          [
+            7.0,
+            10.0,
+            0.9661829134720701,
+            2.0
+          ],
+          [
+            11.0,
+            23.0,
+            0.9683084099327754,
+            3.0
+          ],
+          [
+            8.0,
+            24.0,
+            0.9695431472081218,
+            4.0
+          ],
+          [
+            13.0,
+            25.0,
+            0.9751680614624777,
+            5.0
+          ],
+          [
+            20.0,
+            22.0,
+            0.980039428289798,
+            10.0
+          ],
+          [
+            26.0,
+            27.0,
+            0.9928737638161722,
+            15.0
+          ]
+        ],
+        "cluster_labels": [
+          9,
+          10,
+          6,
+          8,
+          7,
+          12,
+          13,
+          1,
+          4,
+          11,
+          2,
+          3,
+          14,
+          5,
+          15
+        ],
+        "binary_names": [
+          "grep",
+          "sed",
+          "gzip",
+          "bzip2",
+          "xz",
+          "find",
+          "tar",
+          "bash",
+          "python3",
+          "curl",
+          "git",
+          "vim",
+          "nano",
+          "gcc",
+          "objdump"
+        ],
+        "cluster_analysis": {
+          "num_clusters": 15,
+          "cluster_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "largest_cluster_size": 1,
+          "smallest_cluster_size": 1,
+          "mean_cluster_size": 1.0,
+          "singleton_clusters": 15,
+          "clusters": {
+            "cluster_9": [
+              "grep"
+            ],
+            "cluster_10": [
+              "sed"
+            ],
+            "cluster_6": [
+              "gzip"
+            ],
+            "cluster_8": [
+              "bzip2"
+            ],
+            "cluster_7": [
+              "xz"
+            ],
+            "cluster_12": [
+              "find"
+            ],
+            "cluster_13": [
+              "tar"
+            ],
+            "cluster_1": [
+              "bash"
+            ],
+            "cluster_4": [
+              "python3"
+            ],
+            "cluster_11": [
+              "curl"
+            ],
+            "cluster_2": [
+              "git"
+            ],
+            "cluster_3": [
+              "vim"
+            ],
+            "cluster_14": [
+              "nano"
+            ],
+            "cluster_5": [
+              "gcc"
+            ],
+            "cluster_15": [
+              "objdump"
+            ]
+          }
+        },
+        "cophenetic_correlation": 0.0,
+        "dendrogram_info": {
+          "max_distance": 0.9928737638161722,
+          "min_distance": 0.8833063209076175,
+          "height_range": 0.10956744290855469,
+          "num_merges": 14
+        },
+        "silhouette_score": null,
+        "category_purity": {
+          "mean_purity": 1.0,
+          "per_cluster_purity": {
+            "cluster_9": 1.0,
+            "cluster_10": 1.0,
+            "cluster_6": 1.0,
+            "cluster_8": 1.0,
+            "cluster_7": 1.0,
+            "cluster_12": 1.0,
+            "cluster_13": 1.0,
+            "cluster_1": 1.0,
+            "cluster_4": 1.0,
+            "cluster_11": 1.0,
+            "cluster_2": 1.0,
+            "cluster_3": 1.0,
+            "cluster_14": 1.0,
+            "cluster_5": 1.0,
+            "cluster_15": 1.0
+          },
+          "interpretation": "High category purity (100.00% mean)"
+        }
+      },
+      "average": {
+        "linkage_method": "average",
+        "distance_threshold": 0.5,
+        "linkage_matrix": [
+          [
+            0.0,
+            1.0,
+            0.8833063209076175,
+            2.0
+          ],
+          [
+            5.0,
+            15.0,
+            0.9115243760340557,
+            3.0
+          ],
+          [
+            2.0,
+            4.0,
+            0.9300239234449761,
+            2.0
+          ],
+          [
+            9.0,
+            16.0,
+            0.9358518709125668,
+            4.0
+          ],
+          [
+            3.0,
+            17.0,
+            0.9423241126786566,
+            3.0
+          ],
+          [
+            6.0,
+            18.0,
+            0.9440142318961908,
+            5.0
+          ],
+          [
+            12.0,
+            20.0,
+            0.9498638744289993,
+            6.0
+          ],
+          [
+            14.0,
+            21.0,
+            0.9543643188818548,
+            7.0
+          ],
+          [
+            19.0,
+            22.0,
+            0.9582816014506312,
+            10.0
+          ],
+          [
+            7.0,
+            10.0,
+            0.9661829134720701,
+            2.0
+          ],
+          [
+            11.0,
+            24.0,
+            0.9678617624691259,
+            3.0
+          ],
+          [
+            8.0,
+            25.0,
+            0.96856834632198,
+            4.0
+          ],
+          [
+            13.0,
+            26.0,
+            0.9740665863802946,
+            5.0
+          ],
+          [
+            23.0,
+            27.0,
+            0.9832274617595251,
+            15.0
+          ]
+        ],
+        "cluster_labels": [
+          4,
+          5,
+          1,
+          3,
+          2,
+          6,
+          8,
+          11,
+          14,
+          7,
+          12,
+          13,
+          9,
+          15,
+          10
+        ],
+        "binary_names": [
+          "grep",
+          "sed",
+          "gzip",
+          "bzip2",
+          "xz",
+          "find",
+          "tar",
+          "bash",
+          "python3",
+          "curl",
+          "git",
+          "vim",
+          "nano",
+          "gcc",
+          "objdump"
+        ],
+        "cluster_analysis": {
+          "num_clusters": 15,
+          "cluster_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "largest_cluster_size": 1,
+          "smallest_cluster_size": 1,
+          "mean_cluster_size": 1.0,
+          "singleton_clusters": 15,
+          "clusters": {
+            "cluster_4": [
+              "grep"
+            ],
+            "cluster_5": [
+              "sed"
+            ],
+            "cluster_1": [
+              "gzip"
+            ],
+            "cluster_3": [
+              "bzip2"
+            ],
+            "cluster_2": [
+              "xz"
+            ],
+            "cluster_6": [
+              "find"
+            ],
+            "cluster_8": [
+              "tar"
+            ],
+            "cluster_11": [
+              "bash"
+            ],
+            "cluster_14": [
+              "python3"
+            ],
+            "cluster_7": [
+              "curl"
+            ],
+            "cluster_12": [
+              "git"
+            ],
+            "cluster_13": [
+              "vim"
+            ],
+            "cluster_9": [
+              "nano"
+            ],
+            "cluster_15": [
+              "gcc"
+            ],
+            "cluster_10": [
+              "objdump"
+            ]
+          }
+        },
+        "cophenetic_correlation": 0.0,
+        "dendrogram_info": {
+          "max_distance": 0.9832274617595251,
+          "min_distance": 0.8833063209076175,
+          "height_range": 0.09992114085190762,
+          "num_merges": 14
+        },
+        "silhouette_score": null,
+        "category_purity": {
+          "mean_purity": 1.0,
+          "per_cluster_purity": {
+            "cluster_4": 1.0,
+            "cluster_5": 1.0,
+            "cluster_1": 1.0,
+            "cluster_3": 1.0,
+            "cluster_2": 1.0,
+            "cluster_6": 1.0,
+            "cluster_8": 1.0,
+            "cluster_11": 1.0,
+            "cluster_14": 1.0,
+            "cluster_7": 1.0,
+            "cluster_12": 1.0,
+            "cluster_13": 1.0,
+            "cluster_9": 1.0,
+            "cluster_15": 1.0,
+            "cluster_10": 1.0
+          },
+          "interpretation": "High category purity (100.00% mean)"
+        }
+      }
+    },
+    "best_method": "ward",
+    "best_result": {
+      "linkage_method": "ward",
+      "distance_threshold": 0.5,
+      "linkage_matrix": [
+        [
+          0.0,
+          1.0,
+          0.8833063209076175,
+          2.0
+        ],
+        [
+          5.0,
+          6.0,
+          0.9127249895353704,
+          2.0
+        ],
+        [
+          2.0,
+          4.0,
+          0.9300239234449761,
+          2.0
+        ],
+        [
+          9.0,
+          17.0,
+          0.9451275774485073,
+          3.0
+        ],
+        [
+          12.0,
+          14.0,
+          0.9537624660018132,
+          2.0
+        ],
+        [
+          3.0,
+          18.0,
+          0.9554142565061547,
+          4.0
+        ],
+        [
+          16.0,
+          19.0,
+          0.9651913069052591,
+          4.0
+        ],
+        [
+          7.0,
+          10.0,
+          0.9661829134720701,
+          2.0
+        ],
+        [
+          11.0,
+          22.0,
+          0.9684208693692737,
+          3.0
+        ],
+        [
+          8.0,
+          23.0,
+          0.9692011422042504,
+          4.0
+        ],
+        [
+          13.0,
+          24.0,
+          0.9777278870486623,
+          5.0
+        ],
+        [
+          15.0,
+          21.0,
+          0.9801255188296143,
+          6.0
+        ],
+        [
+          20.0,
+          26.0,
+          1.0110346069257634,
+          10.0
+        ],
+        [
+          25.0,
+          27.0,
+          1.1095622132081417,
+          15.0
+        ]
+      ],
+      "cluster_labels": [
+        10,
+        11,
+        6,
+        9,
+        7,
+        12,
+        13,
+        1,
+        4,
+        8,
+        2,
+        3,
+        14,
+        5,
+        15
+      ],
+      "binary_names": [
+        "grep",
+        "sed",
+        "gzip",
+        "bzip2",
+        "xz",
+        "find",
+        "tar",
+        "bash",
+        "python3",
+        "curl",
+        "git",
+        "vim",
+        "nano",
+        "gcc",
+        "objdump"
+      ],
+      "cluster_analysis": {
+        "num_clusters": 15,
+        "cluster_sizes": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "largest_cluster_size": 1,
+        "smallest_cluster_size": 1,
+        "mean_cluster_size": 1.0,
+        "singleton_clusters": 15,
+        "clusters": {
+          "cluster_10": [
+            "grep"
+          ],
+          "cluster_11": [
+            "sed"
+          ],
+          "cluster_6": [
+            "gzip"
+          ],
+          "cluster_9": [
+            "bzip2"
+          ],
+          "cluster_7": [
+            "xz"
+          ],
+          "cluster_12": [
+            "find"
+          ],
+          "cluster_13": [
+            "tar"
+          ],
+          "cluster_1": [
+            "bash"
+          ],
+          "cluster_4": [
+            "python3"
+          ],
+          "cluster_8": [
+            "curl"
+          ],
+          "cluster_2": [
+            "git"
+          ],
+          "cluster_3": [
+            "vim"
+          ],
+          "cluster_14": [
+            "nano"
+          ],
+          "cluster_5": [
+            "gcc"
+          ],
+          "cluster_15": [
+            "objdump"
+          ]
+        }
+      },
+      "cophenetic_correlation": 0.0,
+      "dendrogram_info": {
+        "max_distance": 1.1095622132081417,
+        "min_distance": 0.8833063209076175,
+        "height_range": 0.22625589230052423,
+        "num_merges": 14
+      },
+      "silhouette_score": null,
+      "category_purity": {
+        "mean_purity": 1.0,
+        "per_cluster_purity": {
+          "cluster_10": 1.0,
+          "cluster_11": 1.0,
+          "cluster_6": 1.0,
+          "cluster_9": 1.0,
+          "cluster_7": 1.0,
+          "cluster_12": 1.0,
+          "cluster_13": 1.0,
+          "cluster_1": 1.0,
+          "cluster_4": 1.0,
+          "cluster_8": 1.0,
+          "cluster_2": 1.0,
+          "cluster_3": 1.0,
+          "cluster_14": 1.0,
+          "cluster_5": 1.0,
+          "cluster_15": 1.0
+        },
+        "interpretation": "High category purity (100.00% mean)"
+      }
+    },
+    "method_comparison": {
+      "ward": {
+        "num_clusters": 15,
+        "cophenetic_correlation": 0.0,
+        "silhouette_score": null,
+        "category_purity": 1.0,
+        "largest_cluster_fraction": 0.06666666666666667
+      },
+      "complete": {
+        "num_clusters": 15,
+        "cophenetic_correlation": 0.0,
+        "silhouette_score": null,
+        "category_purity": 1.0,
+        "largest_cluster_fraction": 0.06666666666666667
+      },
+      "average": {
+        "num_clusters": 15,
+        "cophenetic_correlation": 0.0,
+        "silhouette_score": null,
+        "category_purity": 1.0,
+        "largest_cluster_fraction": 0.06666666666666667
+      },
+      "recommendation": {
+        "best_method": null,
+        "score": 0.0,
+        "reasoning": "None provides the best balance of clustering quality and structure"
+      }
+    }
+  },
+  "summary": {
+    "pairwise_consistency": {
+      "ncd_zlib_vs_ncd_lzma": 1.0
+    },
+    "mean_consistency": 1.0,
+    "interpretation": "Very high consistency - different distance metrics produce similar clusterings",
+    "matrix_count": 2
+  }
+}

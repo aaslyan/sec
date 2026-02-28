@@ -1,0 +1,207 @@
+{
+  "compression_statistics": {
+    "zlib": {
+      "mean": 0.2230400873971152,
+      "std": 0.016065789095156595,
+      "min": 0.19685393626071593,
+      "max": 0.26239037324087294,
+      "median": 0.2215525198838371
+    },
+    "lzma": {
+      "mean": 0.18516598427730077,
+      "std": 0.021184845252256456,
+      "min": 0.14392289161074756,
+      "max": 0.2273438031137399,
+      "median": 0.18602430874306908
+    },
+    "lz_complexity": {
+      "mean": 2029.5559258857802,
+      "std": 2710.812646905128,
+      "min": 77.80786860972609,
+      "max": 7497.302828791767,
+      "median": 629.5953256156427
+    }
+  },
+  "random_baseline": {
+    "zlib_ratio": 0.6719955046034589,
+    "lzma_ratio": 0.5599064419608766,
+    "lz_complexity": 87881.4,
+    "num_samples": 10
+  },
+  "size_correlation": {
+    "correlation": -0.2802389213012814,
+    "interpretation": "Weak correlation between size and compression ratio (r=-0.280)"
+  },
+  "per_binary_results": [
+    {
+      "binary_name": "grep",
+      "original_size": 65920,
+      "instruction_count": 32960,
+      "zlib_compressed_size": 14581,
+      "zlib_ratio": 0.22119235436893203,
+      "lzma_compressed_size": 12340,
+      "lzma_ratio": 0.18719660194174756,
+      "lz_complexity": 7250,
+      "normalized_lz_complexity": 483.0618969222763
+    },
+    {
+      "binary_name": "sed",
+      "original_size": 36956,
+      "instruction_count": 18478,
+      "zlib_compressed_size": 9031,
+      "zlib_ratio": 0.24437168524732114,
+      "lzma_compressed_size": 7772,
+      "lzma_ratio": 0.210304145470289,
+      "lz_complexity": 4378,
+      "normalized_lz_complexity": 308.88584441810593
+    },
+    {
+      "binary_name": "gzip",
+      "original_size": 29418,
+      "instruction_count": 14709,
+      "zlib_compressed_size": 7719,
+      "zlib_ratio": 0.26239037324087294,
+      "lzma_compressed_size": 6688,
+      "lzma_ratio": 0.2273438031137399,
+      "lz_complexity": 3801,
+      "normalized_lz_complexity": 274.5512141916769
+    },
+    {
+      "binary_name": "bzip2",
+      "original_size": 6516,
+      "instruction_count": 3258,
+      "zlib_compressed_size": 1511,
+      "zlib_ratio": 0.23189073050951503,
+      "lzma_compressed_size": 1436,
+      "lzma_ratio": 0.2203806015960712,
+      "lz_complexity": 908,
+      "normalized_lz_complexity": 77.80786860972609
+    },
+    {
+      "binary_name": "xz",
+      "original_size": 26012,
+      "instruction_count": 13006,
+      "zlib_compressed_size": 5701,
+      "zlib_ratio": 0.21916807627248963,
+      "lzma_compressed_size": 4976,
+      "lzma_ratio": 0.19129632477318162,
+      "lz_complexity": 3032,
+      "normalized_lz_complexity": 221.85003791517602
+    },
+    {
+      "binary_name": "find",
+      "original_size": 64028,
+      "instruction_count": 32014,
+      "zlib_compressed_size": 14565,
+      "zlib_ratio": 0.22747860311113888,
+      "lzma_compressed_size": 12296,
+      "lzma_ratio": 0.19204098207034423,
+      "lz_complexity": 7118,
+      "normalized_lz_complexity": 475.59818734759233
+    },
+    {
+      "binary_name": "tar",
+      "original_size": 147214,
+      "instruction_count": 73607,
+      "zlib_compressed_size": 34036,
+      "zlib_ratio": 0.23120083687692747,
+      "lzma_compressed_size": 27908,
+      "lzma_ratio": 0.18957436113413126,
+      "lz_complexity": 14995,
+      "normalized_lz_complexity": 927.4747896876895
+    },
+    {
+      "binary_name": "bash",
+      "original_size": 474506,
+      "instruction_count": 237253,
+      "zlib_compressed_size": 105128,
+      "zlib_ratio": 0.2215525198838371,
+      "lzma_compressed_size": 83076,
+      "lzma_ratio": 0.17507892418641705,
+      "lz_complexity": 44767,
+      "normalized_lz_complexity": 2507.103075423753
+    },
+    {
+      "binary_name": "python3",
+      "original_size": 1733456,
+      "instruction_count": 866728,
+      "zlib_compressed_size": 341839,
+      "zlib_ratio": 0.19720085193970888,
+      "lzma_compressed_size": 249484,
+      "lzma_ratio": 0.14392289161074756,
+      "lz_complexity": 137896,
+      "normalized_lz_complexity": 6990.84732598217
+    },
+    {
+      "binary_name": "curl",
+      "original_size": 54466,
+      "instruction_count": 27233,
+      "zlib_compressed_size": 11863,
+      "zlib_ratio": 0.2178056034957588,
+      "lzma_compressed_size": 10132,
+      "lzma_ratio": 0.18602430874306908,
+      "lz_complexity": 5861,
+      "normalized_lz_complexity": 397.81258602724165
+    },
+    {
+      "binary_name": "git",
+      "original_size": 1564540,
+      "instruction_count": 782270,
+      "zlib_compressed_size": 350836,
+      "zlib_ratio": 0.22424226929321078,
+      "lzma_compressed_size": 261456,
+      "lzma_ratio": 0.16711365641019085,
+      "lz_complexity": 146777,
+      "normalized_lz_complexity": 7497.302828791767
+    },
+    {
+      "binary_name": "vim",
+      "original_size": 1568900,
+      "instruction_count": 784450,
+      "zlib_compressed_size": 356742,
+      "zlib_ratio": 0.22738351711390145,
+      "lzma_compressed_size": 274460,
+      "lzma_ratio": 0.17493785454777233,
+      "lz_complexity": 146425,
+      "normalized_lz_complexity": 7477.78930522858
+    },
+    {
+      "binary_name": "nano",
+      "original_size": 98714,
+      "instruction_count": 49357,
+      "zlib_compressed_size": 21118,
+      "zlib_ratio": 0.21393115464878334,
+      "lzma_compressed_size": 17648,
+      "lzma_ratio": 0.1787790992159167,
+      "lz_complexity": 9816,
+      "normalized_lz_complexity": 629.5953256156427
+    },
+    {
+      "binary_name": "gcc",
+      "original_size": 253524,
+      "instruction_count": 126762,
+      "zlib_compressed_size": 52971,
+      "zlib_ratio": 0.2089387986936148,
+      "lzma_compressed_size": 43064,
+      "lzma_ratio": 0.16986163045707703,
+      "lz_complexity": 24615,
+      "normalized_lz_complexity": 1452.0613748508026
+    },
+    {
+      "binary_name": "objdump",
+      "original_size": 122248,
+      "instruction_count": 61124,
+      "zlib_compressed_size": 24065,
+      "zlib_ratio": 0.19685393626071593,
+      "lzma_compressed_size": 20004,
+      "lzma_ratio": 0.1636345788888162,
+      "lz_complexity": 11473,
+      "normalized_lz_complexity": 721.5972272745023
+    }
+  ],
+  "interpretation": {
+    "compressibility": "Very high compressibility - highly repetitive sequences",
+    "vs_random": "Much more compressible than random - strong structural patterns",
+    "structure_level": "Weakly structured - approaching random complexity"
+  }
+}

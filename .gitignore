@@ -1,0 +1,48 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# LaTeX build artefacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+
+# Large corpus data (regenerate with: python binary_dna.py corpus smoke)
+results/smoke/corpus/sequences/
+results/smoke/corpus/corpus.json
+results/smoke/corpus/corpus.pkl
+
+# Large intermediate result trees
+run_results/
+system_results/
+system_analysis/
+system_compiler_results/
+test_results/
+test_results2/
+test_results3/
+test_results4/
+test_results_small/
+test_full_analysis/
+test_clustering/
+test_clustering_synthetic/
+test_compiler_fingerprinting/
+test_manual_compiler/
+
+# Binary/pickle artefacts
+**/*.pkl
+
+# Generated HTML reports (reproducible via `python binary_dna.py report`)
+**/*.html
+
+# Editor/LaTeX backups
+*.bak
+*.swp
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

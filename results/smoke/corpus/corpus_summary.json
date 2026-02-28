@@ -1,0 +1,146 @@
+{
+  "num_binaries": 15,
+  "vocab_size": 293,
+  "total_instructions": 3123209,
+  "total_functions": 6013,
+  "seq_length": {
+    "min": 3258,
+    "max": 866728,
+    "mean": 208213.93333333332
+  },
+  "categories": [
+    "archives",
+    "compilers",
+    "compression",
+    "editors",
+    "interpreters",
+    "networking",
+    "shells",
+    "system",
+    "text_processing",
+    "version_control"
+  ],
+  "compilers": [],
+  "binaries": [
+    {
+      "name": "grep",
+      "category": "text_processing",
+      "compiler": null,
+      "file_size": 186824,
+      "function_count": 139,
+      "instruction_count": 32960
+    },
+    {
+      "name": "sed",
+      "category": "text_processing",
+      "compiler": null,
+      "file_size": 121560,
+      "function_count": 119,
+      "instruction_count": 18478
+    },
+    {
+      "name": "gzip",
+      "category": "compression",
+      "compiler": null,
+      "file_size": 101760,
+      "function_count": 71,
+      "instruction_count": 14709
+    },
+    {
+      "name": "bzip2",
+      "category": "compression",
+      "compiler": null,
+      "file_size": 39448,
+      "function_count": 52,
+      "instruction_count": 3258
+    },
+    {
+      "name": "xz",
+      "category": "compression",
+      "compiler": null,
+      "file_size": 105560,
+      "function_count": 119,
+      "instruction_count": 13006
+    },
+    {
+      "name": "find",
+      "category": "system",
+      "compiler": null,
+      "file_size": 233088,
+      "function_count": 145,
+      "instruction_count": 32014
+    },
+    {
+      "name": "tar",
+      "category": "archives",
+      "compiler": null,
+      "file_size": 448528,
+      "function_count": 228,
+      "instruction_count": 73607
+    },
+    {
+      "name": "bash",
+      "category": "shells",
+      "compiler": null,
+      "file_size": 1544408,
+      "function_count": 1902,
+      "instruction_count": 237253
+    },
+    {
+      "name": "python3",
+      "category": "interpreters",
+      "compiler": null,
+      "file_size": 6906704,
+      "function_count": 2015,
+      "instruction_count": 866728
+    },
+    {
+      "name": "curl",
+      "category": "networking",
+      "compiler": null,
+      "file_size": 317960,
+      "function_count": 138,
+      "instruction_count": 27233
+    },
+    {
+      "name": "git",
+      "category": "version_control",
+      "compiler": null,
+      "file_size": 4695000,
+      "function_count": 257,
+      "instruction_count": 782270
+    },
+    {
+      "name": "vim",
+      "category": "editors",
+      "compiler": null,
+      "file_size": 4357672,
+      "function_count": 335,
+      "instruction_count": 784450
+    },
+    {
+      "name": "nano",
+      "category": "editors",
+      "compiler": null,
+      "file_size": 291496,
+      "function_count": 184,
+      "instruction_count": 49357
+    },
+    {
+      "name": "gcc",
+      "category": "compilers",
+      "compiler": null,
+      "file_size": 1305304,
+      "function_count": 149,
+      "instruction_count": 126762
+    },
+    {
+      "name": "objdump",
+      "category": null,
+      "compiler": null,
+      "file_size": 415760,
+      "function_count": 160,
+      "instruction_count": 61124
+    }
+  ]
+}

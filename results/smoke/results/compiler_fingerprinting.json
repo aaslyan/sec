@@ -1,0 +1,1514 @@
+{
+  "corpus_summary": {
+    "total_binaries": 15,
+    "compiler_distribution": {
+      "gcc": 7,
+      "rustc": 8
+    },
+    "optimization_distribution": {
+      "O0": 8,
+      "O2": 7
+    },
+    "language_distribution": {},
+    "confidence_stats": {
+      "compiler_confidence_mean": 0.16,
+      "optimization_confidence_mean": 0.34,
+      "compiler_confidence_std": 0.14966629547095767,
+      "optimization_confidence_std": 0.14966629547095764
+    }
+  },
+  "per_binary_analysis": {
+    "grep": {
+      "binary_name": "grep",
+      "features": {
+        "ratio_movq": 0.000970873786407767,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.050910194174757284,
+        "ratio_je": 0.053549757281553395,
+        "ratio_jne": 0.03307038834951456,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.15194174757281553,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0018507281553398057,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 237.12230215827338,
+        "function_length_std": 2227.2919759639194,
+        "max_function_length": 25682,
+        "num_functions": 139,
+        "unique_instruction_ratio": 0.0034283980582524272
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 32960,
+        "unique_instructions": 113,
+        "has_functions": true,
+        "function_count": 139
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "sed": {
+      "binary_name": "sed",
+      "features": {
+        "ratio_movq": 0.0016235523325035177,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.05622902911570516,
+        "ratio_je": 0.04757008334235307,
+        "ratio_jne": 0.03306634917198831,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.1473103149691525,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0020023812100876718,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 155.27731092436974,
+        "function_length_std": 1192.7914996989682,
+        "max_function_length": 11796,
+        "num_functions": 119,
+        "unique_instruction_ratio": 0.004816538586427103
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 18478,
+        "unique_instructions": 89,
+        "has_functions": true,
+        "function_count": 119
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "gzip": {
+      "binary_name": "gzip",
+      "features": {
+        "ratio_movq": 0.0004079135223332653,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.05051329118226936,
+        "ratio_je": 0.04194710721327079,
+        "ratio_jne": 0.033788836766605476,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.13338772180297778,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.001495682915221973,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 207.16901408450704,
+        "function_length_std": 1676.2179258123094,
+        "max_function_length": 14229,
+        "num_functions": 71,
+        "unique_instruction_ratio": 0.006390645183221157
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 14709,
+        "unique_instructions": 94,
+        "has_functions": true,
+        "function_count": 71
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "bzip2": {
+      "binary_name": "bzip2",
+      "features": {
+        "ratio_movq": 0.0006138735420503376,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.06998158379373849,
+        "ratio_je": 0.047268262737875995,
+        "ratio_jne": 0.044812768569674644,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.17556783302639656,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.001534683855125844,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 62.65384615384615,
+        "function_length_std": 399.6822721100515,
+        "max_function_length": 2911,
+        "num_functions": 52,
+        "unique_instruction_ratio": 0.016574585635359115
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 3258,
+        "unique_instructions": 54,
+        "has_functions": true,
+        "function_count": 52
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "xz": {
+      "binary_name": "xz",
+      "features": {
+        "ratio_movq": 0.00038443795171459326,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.05074580962632631,
+        "ratio_je": 0.03529140396739966,
+        "ratio_jne": 0.023758265415961863,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.11056435491311702,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0036137167461171766,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 109.29411764705883,
+        "function_length_std": 1112.8977117669683,
+        "max_function_length": 12190,
+        "num_functions": 119,
+        "unique_instruction_ratio": 0.006919883130862679
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 13006,
+        "unique_instructions": 90,
+        "has_functions": true,
+        "function_count": 119
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "find": {
+      "binary_name": "find",
+      "features": {
+        "ratio_movq": 0.002811270069344662,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.04757293684013244,
+        "ratio_je": 0.04697944649215968,
+        "ratio_jne": 0.03386018616855126,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.13216092959330292,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0023114887236833884,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 220.78620689655173,
+        "function_length_std": 2567.0135343092743,
+        "max_function_length": 31020,
+        "num_functions": 145,
+        "unique_instruction_ratio": 0.0043106141063284815
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 32014,
+        "unique_instructions": 138,
+        "has_functions": true,
+        "function_count": 145
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "tar": {
+      "binary_name": "tar",
+      "features": {
+        "ratio_movq": 0.0018476503593408235,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.04680261388183189,
+        "ratio_je": 0.053160704824269434,
+        "ratio_jne": 0.03640958061053976,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 2.717132881383564e-05,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.14046218430312335,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0014944230847609603,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 2.717132881383564e-05,
+        "avg_function_length": 322.8377192982456,
+        "function_length_std": 3835.80749807149,
+        "max_function_length": 57505,
+        "num_functions": 228,
+        "unique_instruction_ratio": 0.0017797220373062346
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 73607,
+        "unique_instructions": 131,
+        "has_functions": true,
+        "function_count": 228
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "bash": {
+      "binary_name": "bash",
+      "features": {
+        "ratio_movq": 0.000729179399206754,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.047135336539474736,
+        "ratio_je": 0.06531424260177954,
+        "ratio_jne": 0.03569185637273291,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0004172760723784315,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.15786944738317324,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0022423320253063188,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0004172760723784315,
+        "avg_function_length": 124.73869610935857,
+        "function_length_std": 345.37723408372784,
+        "max_function_length": 4978,
+        "num_functions": 1902,
+        "unique_instruction_ratio": 0.00047206990006448815
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 237253,
+        "unique_instructions": 112,
+        "has_functions": true,
+        "function_count": 1902
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "python3": {
+      "binary_name": "python3",
+      "features": {
+        "ratio_movq": 0.00219561384886608,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.061889081695756916,
+        "ratio_je": 0.05712980312162524,
+        "ratio_jne": 0.04270543930737209,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 2.192152555357621e-05,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.16973721859683777,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0019971663543810747,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 2.192152555357621e-05,
+        "avg_function_length": 430.1379652605459,
+        "function_length_std": 1280.2888821123051,
+        "max_function_length": 30670,
+        "num_functions": 2015,
+        "unique_instruction_ratio": 0.0002815185386880313
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 866728,
+        "unique_instructions": 244,
+        "has_functions": true,
+        "function_count": 2015
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "curl": {
+      "binary_name": "curl",
+      "features": {
+        "ratio_movq": 0.0012117651378841846,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.05842176770829508,
+        "ratio_je": 0.05768736459442588,
+        "ratio_jne": 0.038519443322439686,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.0,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.15998971835640582,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0018727279403664672,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.0,
+        "avg_function_length": 197.34057971014494,
+        "function_length_std": 2229.1903888637603,
+        "max_function_length": 26284,
+        "num_functions": 138,
+        "unique_instruction_ratio": 0.0038556163478133147
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.0
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 27233,
+        "unique_instructions": 105,
+        "has_functions": true,
+        "function_count": 138
+      },
+      "predicted_compiler": "gcc",
+      "compiler_confidence": 0.0,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "git": {
+      "binary_name": "git",
+      "features": {
+        "ratio_movq": 0.005737149577511601,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.03416339626983011,
+        "ratio_je": 0.04744525547445255,
+        "ratio_jne": 0.035414882329630436,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 2.0453296176511948e-05,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.12072558068186176,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0020721745688828666,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 2.0453296176511948e-05,
+        "avg_function_length": 3043.852140077821,
+        "function_length_std": 45138.66770515094,
+        "max_function_length": 722985,
+        "num_functions": 257,
+        "unique_instruction_ratio": 0.00020325463075408746
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 782270,
+        "unique_instructions": 159,
+        "has_functions": true,
+        "function_count": 257
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "vim": {
+      "binary_name": "vim",
+      "features": {
+        "ratio_movq": 0.0011498502135254,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.04898208936197336,
+        "ratio_je": 0.0668251641277328,
+        "ratio_jne": 0.04161259481165148,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 1.4022563579578048e-05,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.1723704506342023,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.002990630377971827,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 1.4022563579578048e-05,
+        "avg_function_length": 2341.6417910447763,
+        "function_length_std": 42668.18061108003,
+        "max_function_length": 782130,
+        "num_functions": 335,
+        "unique_instruction_ratio": 0.0002269105742877175
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 784450,
+        "unique_instructions": 178,
+        "has_functions": true,
+        "function_count": 335
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "nano": {
+      "binary_name": "nano",
+      "features": {
+        "ratio_movq": 0.0008104220272707012,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.05109710881941771,
+        "ratio_je": 0.052555868468504977,
+        "ratio_jne": 0.03482788662195838,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 0.00010130275340883765,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.1440727758980489,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.001945012865449683,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 0.00010130275340883765,
+        "avg_function_length": 268.2445652173913,
+        "function_length_std": 3535.764714957102,
+        "max_function_length": 48094,
+        "num_functions": 184,
+        "unique_instruction_ratio": 0.0018031890106773101
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 49357,
+        "unique_instructions": 89,
+        "has_functions": true,
+        "function_count": 184
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    },
+    "gcc": {
+      "binary_name": "gcc",
+      "features": {
+        "ratio_movq": 0.002855745412663101,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.061721967151038955,
+        "ratio_je": 0.04281251479149903,
+        "ratio_jne": 0.03185497231031382,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 9.466559378993705e-05,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.14086240355942634,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0020747542638961205,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 9.466559378993705e-05,
+        "avg_function_length": 850.751677852349,
+        "function_length_std": 6920.066332950145,
+        "max_function_length": 65022,
+        "num_functions": 149,
+        "unique_instruction_ratio": 0.0010807655291017813
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.5,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 126762,
+        "unique_instructions": 137,
+        "has_functions": true,
+        "function_count": 149
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O2",
+      "optimization_confidence": 0.5
+    },
+    "objdump": {
+      "binary_name": "objdump",
+      "features": {
+        "ratio_movq": 0.0007852889208821412,
+        "ratio_movl": 0.0,
+        "ratio_pushq": 0.0,
+        "ratio_popq": 0.0,
+        "ratio_leaq": 0.0,
+        "ratio_addq": 0.0,
+        "ratio_subq": 0.0,
+        "ratio_testq": 0.0,
+        "ratio_cmpq": 0.0,
+        "ratio_jmp": 0.05757149401217198,
+        "ratio_je": 0.03900268307047968,
+        "ratio_jne": 0.028155879850795106,
+        "ratio_callq": 0.0,
+        "ratio_retq": 0.0,
+        "ratio_vmov": 0.0,
+        "ratio_vadd": 0.0,
+        "ratio_vmul": 0.0,
+        "ratio_vxor": 0.0,
+        "ratio_ud2": 1.6360185851711275e-05,
+        "prologue_pushq_movq": 0.0,
+        "prologue_endbr64_pushq": 0.0,
+        "prologue_pushq_leaq": 0.0,
+        "jump_ratio": 0.12790393298867875,
+        "call_ratio": 0.0,
+        "ret_ratio": 0.0,
+        "vectorization_ratio": 0.0,
+        "lea_ratio": 0.0,
+        "cmov_ratio": 0.0012760944964334796,
+        "push_pop_ratio": 0.0,
+        "error_handling_ratio": 1.6360185851711275e-05,
+        "avg_function_length": 382.025,
+        "function_length_std": 4254.279051657872,
+        "max_function_length": 53654,
+        "num_functions": 160,
+        "unique_instruction_ratio": 0.001554217655912571
+      },
+      "confidence_scores": {
+        "gcc": 0.0,
+        "clang": 0.0,
+        "rustc": 0.3
+      },
+      "optimization_scores": {
+        "O0": 0.2,
+        "O2": 0.2,
+        "O3": 0.0
+      },
+      "analysis_details": {
+        "total_instructions": 61124,
+        "unique_instructions": 95,
+        "has_functions": true,
+        "function_count": 160
+      },
+      "predicted_compiler": "rustc",
+      "compiler_confidence": 0.3,
+      "predicted_optimization": "O0",
+      "optimization_confidence": 0.2
+    }
+  },
+  "aggregate_features": {
+    "gcc": {
+      "ratio_movq": {
+        "mean": 0.0011462409060340468,
+        "std": 0.0007967865318251798,
+        "min": 0.00038443795171459326,
+        "max": 0.002811270069344662,
+        "count": 7
+      },
+      "ratio_movl": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_pushq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_popq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_leaq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_addq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_subq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_testq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_cmpq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_jmp": {
+        "mean": 0.054910658920174875,
+        "std": 0.007048074282132374,
+        "min": 0.04757293684013244,
+        "max": 0.06998158379373849,
+        "count": 7
+      },
+      "ratio_je": {
+        "mean": 0.047184775089862636,
+        "std": 0.0067601819345114375,
+        "min": 0.03529140396739966,
+        "max": 0.05768736459442588,
+        "count": 7
+      },
+      "ratio_jne": {
+        "mean": 0.034410891109247964,
+        "std": 0.005890096510952278,
+        "min": 0.023758265415961863,
+        "max": 0.044812768569674644,
+        "count": 7
+      },
+      "ratio_callq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_retq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_vmov": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_vadd": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_vmul": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_vxor": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ratio_ud2": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "prologue_pushq_movq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "prologue_endbr64_pushq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "prologue_pushq_leaq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "jump_ratio": {
+        "mean": 0.14441751717630974,
+        "std": 0.01962409186127778,
+        "min": 0.11056435491311702,
+        "max": 0.17556783302639656,
+        "count": 7
+      },
+      "call_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "ret_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "vectorization_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "lea_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "cmov_ratio": {
+        "mean": 0.0020973442208489035,
+        "std": 0.0006701936231913887,
+        "min": 0.001495682915221973,
+        "max": 0.0036137167461171766,
+        "count": 7
+      },
+      "push_pop_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "error_handling_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 7
+      },
+      "avg_function_length": {
+        "mean": 169.94905393925026,
+        "std": 59.328173827314345,
+        "min": 62.65384615384615,
+        "max": 237.12230215827338,
+        "count": 7
+      },
+      "function_length_std": {
+        "mean": 1629.2979012178932,
+        "std": 713.9569411781716,
+        "min": 399.6822721100515,
+        "max": 2567.0135343092743,
+        "count": 7
+      },
+      "max_function_length": {
+        "mean": 17730.285714285714,
+        "std": 9341.09994615632,
+        "min": 2911,
+        "max": 31020,
+        "count": 7
+      },
+      "num_functions": {
+        "mean": 111.85714285714286,
+        "std": 33.53645594798324,
+        "min": 52,
+        "max": 145,
+        "count": 7
+      },
+      "unique_instruction_ratio": {
+        "mean": 0.006613754435466325,
+        "std": 0.004236742546773717,
+        "min": 0.0034283980582524272,
+        "max": 0.016574585635359115,
+        "count": 7
+      }
+    },
+    "rustc": {
+      "ratio_movq": {
+        "mean": 0.002013862469908325,
+        "std": 0.001580620267492651,
+        "min": 0.000729179399206754,
+        "max": 0.005737149577511601,
+        "count": 8
+      },
+      "ratio_movl": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_pushq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_popq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_leaq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_addq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_subq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_testq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_cmpq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_jmp": {
+        "mean": 0.05117038596643696,
+        "std": 0.008635618498529214,
+        "min": 0.03416339626983011,
+        "max": 0.061889081695756916,
+        "count": 8
+      },
+      "ratio_je": {
+        "mean": 0.05303077956004291,
+        "std": 0.009291201688209249,
+        "min": 0.03900268307047968,
+        "max": 0.0668251641277328,
+        "count": 8
+      },
+      "ratio_jne": {
+        "mean": 0.03583413652687425,
+        "std": 0.004429086361556901,
+        "min": 0.028155879850795106,
+        "max": 0.04270543930737209,
+        "count": 8
+      },
+      "ratio_callq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_retq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_vmov": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_vadd": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_vmul": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_vxor": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ratio_ud2": {
+        "mean": 8.914666494405242e-05,
+        "std": 0.0001283878790020896,
+        "min": 1.4022563579578048e-05,
+        "max": 0.0004172760723784315,
+        "count": 8
+      },
+      "prologue_pushq_movq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "prologue_endbr64_pushq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "prologue_pushq_leaq": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "jump_ratio": {
+        "mean": 0.14675049925566908,
+        "std": 0.017400698287892143,
+        "min": 0.12072558068186176,
+        "max": 0.1723704506342023,
+        "count": 8
+      },
+      "call_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "ret_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "vectorization_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "lea_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "cmov_ratio": {
+        "mean": 0.002011573504635291,
+        "std": 0.00047860186564192765,
+        "min": 0.0012760944964334796,
+        "max": 0.002990630377971827,
+        "count": 8
+      },
+      "push_pop_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "count": 8
+      },
+      "error_handling_ratio": {
+        "mean": 8.914666494405242e-05,
+        "std": 0.0001283878790020896,
+        "min": 1.4022563579578048e-05,
+        "max": 0.0004172760723784315,
+        "count": 8
+      },
+      "avg_function_length": {
+        "mean": 970.5286943575609,
+        "std": 1028.3113478466819,
+        "min": 124.73869610935857,
+        "max": 3043.852140077821,
+        "count": 8
+      },
+      "function_length_std": {
+        "mean": 13497.304003757952,
+        "std": 17662.15912811902,
+        "min": 345.37723408372784,
+        "max": 45138.66770515094,
+        "count": 8
+      },
+      "max_function_length": {
+        "mean": 220629.75,
+        "std": 307958.32792146975,
+        "min": 4978,
+        "max": 782130,
+        "count": 8
+      },
+      "num_functions": {
+        "mean": 653.75,
+        "std": 755.8630414962753,
+        "min": 149,
+        "max": 2015,
+        "count": 8
+      },
+      "unique_instruction_ratio": {
+        "mean": 0.0009252059845990277,
+        "std": 0.0006660895594307817,
+        "min": 0.00020325463075408746,
+        "max": 0.0018031890106773101,
+        "count": 8
+      }
+    }
+  },
+  "pattern_analysis": {
+    "instruction_stats": {
+      "total_instructions": 3123209,
+      "unique_instructions": 293,
+      "diversity_ratio": 9.381376654588278e-05,
+      "top_10_instructions": [
+        [
+          "mov",
+          1053373
+        ],
+        [
+          "call",
+          228517
+        ],
+        [
+          "test",
+          193299
+        ],
+        [
+          "je",
+          175815
+        ],
+        [
+          "lea",
+          161880
+        ],
+        [
+          "jmp",
+          154745
+        ],
+        [
+          "cmp",
+          153920
+        ],
+        [
+          "jne",
+          120773
+        ],
+        [
+          "xor",
+          118117
+        ],
+        [
+          "pop",
+          92275
+        ]
+      ]
+    },
+    "common_sequences": {
+      "total_bigrams": 3123194,
+      "unique_bigrams": 5757,
+      "top_10_bigrams": [
+        [
+          "mov mov",
+          404921
+        ],
+        [
+          "mov call",
+          142849
+        ],
+        [
+          "call mov",
+          114392
+        ],
+        [
+          "mov test",
+          103194
+        ],
+        [
+          "test je",
+          100789
+        ],
+        [
+          "je mov",
+          90996
+        ],
+        [
+          "pop pop",
+          66226
+        ],
+        [
+          "mov lea",
+          65924
+        ],
+        [
+          "lea mov",
+          63258
+        ],
+        [
+          "mov jmp",
+          60097
+        ]
+      ]
+    },
+    "compiler_signatures": {}
+  }
+}

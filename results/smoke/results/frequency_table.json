@@ -1,0 +1,1760 @@
+[
+  {
+    "opcode": "mov",
+    "count": 1053373,
+    "rank": 1,
+    "relative_frequency": 0.33727265770558423
+  },
+  {
+    "opcode": "call",
+    "count": 228517,
+    "rank": 2,
+    "relative_frequency": 0.07316737368520647
+  },
+  {
+    "opcode": "test",
+    "count": 193299,
+    "rank": 3,
+    "relative_frequency": 0.061891151056493496
+  },
+  {
+    "opcode": "je",
+    "count": 175815,
+    "rank": 4,
+    "relative_frequency": 0.05629306268008321
+  },
+  {
+    "opcode": "lea",
+    "count": 161880,
+    "rank": 5,
+    "relative_frequency": 0.05183130555784131
+  },
+  {
+    "opcode": "jmp",
+    "count": 154745,
+    "rank": 6,
+    "relative_frequency": 0.04954679625987246
+  },
+  {
+    "opcode": "cmp",
+    "count": 153920,
+    "rank": 7,
+    "relative_frequency": 0.049282644869427565
+  },
+  {
+    "opcode": "jne",
+    "count": 120773,
+    "rank": 8,
+    "relative_frequency": 0.03866952227660717
+  },
+  {
+    "opcode": "xor",
+    "count": 118117,
+    "rank": 9,
+    "relative_frequency": 0.0378191148911264
+  },
+  {
+    "opcode": "pop",
+    "count": 92275,
+    "rank": 10,
+    "relative_frequency": 0.029544932791881685
+  },
+  {
+    "opcode": "push",
+    "count": 80006,
+    "rank": 11,
+    "relative_frequency": 0.025616601386586682
+  },
+  {
+    "opcode": "add",
+    "count": 79911,
+    "rank": 12,
+    "relative_frequency": 0.025586183953747572
+  },
+  {
+    "opcode": "nop",
+    "count": 71806,
+    "rank": 13,
+    "relative_frequency": 0.022991096657316242
+  },
+  {
+    "opcode": "sub",
+    "count": 58077,
+    "rank": 14,
+    "relative_frequency": 0.01859529733680967
+  },
+  {
+    "opcode": "movzx",
+    "count": 29720,
+    "rank": 15,
+    "relative_frequency": 0.009515853726087495
+  },
+  {
+    "opcode": "ret",
+    "count": 28041,
+    "rank": 16,
+    "relative_frequency": 0.008978265623594195
+  },
+  {
+    "opcode": "endbr64",
+    "count": 25619,
+    "rank": 17,
+    "relative_frequency": 0.008202781177948705
+  },
+  {
+    "opcode": "and",
+    "count": 19895,
+    "rank": 18,
+    "relative_frequency": 0.0063700508035165115
+  },
+  {
+    "opcode": "movsxd",
+    "count": 19173,
+    "rank": 19,
+    "relative_frequency": 0.006138878313939285
+  },
+  {
+    "opcode": "js",
+    "count": 15764,
+    "rank": 20,
+    "relative_frequency": 0.005047372750270635
+  },
+  {
+    "opcode": "data16",
+    "count": 15028,
+    "rank": 21,
+    "relative_frequency": 0.0048117176916434344
+  },
+  {
+    "opcode": "movaps",
+    "count": 13121,
+    "rank": 22,
+    "relative_frequency": 0.004201127750336273
+  },
+  {
+    "opcode": "or",
+    "count": 12922,
+    "rank": 23,
+    "relative_frequency": 0.004137411233125929
+  },
+  {
+    "opcode": "jle",
+    "count": 11854,
+    "rank": 24,
+    "relative_frequency": 0.0037954552513136328
+  },
+  {
+    "opcode": "xchg",
+    "count": 10740,
+    "rank": 25,
+    "relative_frequency": 0.0034387708283371366
+  },
+  {
+    "opcode": "shl",
+    "count": 10420,
+    "rank": 26,
+    "relative_frequency": 0.0033363121071948755
+  },
+  {
+    "opcode": "movups",
+    "count": 8836,
+    "rank": 27,
+    "relative_frequency": 0.0028291414375406832
+  },
+  {
+    "opcode": "jg",
+    "count": 8789,
+    "rank": 28,
+    "relative_frequency": 0.0028140928128729138
+  },
+  {
+    "opcode": "movq",
+    "count": 8250,
+    "rank": 29,
+    "relative_frequency": 0.002641513904448918
+  },
+  {
+    "opcode": "shr",
+    "count": 7129,
+    "rank": 30,
+    "relative_frequency": 0.0022825881969474344
+  },
+  {
+    "opcode": "jae",
+    "count": 6931,
+    "rank": 31,
+    "relative_frequency": 0.0022191918632406605
+  },
+  {
+    "opcode": "ja",
+    "count": 6447,
+    "rank": 32,
+    "relative_frequency": 0.0020642230475129905
+  },
+  {
+    "opcode": "leave",
+    "count": 6332,
+    "rank": 33,
+    "relative_frequency": 0.0020274019446024907
+  },
+  {
+    "opcode": "cs",
+    "count": 6272,
+    "rank": 34,
+    "relative_frequency": 0.0020081909343883167
+  },
+  {
+    "opcode": "jb",
+    "count": 6042,
+    "rank": 35,
+    "relative_frequency": 0.0019345487285673164
+  },
+  {
+    "opcode": "pxor",
+    "count": 5275,
+    "rank": 36,
+    "relative_frequency": 0.0016889679813294595
+  },
+  {
+    "opcode": "ff",
+    "count": 5270,
+    "rank": 37,
+    "relative_frequency": 0.0016873670638116118
+  },
+  {
+    "opcode": "movdqa",
+    "count": 5155,
+    "rank": 38,
+    "relative_frequency": 0.0016505459609011117
+  },
+  {
+    "opcode": "imul",
+    "count": 4696,
+    "rank": 39,
+    "relative_frequency": 0.001503581732762681
+  },
+  {
+    "opcode": "jns",
+    "count": 4318,
+    "rank": 40,
+    "relative_frequency": 0.001382552368413385
+  },
+  {
+    "opcode": "sete",
+    "count": 4048,
+    "rank": 41,
+    "relative_frequency": 0.0012961028224496023
+  },
+  {
+    "opcode": "jbe",
+    "count": 4048,
+    "rank": 42,
+    "relative_frequency": 0.0012961028224496023
+  },
+  {
+    "opcode": "movabs",
+    "count": 3731,
+    "rank": 43,
+    "relative_frequency": 0.00119460465181805
+  },
+  {
+    "opcode": "movdqu",
+    "count": 3458,
+    "rank": 44,
+    "relative_frequency": 0.0011071945553435584
+  },
+  {
+    "opcode": "punpcklqdq",
+    "count": 3335,
+    "rank": 45,
+    "relative_frequency": 0.0010678119844045018
+  },
+  {
+    "opcode": "movsd",
+    "count": 3062,
+    "rank": 46,
+    "relative_frequency": 0.0009804018879300104
+  },
+  {
+    "opcode": "jge",
+    "count": 2972,
+    "rank": 47,
+    "relative_frequency": 0.0009515853726087495
+  },
+  {
+    "opcode": "cdqe",
+    "count": 2854,
+    "rank": 48,
+    "relative_frequency": 0.0009138037191875407
+  },
+  {
+    "opcode": "cmove",
+    "count": 2812,
+    "rank": 49,
+    "relative_frequency": 0.000900356012037619
+  },
+  {
+    "opcode": "setne",
+    "count": 2725,
+    "rank": 50,
+    "relative_frequency": 0.0008725000472270668
+  },
+  {
+    "opcode": "jl",
+    "count": 2693,
+    "rank": 51,
+    "relative_frequency": 0.0008622541751128407
+  },
+  {
+    "opcode": "cmovne",
+    "count": 2571,
+    "rank": 52,
+    "relative_frequency": 0.0008231917876773536
+  },
+  {
+    "opcode": "movsx",
+    "count": 2177,
+    "rank": 53,
+    "relative_frequency": 0.0006970394872709447
+  },
+  {
+    "opcode": "rep",
+    "count": 2116,
+    "rank": 54,
+    "relative_frequency": 0.0006775082935532012
+  },
+  {
+    "opcode": "rol",
+    "count": 2108,
+    "rank": 55,
+    "relative_frequency": 0.0006749468255246447
+  },
+  {
+    "opcode": "ror",
+    "count": 1971,
+    "rank": 56,
+    "relative_frequency": 0.0006310816855356142
+  },
+  {
+    "opcode": "sar",
+    "count": 1927,
+    "rank": 57,
+    "relative_frequency": 0.0006169936113785533
+  },
+  {
+    "opcode": "movd",
+    "count": 1907,
+    "rank": 58,
+    "relative_frequency": 0.0006105899413071619
+  },
+  {
+    "opcode": "inc",
+    "count": 1820,
+    "rank": 59,
+    "relative_frequency": 0.0005827339764966097
+  },
+  {
+    "opcode": "dec",
+    "count": 1296,
+    "rank": 60,
+    "relative_frequency": 0.0004149578206261573
+  },
+  {
+    "opcode": "neg",
+    "count": 1216,
+    "rank": 61,
+    "relative_frequency": 0.000389343140340592
+  },
+  {
+    "opcode": "not",
+    "count": 1056,
+    "rank": 62,
+    "relative_frequency": 0.0003381137797694615
+  },
+  {
+    "opcode": "bt",
+    "count": 978,
+    "rank": 63,
+    "relative_frequency": 0.00031313946649103535
+  },
+  {
+    "opcode": "sbb",
+    "count": 970,
+    "rank": 64,
+    "relative_frequency": 0.0003105779984624788
+  },
+  {
+    "opcode": "notrack",
+    "count": 877,
+    "rank": 65,
+    "relative_frequency": 0.0002808009326305092
+  },
+  {
+    "opcode": "cmovb",
+    "count": 768,
+    "rank": 66,
+    "relative_frequency": 0.00024590093074142654
+  },
+  {
+    "opcode": "punpckldq",
+    "count": 707,
+    "rank": 67,
+    "relative_frequency": 0.00022636973702368302
+  },
+  {
+    "opcode": "movhps",
+    "count": 704,
+    "rank": 68,
+    "relative_frequency": 0.00022540918651297432
+  },
+  {
+    "opcode": "cmovs",
+    "count": 605,
+    "rank": 69,
+    "relative_frequency": 0.0001937110196595873
+  },
+  {
+    "opcode": "idiv",
+    "count": 598,
+    "rank": 70,
+    "relative_frequency": 0.00019146973513460035
+  },
+  {
+    "opcode": "cmovle",
+    "count": 536,
+    "rank": 71,
+    "relative_frequency": 0.00017161835791328726
+  },
+  {
+    "opcode": "movapd",
+    "count": 514,
+    "rank": 72,
+    "relative_frequency": 0.0001645743208347568
+  },
+  {
+    "opcode": "cmovae",
+    "count": 513,
+    "rank": 73,
+    "relative_frequency": 0.00016425413733118724
+  },
+  {
+    "opcode": "cmovg",
+    "count": 509,
+    "rank": 74,
+    "relative_frequency": 0.000162973403316909
+  },
+  {
+    "opcode": "ucomisd",
+    "count": 500,
+    "rank": 75,
+    "relative_frequency": 0.0001600917517847829
+  },
+  {
+    "opcode": "cvtsi2sd",
+    "count": 461,
+    "rank": 76,
+    "relative_frequency": 0.00014760459514556983
+  },
+  {
+    "opcode": "lock",
+    "count": 460,
+    "rank": 77,
+    "relative_frequency": 0.00014728441164200027
+  },
+  {
+    "opcode": "bswap",
+    "count": 456,
+    "rank": 78,
+    "relative_frequency": 0.000146003677627722
+  },
+  {
+    "opcode": "setg",
+    "count": 454,
+    "rank": 79,
+    "relative_frequency": 0.00014536331062058288
+  },
+  {
+    "opcode": "adc",
+    "count": 448,
+    "rank": 80,
+    "relative_frequency": 0.00014344220959916547
+  },
+  {
+    "opcode": "pshufd",
+    "count": 429,
+    "rank": 81,
+    "relative_frequency": 0.00013735872303134372
+  },
+  {
+    "opcode": "div",
+    "count": 404,
+    "rank": 82,
+    "relative_frequency": 0.0001293541354421046
+  },
+  {
+    "opcode": "addsd",
+    "count": 374,
+    "rank": 83,
+    "relative_frequency": 0.0001197486303350176
+  },
+  {
+    "opcode": "cmovl",
+    "count": 373,
+    "rank": 84,
+    "relative_frequency": 0.00011942844683144804
+  },
+  {
+    "opcode": "cqo",
+    "count": 343,
+    "rank": 85,
+    "relative_frequency": 0.00010982294172436107
+  },
+  {
+    "opcode": "paddq",
+    "count": 342,
+    "rank": 86,
+    "relative_frequency": 0.0001095027582207915
+  },
+  {
+    "opcode": "mulsd",
+    "count": 333,
+    "rank": 87,
+    "relative_frequency": 0.00010662110668866541
+  },
+  {
+    "opcode": "cmova",
+    "count": 304,
+    "rank": 88,
+    "relative_frequency": 9.7335785085148e-05
+  },
+  {
+    "opcode": "por",
+    "count": 296,
+    "rank": 89,
+    "relative_frequency": 9.477431705659147e-05
+  },
+  {
+    "opcode": "cmovns",
+    "count": 293,
+    "rank": 90,
+    "relative_frequency": 9.381376654588278e-05
+  },
+  {
+    "opcode": "jp",
+    "count": 290,
+    "rank": 91,
+    "relative_frequency": 9.285321603517408e-05
+  },
+  {
+    "opcode": "comisd",
+    "count": 277,
+    "rank": 92,
+    "relative_frequency": 8.869083048876972e-05
+  },
+  {
+    "opcode": "cmovge",
+    "count": 273,
+    "rank": 93,
+    "relative_frequency": 8.741009647449146e-05
+  },
+  {
+    "opcode": "cmovbe",
+    "count": 266,
+    "rank": 94,
+    "relative_frequency": 8.51688119495045e-05
+  },
+  {
+    "opcode": "cdq",
+    "count": 266,
+    "rank": 95,
+    "relative_frequency": 8.51688119495045e-05
+  },
+  {
+    "opcode": "movss",
+    "count": 260,
+    "rank": 96,
+    "relative_frequency": 8.324771092808711e-05
+  },
+  {
+    "opcode": "punpcklwd",
+    "count": 250,
+    "rank": 97,
+    "relative_frequency": 8.004587589239145e-05
+  },
+  {
+    "opcode": "pand",
+    "count": 250,
+    "rank": 98,
+    "relative_frequency": 8.004587589239145e-05
+  },
+  {
+    "opcode": "jo",
+    "count": 242,
+    "rank": 99,
+    "relative_frequency": 7.748440786383492e-05
+  },
+  {
+    "opcode": "mul",
+    "count": 216,
+    "rank": 100,
+    "relative_frequency": 6.915963677102621e-05
+  },
+  {
+    "opcode": "setb",
+    "count": 205,
+    "rank": 101,
+    "relative_frequency": 6.563761823176099e-05
+  },
+  {
+    "opcode": "divsd",
+    "count": 185,
+    "rank": 102,
+    "relative_frequency": 5.923394816036967e-05
+  },
+  {
+    "opcode": "psrlq",
+    "count": 184,
+    "rank": 103,
+    "relative_frequency": 5.891376465680011e-05
+  },
+  {
+    "opcode": "setl",
+    "count": 183,
+    "rank": 104,
+    "relative_frequency": 5.859358115323054e-05
+  },
+  {
+    "opcode": "setle",
+    "count": 179,
+    "rank": 105,
+    "relative_frequency": 5.731284713895228e-05
+  },
+  {
+    "opcode": "punpckhwd",
+    "count": 170,
+    "rank": 106,
+    "relative_frequency": 5.443119560682618e-05
+  },
+  {
+    "opcode": "ud2",
+    "count": 165,
+    "rank": 107,
+    "relative_frequency": 5.283027808897835e-05
+  },
+  {
+    "opcode": "andpd",
+    "count": 159,
+    "rank": 108,
+    "relative_frequency": 5.090917706756096e-05
+  },
+  {
+    "opcode": "subsd",
+    "count": 158,
+    "rank": 109,
+    "relative_frequency": 5.058899356399139e-05
+  },
+  {
+    "opcode": "psrldq",
+    "count": 154,
+    "rank": 110,
+    "relative_frequency": 4.930825954971313e-05
+  },
+  {
+    "opcode": "psllq",
+    "count": 154,
+    "rank": 111,
+    "relative_frequency": 4.930825954971313e-05
+  },
+  {
+    "opcode": "paddd",
+    "count": 150,
+    "rank": 112,
+    "relative_frequency": 4.802752553543487e-05
+  },
+  {
+    "opcode": "movhlps",
+    "count": 149,
+    "rank": 113,
+    "relative_frequency": 4.77073420318653e-05
+  },
+  {
+    "opcode": "xorps",
+    "count": 149,
+    "rank": 114,
+    "relative_frequency": 4.77073420318653e-05
+  },
+  {
+    "opcode": "comiss",
+    "count": 127,
+    "rank": 115,
+    "relative_frequency": 4.0663304953334855e-05
+  },
+  {
+    "opcode": "pcmpeqd",
+    "count": 112,
+    "rank": 116,
+    "relative_frequency": 3.586055239979137e-05
+  },
+  {
+    "opcode": "btr",
+    "count": 112,
+    "rank": 117,
+    "relative_frequency": 3.586055239979137e-05
+  },
+  {
+    "opcode": "setbe",
+    "count": 99,
+    "rank": 118,
+    "relative_frequency": 3.169816685338701e-05
+  },
+  {
+    "opcode": "cvttsd2si",
+    "count": 98,
+    "rank": 119,
+    "relative_frequency": 3.137798334981745e-05
+  },
+  {
+    "opcode": "cc",
+    "count": 96,
+    "rank": 120,
+    "relative_frequency": 3.073761634267832e-05
+  },
+  {
+    "opcode": "seto",
+    "count": 93,
+    "rank": 121,
+    "relative_frequency": 2.977706583196962e-05
+  },
+  {
+    "opcode": "cvtsi2ss",
+    "count": 92,
+    "rank": 122,
+    "relative_frequency": 2.9456882328400054e-05
+  },
+  {
+    "opcode": "psubq",
+    "count": 82,
+    "rank": 123,
+    "relative_frequency": 2.6255047292704395e-05
+  },
+  {
+    "opcode": "bts",
+    "count": 82,
+    "rank": 124,
+    "relative_frequency": 2.6255047292704395e-05
+  },
+  {
+    "opcode": "aa",
+    "count": 81,
+    "rank": 125,
+    "relative_frequency": 2.593486378913483e-05
+  },
+  {
+    "opcode": "a1",
+    "count": 81,
+    "rank": 126,
+    "relative_frequency": 2.593486378913483e-05
+  },
+  {
+    "opcode": "seta",
+    "count": 79,
+    "rank": 127,
+    "relative_frequency": 2.5294496781995696e-05
+  },
+  {
+    "opcode": "psubd",
+    "count": 66,
+    "rank": 128,
+    "relative_frequency": 2.1132111235591342e-05
+  },
+  {
+    "opcode": "shufps",
+    "count": 65,
+    "rank": 129,
+    "relative_frequency": 2.0811927732021777e-05
+  },
+  {
+    "opcode": "c4",
+    "count": 64,
+    "rank": 130,
+    "relative_frequency": 2.0491744228452212e-05
+  },
+  {
+    "opcode": "xorpd",
+    "count": 64,
+    "rank": 131,
+    "relative_frequency": 2.0491744228452212e-05
+  },
+  {
+    "opcode": "setae",
+    "count": 61,
+    "rank": 132,
+    "relative_frequency": 1.9531193717743513e-05
+  },
+  {
+    "opcode": "setge",
+    "count": 58,
+    "rank": 133,
+    "relative_frequency": 1.8570643207034814e-05
+  },
+  {
+    "opcode": "mulss",
+    "count": 55,
+    "rank": 134,
+    "relative_frequency": 1.761009269632612e-05
+  },
+  {
+    "opcode": "psrld",
+    "count": 55,
+    "rank": 135,
+    "relative_frequency": 1.761009269632612e-05
+  },
+  {
+    "opcode": "addss",
+    "count": 52,
+    "rank": 136,
+    "relative_frequency": 1.664954218561742e-05
+  },
+  {
+    "opcode": "punpcklbw",
+    "count": 49,
+    "rank": 137,
+    "relative_frequency": 1.5688991674908724e-05
+  },
+  {
+    "opcode": "unpcklpd",
+    "count": 46,
+    "rank": 138,
+    "relative_frequency": 1.4728441164200027e-05
+  },
+  {
+    "opcode": "bsr",
+    "count": 45,
+    "rank": 139,
+    "relative_frequency": 1.440825766063046e-05
+  },
+  {
+    "opcode": "punpckhdq",
+    "count": 44,
+    "rank": 140,
+    "relative_frequency": 1.4088074157060895e-05
+  },
+  {
+    "opcode": "cvtss2sd",
+    "count": 44,
+    "rank": 141,
+    "relative_frequency": 1.4088074157060895e-05
+  },
+  {
+    "opcode": "psraw",
+    "count": 44,
+    "rank": 142,
+    "relative_frequency": 1.4088074157060895e-05
+  },
+  {
+    "opcode": "a5",
+    "count": 44,
+    "rank": 143,
+    "relative_frequency": 1.4088074157060895e-05
+  },
+  {
+    "opcode": "pandn",
+    "count": 42,
+    "rank": 144,
+    "relative_frequency": 1.3447707149921763e-05
+  },
+  {
+    "opcode": "andps",
+    "count": 42,
+    "rank": 145,
+    "relative_frequency": 1.3447707149921763e-05
+  },
+  {
+    "opcode": "cvttss2si",
+    "count": 41,
+    "rank": 146,
+    "relative_frequency": 1.3127523646352198e-05
+  },
+  {
+    "opcode": "psrad",
+    "count": 41,
+    "rank": 147,
+    "relative_frequency": 1.3127523646352198e-05
+  },
+  {
+    "opcode": "setnp",
+    "count": 41,
+    "rank": 148,
+    "relative_frequency": 1.3127523646352198e-05
+  },
+  {
+    "opcode": "punpckhbw",
+    "count": 39,
+    "rank": 149,
+    "relative_frequency": 1.2487156639213066e-05
+  },
+  {
+    "opcode": "cpuid",
+    "count": 37,
+    "rank": 150,
+    "relative_frequency": 1.1846789632073934e-05
+  },
+  {
+    "opcode": "subss",
+    "count": 34,
+    "rank": 151,
+    "relative_frequency": 1.0886239121365236e-05
+  },
+  {
+    "opcode": "orpd",
+    "count": 32,
+    "rank": 152,
+    "relative_frequency": 1.0245872114226106e-05
+  },
+  {
+    "opcode": "shufpd",
+    "count": 31,
+    "rank": 153,
+    "relative_frequency": 9.925688610656539e-06
+  },
+  {
+    "opcode": "btc",
+    "count": 30,
+    "rank": 154,
+    "relative_frequency": 9.605505107086974e-06
+  },
+  {
+    "opcode": "packuswb",
+    "count": 27,
+    "rank": 155,
+    "relative_frequency": 8.644954596378277e-06
+  },
+  {
+    "opcode": "pslld",
+    "count": 25,
+    "rank": 156,
+    "relative_frequency": 8.004587589239145e-06
+  },
+  {
+    "opcode": "pcmpeqb",
+    "count": 24,
+    "rank": 157,
+    "relative_frequency": 7.68440408566958e-06
+  },
+  {
+    "opcode": "jno",
+    "count": 23,
+    "rank": 158,
+    "relative_frequency": 7.3642205821000135e-06
+  },
+  {
+    "opcode": "pcmpgtb",
+    "count": 22,
+    "rank": 159,
+    "relative_frequency": 7.0440370785304475e-06
+  },
+  {
+    "opcode": "unpckhpd",
+    "count": 21,
+    "rank": 160,
+    "relative_frequency": 6.7238535749608814e-06
+  },
+  {
+    "opcode": "a3",
+    "count": 19,
+    "rank": 161,
+    "relative_frequency": 6.08348656782175e-06
+  },
+  {
+    "opcode": "c8",
+    "count": 19,
+    "rank": 162,
+    "relative_frequency": 6.08348656782175e-06
+  },
+  {
+    "opcode": "e0",
+    "count": 19,
+    "rank": 163,
+    "relative_frequency": 6.08348656782175e-06
+  },
+  {
+    "opcode": "divss",
+    "count": 18,
+    "rank": 164,
+    "relative_frequency": 5.763303064252184e-06
+  },
+  {
+    "opcode": "jnp",
+    "count": 18,
+    "rank": 165,
+    "relative_frequency": 5.763303064252184e-06
+  },
+  {
+    "opcode": "hlt",
+    "count": 15,
+    "rank": 166,
+    "relative_frequency": 4.802752553543487e-06
+  },
+  {
+    "opcode": "cvtsd2ss",
+    "count": 15,
+    "rank": 167,
+    "relative_frequency": 4.802752553543487e-06
+  },
+  {
+    "opcode": "orps",
+    "count": 14,
+    "rank": 168,
+    "relative_frequency": 4.482569049973921e-06
+  },
+  {
+    "opcode": "incsspq",
+    "count": 14,
+    "rank": 169,
+    "relative_frequency": 4.482569049973921e-06
+  },
+  {
+    "opcode": "fe",
+    "count": 13,
+    "rank": 170,
+    "relative_frequency": 4.162385546404355e-06
+  },
+  {
+    "opcode": "f5",
+    "count": 13,
+    "rank": 171,
+    "relative_frequency": 4.162385546404355e-06
+  },
+  {
+    "opcode": "c7",
+    "count": 12,
+    "rank": 172,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "fldcw",
+    "count": 12,
+    "rank": 173,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "setp",
+    "count": 12,
+    "rank": 174,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "pextrw",
+    "count": 12,
+    "rank": 175,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "andnpd",
+    "count": 12,
+    "rank": 176,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "mulpd",
+    "count": 12,
+    "rank": 177,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "f0",
+    "count": 12,
+    "rank": 178,
+    "relative_frequency": 3.84220204283479e-06
+  },
+  {
+    "opcode": "fstp",
+    "count": 11,
+    "rank": 179,
+    "relative_frequency": 3.5220185392652237e-06
+  },
+  {
+    "opcode": "bf",
+    "count": 10,
+    "rank": 180,
+    "relative_frequency": 3.2018350356956577e-06
+  },
+  {
+    "opcode": "fb",
+    "count": 10,
+    "rank": 181,
+    "relative_frequency": 3.2018350356956577e-06
+  },
+  {
+    "opcode": "pause",
+    "count": 10,
+    "rank": 182,
+    "relative_frequency": 3.2018350356956577e-06
+  },
+  {
+    "opcode": "fd",
+    "count": 10,
+    "rank": 183,
+    "relative_frequency": 3.2018350356956577e-06
+  },
+  {
+    "opcode": "e8",
+    "count": 9,
+    "rank": 184,
+    "relative_frequency": 2.881651532126092e-06
+  },
+  {
+    "opcode": "tzcnt",
+    "count": 9,
+    "rank": 185,
+    "relative_frequency": 2.881651532126092e-06
+  },
+  {
+    "opcode": "b0",
+    "count": 9,
+    "rank": 186,
+    "relative_frequency": 2.881651532126092e-06
+  },
+  {
+    "opcode": "fld",
+    "count": 8,
+    "rank": 187,
+    "relative_frequency": 2.5614680285565265e-06
+  },
+  {
+    "opcode": "movupd",
+    "count": 8,
+    "rank": 188,
+    "relative_frequency": 2.5614680285565265e-06
+  },
+  {
+    "opcode": "fild",
+    "count": 7,
+    "rank": 189,
+    "relative_frequency": 2.2412845249869605e-06
+  },
+  {
+    "opcode": "subpd",
+    "count": 7,
+    "rank": 190,
+    "relative_frequency": 2.2412845249869605e-06
+  },
+  {
+    "opcode": "pinsrw",
+    "count": 7,
+    "rank": 191,
+    "relative_frequency": 2.2412845249869605e-06
+  },
+  {
+    "opcode": "psubb",
+    "count": 7,
+    "rank": 192,
+    "relative_frequency": 2.2412845249869605e-06
+  },
+  {
+    "opcode": "ucomiss",
+    "count": 6,
+    "rank": 193,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "fnstcw",
+    "count": 6,
+    "rank": 194,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "a0",
+    "count": 6,
+    "rank": 195,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "c9",
+    "count": 6,
+    "rank": 196,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "ca",
+    "count": 6,
+    "rank": 197,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "a6",
+    "count": 6,
+    "rank": 198,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "addpd",
+    "count": 6,
+    "rank": 199,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "a2",
+    "count": 6,
+    "rank": 200,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "d1",
+    "count": 6,
+    "rank": 201,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "e3",
+    "count": 6,
+    "rank": 202,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "b8",
+    "count": 6,
+    "rank": 203,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "f7",
+    "count": 6,
+    "rank": 204,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "rdsspq",
+    "count": 6,
+    "rank": 205,
+    "relative_frequency": 1.921101021417395e-06
+  },
+  {
+    "opcode": "ef",
+    "count": 5,
+    "rank": 206,
+    "relative_frequency": 1.6009175178478289e-06
+  },
+  {
+    "opcode": "psrlw",
+    "count": 5,
+    "rank": 207,
+    "relative_frequency": 1.6009175178478289e-06
+  },
+  {
+    "opcode": "fadd",
+    "count": 4,
+    "rank": 208,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "shld",
+    "count": 4,
+    "rank": 209,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "c2",
+    "count": 4,
+    "rank": 210,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "d4",
+    "count": 4,
+    "rank": 211,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "a4",
+    "count": 4,
+    "rank": 212,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "maxsd",
+    "count": 4,
+    "rank": 213,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "dd",
+    "count": 4,
+    "rank": 214,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "fc",
+    "count": 4,
+    "rank": 215,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "rdseed",
+    "count": 4,
+    "rank": 216,
+    "relative_frequency": 1.2807340142782633e-06
+  },
+  {
+    "opcode": "psllw",
+    "count": 3,
+    "rank": 217,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "punpckhqdq",
+    "count": 3,
+    "rank": 218,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "f1",
+    "count": 3,
+    "rank": 219,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "d2",
+    "count": 3,
+    "rank": 220,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "d9",
+    "count": 3,
+    "rank": 221,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "cmpnlesd",
+    "count": 3,
+    "rank": 222,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "divpd",
+    "count": 3,
+    "rank": 223,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "cd",
+    "count": 3,
+    "rank": 224,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "be",
+    "count": 3,
+    "rank": 225,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "b6",
+    "count": 3,
+    "rank": 226,
+    "relative_frequency": 9.605505107086974e-07
+  },
+  {
+    "opcode": "psubusw",
+    "count": 2,
+    "rank": 227,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "fdivp",
+    "count": 2,
+    "rank": 228,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "fmulp",
+    "count": 2,
+    "rank": 229,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "fcomip",
+    "count": 2,
+    "rank": 230,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "fxch",
+    "count": 2,
+    "rank": 231,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "fistp",
+    "count": 2,
+    "rank": 232,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "d0",
+    "count": 2,
+    "rank": 233,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "f3",
+    "count": 2,
+    "rank": 234,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "paddb",
+    "count": 2,
+    "rank": 235,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "sets",
+    "count": 2,
+    "rank": 236,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "sqrtsd",
+    "count": 2,
+    "rank": 237,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "f9",
+    "count": 2,
+    "rank": 238,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "c3",
+    "count": 2,
+    "rank": 239,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "ea",
+    "count": 2,
+    "rank": 240,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "e9",
+    "count": 2,
+    "rank": 241,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "ab",
+    "count": 2,
+    "rank": 242,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "d8",
+    "count": 2,
+    "rank": 243,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "c1",
+    "count": 2,
+    "rank": 244,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "a8",
+    "count": 2,
+    "rank": 245,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "c6",
+    "count": 2,
+    "rank": 246,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "shrd",
+    "count": 2,
+    "rank": 247,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "df",
+    "count": 2,
+    "rank": 248,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "pcmpgtd",
+    "count": 2,
+    "rank": 249,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "e6",
+    "count": 2,
+    "rank": 250,
+    "relative_frequency": 6.403670071391316e-07
+  },
+  {
+    "opcode": "fa",
+    "count": 1,
+    "rank": 251,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "cmpnltss",
+    "count": 1,
+    "rank": 252,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "fcomi",
+    "count": 1,
+    "rank": 253,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "fucomip",
+    "count": 1,
+    "rank": 254,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "fsubr",
+    "count": 1,
+    "rank": 255,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "setns",
+    "count": 1,
+    "rank": 256,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "ad",
+    "count": 1,
+    "rank": 257,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "e2",
+    "count": 1,
+    "rank": 258,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "b1",
+    "count": 1,
+    "rank": 259,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "a7",
+    "count": 1,
+    "rank": 260,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "pshuflw",
+    "count": 1,
+    "rank": 261,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "b4",
+    "count": 1,
+    "rank": 262,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "cmovp",
+    "count": 1,
+    "rank": 263,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "bsf",
+    "count": 1,
+    "rank": 264,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "e7",
+    "count": 1,
+    "rank": 265,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "ce",
+    "count": 1,
+    "rank": 266,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "ec",
+    "count": 1,
+    "rank": 267,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "a9",
+    "count": 1,
+    "rank": 268,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "minsd",
+    "count": 1,
+    "rank": 269,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "b5",
+    "count": 1,
+    "rank": 270,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "de",
+    "count": 1,
+    "rank": 271,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "dc",
+    "count": 1,
+    "rank": 272,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "e4",
+    "count": 1,
+    "rank": 273,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "d5",
+    "count": 1,
+    "rank": 274,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "b7",
+    "count": 1,
+    "rank": 275,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "d6",
+    "count": 1,
+    "rank": 276,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "f4",
+    "count": 1,
+    "rank": 277,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "db",
+    "count": 1,
+    "rank": 278,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "c5",
+    "count": 1,
+    "rank": 279,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "cb",
+    "count": 1,
+    "rank": 280,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "bb",
+    "count": 1,
+    "rank": 281,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "cmpltsd",
+    "count": 1,
+    "rank": 282,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "c0",
+    "count": 1,
+    "rank": 283,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "cwde",
+    "count": 1,
+    "rank": 284,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "fprem",
+    "count": 1,
+    "rank": 285,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "fnstsw",
+    "count": 1,
+    "rank": 286,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "cvttpd2dq",
+    "count": 1,
+    "rank": 287,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "b2",
+    "count": 1,
+    "rank": 288,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "xgetbv",
+    "count": 1,
+    "rank": 289,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "prefetchnta",
+    "count": 1,
+    "rank": 290,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "prefetcht0",
+    "count": 1,
+    "rank": 291,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "rdrand",
+    "count": 1,
+    "rank": 292,
+    "relative_frequency": 3.201835035695658e-07
+  },
+  {
+    "opcode": "f8",
+    "count": 1,
+    "rank": 293,
+    "relative_frequency": 3.201835035695658e-07
+  }
+]
