@@ -582,7 +582,8 @@ The boundary entropy is $\approx 0.12$ bits at position 0---far below the
 corpus unigram entropy of $3.99$ bits---rising to near-corpus levels by
 position 5--8.  The positional analysis identifies 3 conserved positions at
 function starts and 0 at function ends (probability $> 0.5$), classifying the
-corpus as \emph{loosely structured} (ABI prologues are strongly conserved but
+corpus as \emph{loosely structured} (positions 1--2 are strongly conserved
+and CET-independent; position 0 is system-dependent as noted above;
 epilogues are more varied).
 
 \begin{figure}[h]
@@ -629,6 +630,9 @@ threshold.  This does not imply NCD is uninformative: NCD is useful as a
 thresholds is inappropriate for a small, deliberately heterogeneous corpus
 such as ours; the within-vs-between category U-test below confirms that the
 signal is present and statistically significant.
+We therefore recommend using NCD for pairwise retrieval, similarity ranking,
+and within/between-group statistical tests rather than for hard partitioning of
+heterogeneous corpora.
 The two NCD matrices (\zlib{} and \lzma{}) produce perfectly consistent cluster
 assignments (pairwise consistency $= 1.0$), and category purity is trivially
 $100\%$ for singletons.  The PCA projection of the NCD-\zlib{} distance matrix
