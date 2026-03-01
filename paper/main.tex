@@ -412,8 +412,9 @@ flag indicating whether members span more than one input binary.
 \subsection{Corpus Statistics}
 
 Table~\ref{tab:corpus} summarises the smoke corpus after inode deduplication.
-Results for the coreutils-system and mixed-system corpora are reserved for
-future work; the smoke corpus already spans 8 distinct functional categories
+We treat the smoke corpus as a controlled pilot; the coreutils-system and
+mixed-system corpora are prepared for scaling the same measurements.
+The smoke corpus already spans 8 distinct functional categories
 and over 3 million instructions.
 
 \begin{table}[h]
@@ -500,12 +501,15 @@ on top of the unigram distribution contributes the remaining $0.138$ ($31\%$).
 Under \lzma{} the pattern is consistent: real $0.185$ vs.\ shuffled $0.304$
 vs.\ random $0.560$.  LZ78 normalised complexity ($\tilde{c} = K/\log_2 N$) has a median of $630$
 phrases-per-log-bit for real binaries vs.\ $45{,}187$ for unigram-shuffled
-sequences and $87{,}881$ for random sequences (to calibrate: a sequence of
+sequences and $87{,}881$ for random sequences.
+Since $K$ scales as $\Theta(N/\log N)$ for high-entropy sources, $\tilde{c}$
+is expected to be on the order of $N/\log_2 N$ for a near-uniform source,
+which explains the large random-baseline magnitude (to calibrate: a sequence of
 $N\!=\!10^6$ tokens would yield $\tilde{c} \approx N/\log_2 N \approx 50{,}000$
 at maximum entropy, so $\tilde{c}\!=\!87{,}881$ for our random baseline is
 consistent with near-maximum-entropy behaviour while $\tilde{c}\!=\!630$
-is roughly $70\times$ below that floor, confirming near-minimal algorithmic
-complexity for real instruction streams).
+is roughly $70\times$ below that floor, placing real instruction streams
+substantially below both baselines).
 
 \begin{table}[h]
 \centering
@@ -1027,8 +1031,9 @@ which is determined by the corpus structure alone.  The gap of only $0.07$~bits
 between the trained LM and the information-theoretic lower bound confirms that
 simple count statistics capture nearly all the structure available to a bigram
 model.  Together, these properties explain why even relatively small language
-models achieve low perplexity on opcode streams and why decompilers guided by
-LLMs can recover meaningful variable names and control structures from assembly.
+models achieve low perplexity on opcode streams, and suggests one contributing
+factor to why decompilers guided by LLMs may recover meaningful variable names
+and control structures from assembly in practice.
 
 \subsection{Limitations}
 
