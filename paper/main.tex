@@ -250,8 +250,12 @@ We measure two proxies for Kolmogorov complexity:
   \item \textbf{Compression ratio} $\rho = |C(s)| / |s|$ using \zlib{} and
         \lzma{} on the UTF-8 encoded opcode stream.
   \item \textbf{LZ78 complexity}~\cite{ziv1978compression}: the number of
-        distinct phrases produced by the LZ78 factorisation of the integer-encoded
-        sequence, normalised by $\log_2 N$.
+        distinct phrases $K$ produced by the LZ78 factorisation of the
+        integer-encoded opcode sequence of length $N$, normalised as
+        $\tilde{c} = K / \log_2 N$ (dimensionless phrase count per bit of
+        sequence length).  A maximally random sequence of length $N$ over
+        alphabet $\mathcal{V}$ yields $\tilde{c} \sim N/\log_2 N$; highly
+        compressible sequences yield much smaller $\tilde{c}$.
 \end{enumerate}
 Both are compared to two baselines:
 \begin{itemize}
@@ -494,10 +498,14 @@ advantage over random ($\Delta = 0.449$): the Zipfian frequency distribution
 alone (unigram skew) contributes $0.311$ ($69\%$), while sequential structure
 on top of the unigram distribution contributes the remaining $0.138$ ($31\%$).
 Under \lzma{} the pattern is consistent: real $0.185$ vs.\ shuffled $0.304$
-vs.\ random $0.560$.  LZ78 normalised complexity has a median of $630$ for real
-binaries vs.\ $45{,}187$ for unigram-shuffled sequences and $87{,}881$ for
-random sequences, consistent with near-minimal Kolmogorov complexity for real
-instruction streams once sequential structure is accounted for.
+vs.\ random $0.560$.  LZ78 normalised complexity ($\tilde{c} = K/\log_2 N$) has a median of $630$
+phrases-per-log-bit for real binaries vs.\ $45{,}187$ for unigram-shuffled
+sequences and $87{,}881$ for random sequences (to calibrate: a sequence of
+$N\!=\!10^6$ tokens would yield $\tilde{c} \approx N/\log_2 N \approx 50{,}000$
+at maximum entropy, so $\tilde{c}\!=\!87{,}881$ for our random baseline is
+consistent with near-maximum-entropy behaviour while $\tilde{c}\!=\!630$
+is roughly $70\times$ below that floor, confirming near-minimal algorithmic
+complexity for real instruction streams).
 
 \begin{table}[h]
 \centering
@@ -560,9 +568,15 @@ frequency.
 Figure~\ref{fig:positional} shows the positional heatmap of opcode
 probabilities at the first and last 20 instruction slots of functions.
 Position 0 is dominated by \texttt{endbr64} ($p \approx 0.986$), Intel's
-Control-flow Enforcement Technology instruction present in nearly every function
-on this CET-enabled system.  At position 1, \texttt{push} appears with
-$p \approx 0.672$; at position 2, \texttt{mov} with $p \approx 0.671$.
+Control-flow Enforcement Technology (CET) indirect-branch tracking instruction,
+which the Ubuntu 22.04 toolchain inserts at the start of every
+indirect-call-target function when CET is enabled at the OS level.
+This result is therefore \emph{system-dependent}: on non-CET builds or older
+toolchains, position-0 would be dominated by \texttt{push} (frame setup)
+instead.  At position 1, \texttt{push} appears with
+$p \approx 0.672$; at position 2, \texttt{mov} with $p \approx 0.671$;
+these ABI-mandated frame-setup slots are CET-independent and expected to
+generalise across x86-64 Linux builds.
 
 The boundary entropy is $\approx 0.12$ bits at position 0---far below the
 corpus unigram entropy of $3.99$ bits---rising to near-corpus levels by
@@ -609,7 +623,12 @@ patterns emerge:
 
 Hierarchical clustering (Ward linkage) with a distance threshold of $0.5$
 produces 15 singleton clusters since all pairwise NCD values exceed $0.9$---the
-corpus is too heterogeneous for compression-based partitioning at this threshold.
+corpus is too heterogeneous for compression-based hard partitioning at this
+threshold.  This does not imply NCD is uninformative: NCD is useful as a
+\emph{continuous similarity signal} even when hard clustering at conventional
+thresholds is inappropriate for a small, deliberately heterogeneous corpus
+such as ours; the within-vs-between category U-test below confirms that the
+signal is present and statistically significant.
 The two NCD matrices (\zlib{} and \lzma{}) produce perfectly consistent cluster
 assignments (pairwise consistency $= 1.0$), and category purity is trivially
 $100\%$ for singletons.  The PCA projection of the NCD-\zlib{} distance matrix
@@ -790,14 +809,19 @@ instructions.
 \paragraph{Instruction count and compression vs optimisation level.}
 Table~\ref{tab:compiler_matrix} reports mean instruction count and
 \zlib{} compression ratio across both compilers for each optimisation level.
-Counter-intuitively, \texttt{-O3} increases mean instruction count
-($601$ vs.\ $499$ at \texttt{-O0}) while also increasing compressibility
-for numeric codes (matrix: $0.375$, the lowest of any configuration)
-due to aggressive loop unrolling creating longer repeated blocks; text
-and search programs exhibit the opposite trend, remaining near \texttt{-O2}
-levels.  \texttt{-O2} consistently produces the \emph{least} compressible
-output, suggesting it generates the most diverse (least-repetitive) instruction
-mix before \texttt{-O3} re-introduces repetition through unrolling.
+In our micro-benchmark suite, \texttt{-O3} increases mean instruction count
+($601$ vs.\ $499$ at \texttt{-O0}) while simultaneously increasing
+compressibility for compute-intensive code: the \texttt{matrix} program
+achieves its lowest ratio ($0.375$) under \texttt{-O3}, a consequence of
+aggressive loop unrolling that produces long repeated instruction blocks
+(size--speed trade-off~\cite{agner2024optimizing}).  Text and search programs
+exhibit the opposite trend, remaining near \texttt{-O2} levels, because
+their inner loops are too short to benefit from unrolling.
+\texttt{-O2} consistently produces the \emph{least} compressible output,
+suggesting it generates the most diverse (least-repetitive) instruction mix
+before \texttt{-O3} re-introduces repetition through unrolling.
+These observations are specific to our five micro-benchmarks; behaviour on
+larger, more complex codebases may differ.
 
 \begin{table}[h]
 \centering
