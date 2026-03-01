@@ -251,11 +251,13 @@ We measure two proxies for Kolmogorov complexity:
         \lzma{} on the UTF-8 encoded opcode stream.
   \item \textbf{LZ78 complexity}~\cite{ziv1978compression}: the number of
         distinct phrases $K$ produced by the LZ78 factorisation of the
-        integer-encoded opcode sequence of length $N$, normalised as
-        $\tilde{c} = K / \log_2 N$ (dimensionless phrase count per bit of
-        sequence length).  A maximally random sequence of length $N$ over
-        alphabet $\mathcal{V}$ yields $\tilde{c} \sim N/\log_2 N$; highly
-        compressible sequences yield much smaller $\tilde{c}$.
+        integer-encoded opcode sequence of length $N$, reported as the
+        normalised statistic $\tilde{c} = K / \log_2 N$ (phrase count per
+        log-bit of sequence length).  For high-entropy sources, the expected
+        phrase count scales as $K = \Theta(N/\log N)$, so $\tilde{c}$ is
+        correspondingly large for random sequences at $N \sim 10^6$.  Highly
+        structured (more compressible) sequences yield substantially smaller
+        $\tilde{c}$.
 \end{enumerate}
 Both are compared to two baselines:
 \begin{itemize}
@@ -1032,8 +1034,8 @@ between the trained LM and the information-theoretic lower bound confirms that
 simple count statistics capture nearly all the structure available to a bigram
 model.  Together, these properties explain why even relatively small language
 models achieve low perplexity on opcode streams, and suggests one contributing
-factor to why decompilers guided by LLMs may recover meaningful variable names
-and control structures from assembly in practice.
+factor to why learning-based decompilation and lifting methods can recover
+useful higher-level structure from assembly in practice.
 
 \subsection{Limitations}
 
