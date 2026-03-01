@@ -1,0 +1,548 @@
+[
+  {
+    "opcode": "mov",
+    "count": 3597,
+    "rank": 1,
+    "relative_frequency": 0.23451558221410876
+  },
+  {
+    "opcode": "jmp",
+    "count": 898,
+    "rank": 2,
+    "relative_frequency": 0.05854739861781197
+  },
+  {
+    "opcode": "cmp",
+    "count": 852,
+    "rank": 3,
+    "relative_frequency": 0.05554831138349198
+  },
+  {
+    "opcode": "add",
+    "count": 757,
+    "rank": 4,
+    "relative_frequency": 0.04935454426913548
+  },
+  {
+    "opcode": "call",
+    "count": 652,
+    "rank": 5,
+    "relative_frequency": 0.042508801669057246
+  },
+  {
+    "opcode": "xor",
+    "count": 595,
+    "rank": 6,
+    "relative_frequency": 0.038792541400443345
+  },
+  {
+    "opcode": "lea",
+    "count": 582,
+    "rank": 7,
+    "relative_frequency": 0.03794497326900508
+  },
+  {
+    "opcode": "nop",
+    "count": 574,
+    "rank": 8,
+    "relative_frequency": 0.037423392880427696
+  },
+  {
+    "opcode": "push",
+    "count": 532,
+    "rank": 9,
+    "relative_frequency": 0.034685095840396404
+  },
+  {
+    "opcode": "je",
+    "count": 401,
+    "rank": 10,
+    "relative_frequency": 0.02614421697744165
+  },
+  {
+    "opcode": "endbr64",
+    "count": 395,
+    "rank": 11,
+    "relative_frequency": 0.025753031686008607
+  },
+  {
+    "opcode": "movupd",
+    "count": 380,
+    "rank": 12,
+    "relative_frequency": 0.024775068457426
+  },
+  {
+    "opcode": "jne",
+    "count": 338,
+    "rank": 13,
+    "relative_frequency": 0.022036771417394706
+  },
+  {
+    "opcode": "pop",
+    "count": 289,
+    "rank": 14,
+    "relative_frequency": 0.018842091537358194
+  },
+  {
+    "opcode": "ret",
+    "count": 286,
+    "rank": 15,
+    "relative_frequency": 0.018646498891641675
+  },
+  {
+    "opcode": "sub",
+    "count": 269,
+    "rank": 16,
+    "relative_frequency": 0.017538140565914722
+  },
+  {
+    "opcode": "movzx",
+    "count": 269,
+    "rank": 17,
+    "relative_frequency": 0.017538140565914722
+  },
+  {
+    "opcode": "movsd",
+    "count": 263,
+    "rank": 18,
+    "relative_frequency": 0.01714695527448168
+  },
+  {
+    "opcode": "test",
+    "count": 242,
+    "rank": 19,
+    "relative_frequency": 0.015777806754466033
+  },
+  {
+    "opcode": "ff",
+    "count": 217,
+    "rank": 20,
+    "relative_frequency": 0.01414786804016169
+  },
+  {
+    "opcode": "movapd",
+    "count": 190,
+    "rank": 21,
+    "relative_frequency": 0.012387534228713
+  },
+  {
+    "opcode": "movsxd",
+    "count": 169,
+    "rank": 22,
+    "relative_frequency": 0.011018385708697353
+  },
+  {
+    "opcode": "data16",
+    "count": 134,
+    "rank": 23,
+    "relative_frequency": 0.008736471508671274
+  },
+  {
+    "opcode": "mulpd",
+    "count": 133,
+    "rank": 24,
+    "relative_frequency": 0.008671273960099101
+  },
+  {
+    "opcode": "addpd",
+    "count": 131,
+    "rank": 25,
+    "relative_frequency": 0.008540878862954753
+  },
+  {
+    "opcode": "xchg",
+    "count": 128,
+    "rank": 26,
+    "relative_frequency": 0.008345286217238231
+  },
+  {
+    "opcode": "movdqa",
+    "count": 128,
+    "rank": 27,
+    "relative_frequency": 0.008345286217238231
+  },
+  {
+    "opcode": "movaps",
+    "count": 114,
+    "rank": 28,
+    "relative_frequency": 0.0074325205372278
+  },
+  {
+    "opcode": "movups",
+    "count": 111,
+    "rank": 29,
+    "relative_frequency": 0.0072369278915112795
+  },
+  {
+    "opcode": "inc",
+    "count": 108,
+    "rank": 30,
+    "relative_frequency": 0.007041335245794758
+  },
+  {
+    "opcode": "shl",
+    "count": 101,
+    "rank": 31,
+    "relative_frequency": 0.006584952405789542
+  },
+  {
+    "opcode": "and",
+    "count": 100,
+    "rank": 32,
+    "relative_frequency": 0.006519754857217368
+  },
+  {
+    "opcode": "addsd",
+    "count": 99,
+    "rank": 33,
+    "relative_frequency": 0.006454557308645195
+  },
+  {
+    "opcode": "imul",
+    "count": 98,
+    "rank": 34,
+    "relative_frequency": 0.006389359760073021
+  },
+  {
+    "opcode": "mulsd",
+    "count": 90,
+    "rank": 35,
+    "relative_frequency": 0.005867779371495632
+  },
+  {
+    "opcode": "jle",
+    "count": 82,
+    "rank": 36,
+    "relative_frequency": 0.005346198982918242
+  },
+  {
+    "opcode": "jge",
+    "count": 69,
+    "rank": 37,
+    "relative_frequency": 0.004498630851479985
+  },
+  {
+    "opcode": "cdqe",
+    "count": 68,
+    "rank": 38,
+    "relative_frequency": 0.0044334333029078105
+  },
+  {
+    "opcode": "cs",
+    "count": 64,
+    "rank": 39,
+    "relative_frequency": 0.004172643108619116
+  },
+  {
+    "opcode": "shr",
+    "count": 63,
+    "rank": 40,
+    "relative_frequency": 0.004107445560046942
+  },
+  {
+    "opcode": "sar",
+    "count": 63,
+    "rank": 41,
+    "relative_frequency": 0.004107445560046942
+  },
+  {
+    "opcode": "jl",
+    "count": 59,
+    "rank": 42,
+    "relative_frequency": 0.0038466553657582475
+  },
+  {
+    "opcode": "movabs",
+    "count": 50,
+    "rank": 43,
+    "relative_frequency": 0.003259877428608684
+  },
+  {
+    "opcode": "movq",
+    "count": 44,
+    "rank": 44,
+    "relative_frequency": 0.0028686921371756423
+  },
+  {
+    "opcode": "sete",
+    "count": 43,
+    "rank": 45,
+    "relative_frequency": 0.0028034945886034686
+  },
+  {
+    "opcode": "jg",
+    "count": 37,
+    "rank": 46,
+    "relative_frequency": 0.0024123092971704264
+  },
+  {
+    "opcode": "cvtsi2sd",
+    "count": 36,
+    "rank": 47,
+    "relative_frequency": 0.0023471117485982526
+  },
+  {
+    "opcode": "hlt",
+    "count": 30,
+    "rank": 48,
+    "relative_frequency": 0.0019559264571652104
+  },
+  {
+    "opcode": "jae",
+    "count": 30,
+    "rank": 49,
+    "relative_frequency": 0.0019559264571652104
+  },
+  {
+    "opcode": "pxor",
+    "count": 29,
+    "rank": 50,
+    "relative_frequency": 0.001890728908593037
+  },
+  {
+    "opcode": "cb",
+    "count": 25,
+    "rank": 51,
+    "relative_frequency": 0.001629938714304342
+  },
+  {
+    "opcode": "ja",
+    "count": 25,
+    "rank": 52,
+    "relative_frequency": 0.001629938714304342
+  },
+  {
+    "opcode": "jb",
+    "count": 21,
+    "rank": 53,
+    "relative_frequency": 0.0013691485200156474
+  },
+  {
+    "opcode": "xorpd",
+    "count": 20,
+    "rank": 54,
+    "relative_frequency": 0.0013039509714434737
+  },
+  {
+    "opcode": "leave",
+    "count": 17,
+    "rank": 55,
+    "relative_frequency": 0.0011083583257269526
+  },
+  {
+    "opcode": "dec",
+    "count": 16,
+    "rank": 56,
+    "relative_frequency": 0.001043160777154779
+  },
+  {
+    "opcode": "setne",
+    "count": 15,
+    "rank": 57,
+    "relative_frequency": 0.0009779632285826052
+  },
+  {
+    "opcode": "xorps",
+    "count": 15,
+    "rank": 58,
+    "relative_frequency": 0.0009779632285826052
+  },
+  {
+    "opcode": "movsx",
+    "count": 14,
+    "rank": 59,
+    "relative_frequency": 0.0009127656800104316
+  },
+  {
+    "opcode": "divsd",
+    "count": 12,
+    "rank": 60,
+    "relative_frequency": 0.0007823705828660843
+  },
+  {
+    "opcode": "ucomisd",
+    "count": 12,
+    "rank": 61,
+    "relative_frequency": 0.0007823705828660843
+  },
+  {
+    "opcode": "sqrtsd",
+    "count": 12,
+    "rank": 62,
+    "relative_frequency": 0.0007823705828660843
+  },
+  {
+    "opcode": "js",
+    "count": 11,
+    "rank": 63,
+    "relative_frequency": 0.0007171730342939106
+  },
+  {
+    "opcode": "unpckhpd",
+    "count": 10,
+    "rank": 64,
+    "relative_frequency": 0.0006519754857217369
+  },
+  {
+    "opcode": "cmovb",
+    "count": 9,
+    "rank": 65,
+    "relative_frequency": 0.0005867779371495632
+  },
+  {
+    "opcode": "or",
+    "count": 8,
+    "rank": 66,
+    "relative_frequency": 0.0005215803885773895
+  },
+  {
+    "opcode": "punpckldq",
+    "count": 8,
+    "rank": 67,
+    "relative_frequency": 0.0005215803885773895
+  },
+  {
+    "opcode": "subpd",
+    "count": 8,
+    "rank": 68,
+    "relative_frequency": 0.0005215803885773895
+  },
+  {
+    "opcode": "setg",
+    "count": 7,
+    "rank": 69,
+    "relative_frequency": 0.0004563828400052158
+  },
+  {
+    "opcode": "setl",
+    "count": 7,
+    "rank": 70,
+    "relative_frequency": 0.0004563828400052158
+  },
+  {
+    "opcode": "unpcklpd",
+    "count": 7,
+    "rank": 71,
+    "relative_frequency": 0.0004563828400052158
+  },
+  {
+    "opcode": "div",
+    "count": 6,
+    "rank": 72,
+    "relative_frequency": 0.00039118529143304214
+  },
+  {
+    "opcode": "cmovl",
+    "count": 6,
+    "rank": 73,
+    "relative_frequency": 0.00039118529143304214
+  },
+  {
+    "opcode": "psllq",
+    "count": 6,
+    "rank": 74,
+    "relative_frequency": 0.00039118529143304214
+  },
+  {
+    "opcode": "neg",
+    "count": 6,
+    "rank": 75,
+    "relative_frequency": 0.00039118529143304214
+  },
+  {
+    "opcode": "jbe",
+    "count": 4,
+    "rank": 76,
+    "relative_frequency": 0.0002607901942886947
+  },
+  {
+    "opcode": "cmovg",
+    "count": 4,
+    "rank": 77,
+    "relative_frequency": 0.0002607901942886947
+  },
+  {
+    "opcode": "not",
+    "count": 4,
+    "rank": 78,
+    "relative_frequency": 0.0002607901942886947
+  },
+  {
+    "opcode": "punpcklqdq",
+    "count": 4,
+    "rank": 79,
+    "relative_frequency": 0.0002607901942886947
+  },
+  {
+    "opcode": "movd",
+    "count": 4,
+    "rank": 80,
+    "relative_frequency": 0.0002607901942886947
+  },
+  {
+    "opcode": "pshufd",
+    "count": 4,
+    "rank": 81,
+    "relative_frequency": 0.0002607901942886947
+  },
+  {
+    "opcode": "cmovne",
+    "count": 3,
+    "rank": 82,
+    "relative_frequency": 0.00019559264571652107
+  },
+  {
+    "opcode": "cmovbe",
+    "count": 3,
+    "rank": 83,
+    "relative_frequency": 0.00019559264571652107
+  },
+  {
+    "opcode": "cmovae",
+    "count": 3,
+    "rank": 84,
+    "relative_frequency": 0.00019559264571652107
+  },
+  {
+    "opcode": "cmove",
+    "count": 3,
+    "rank": 85,
+    "relative_frequency": 0.00019559264571652107
+  },
+  {
+    "opcode": "subsd",
+    "count": 3,
+    "rank": 86,
+    "relative_frequency": 0.00019559264571652107
+  },
+  {
+    "opcode": "rep",
+    "count": 2,
+    "rank": 87,
+    "relative_frequency": 0.00013039509714434736
+  },
+  {
+    "opcode": "cmovle",
+    "count": 2,
+    "rank": 88,
+    "relative_frequency": 0.00013039509714434736
+  },
+  {
+    "opcode": "cdq",
+    "count": 1,
+    "rank": 89,
+    "relative_frequency": 6.519754857217368e-05
+  },
+  {
+    "opcode": "idiv",
+    "count": 1,
+    "rank": 90,
+    "relative_frequency": 6.519754857217368e-05
+  },
+  {
+    "opcode": "jns",
+    "count": 1,
+    "rank": 91,
+    "relative_frequency": 6.519754857217368e-05
+  }
+]

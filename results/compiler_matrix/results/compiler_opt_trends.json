@@ -1,0 +1,324 @@
+{
+  "per_binary": {
+    "sort_gcc-O0": {
+      "project": "sort",
+      "compiler": "gcc-O0",
+      "opt": "O0",
+      "cc": "gcc",
+      "instructions": 637,
+      "functions": 24,
+      "zlib_ratio": 0.3940345368916798
+    },
+    "sort_gcc-O2": {
+      "project": "sort",
+      "compiler": "gcc-O2",
+      "opt": "O2",
+      "cc": "gcc",
+      "instructions": 411,
+      "functions": 19,
+      "zlib_ratio": 0.5766423357664233
+    },
+    "sort_gcc-O3": {
+      "project": "sort",
+      "compiler": "gcc-O3",
+      "opt": "O3",
+      "cc": "gcc",
+      "instructions": 454,
+      "functions": 19,
+      "zlib_ratio": 0.5550660792951542
+    },
+    "sort_clang-O0": {
+      "project": "sort",
+      "compiler": "clang-O0",
+      "opt": "O0",
+      "cc": "clang",
+      "instructions": 519,
+      "functions": 23,
+      "zlib_ratio": 0.4836223506743738
+    },
+    "sort_clang-O2": {
+      "project": "sort",
+      "compiler": "clang-O2",
+      "opt": "O2",
+      "cc": "clang",
+      "instructions": 366,
+      "functions": 18,
+      "zlib_ratio": 0.6147540983606558
+    },
+    "sort_clang-O3": {
+      "project": "sort",
+      "compiler": "clang-O3",
+      "opt": "O3",
+      "cc": "clang",
+      "instructions": 626,
+      "functions": 18,
+      "zlib_ratio": 0.3865814696485623
+    },
+    "hash_gcc-O0": {
+      "project": "hash",
+      "compiler": "gcc-O0",
+      "opt": "O0",
+      "cc": "gcc",
+      "instructions": 414,
+      "functions": 22,
+      "zlib_ratio": 0.4492753623188406
+    },
+    "hash_gcc-O2": {
+      "project": "hash",
+      "compiler": "gcc-O2",
+      "opt": "O2",
+      "cc": "gcc",
+      "instructions": 381,
+      "functions": 19,
+      "zlib_ratio": 0.5275590551181102
+    },
+    "hash_gcc-O3": {
+      "project": "hash",
+      "compiler": "gcc-O3",
+      "opt": "O3",
+      "cc": "gcc",
+      "instructions": 400,
+      "functions": 18,
+      "zlib_ratio": 0.465
+    },
+    "hash_clang-O0": {
+      "project": "hash",
+      "compiler": "clang-O0",
+      "opt": "O0",
+      "cc": "clang",
+      "instructions": 357,
+      "functions": 21,
+      "zlib_ratio": 0.5070028011204482
+    },
+    "hash_clang-O2": {
+      "project": "hash",
+      "compiler": "clang-O2",
+      "opt": "O2",
+      "cc": "clang",
+      "instructions": 466,
+      "functions": 17,
+      "zlib_ratio": 0.4248927038626609
+    },
+    "hash_clang-O3": {
+      "project": "hash",
+      "compiler": "clang-O3",
+      "opt": "O3",
+      "cc": "clang",
+      "instructions": 472,
+      "functions": 17,
+      "zlib_ratio": 0.4279661016949153
+    },
+    "compress_gcc-O0": {
+      "project": "compress",
+      "compiler": "gcc-O0",
+      "opt": "O0",
+      "cc": "gcc",
+      "instructions": 497,
+      "functions": 18,
+      "zlib_ratio": 0.48893360160965793
+    },
+    "compress_gcc-O2": {
+      "project": "compress",
+      "compiler": "gcc-O2",
+      "opt": "O2",
+      "cc": "gcc",
+      "instructions": 368,
+      "functions": 14,
+      "zlib_ratio": 0.657608695652174
+    },
+    "compress_gcc-O3": {
+      "project": "compress",
+      "compiler": "gcc-O3",
+      "opt": "O3",
+      "cc": "gcc",
+      "instructions": 578,
+      "functions": 14,
+      "zlib_ratio": 0.5311418685121108
+    },
+    "compress_clang-O0": {
+      "project": "compress",
+      "compiler": "clang-O0",
+      "opt": "O0",
+      "cc": "clang",
+      "instructions": 480,
+      "functions": 18,
+      "zlib_ratio": 0.5166666666666667
+    },
+    "compress_clang-O2": {
+      "project": "compress",
+      "compiler": "clang-O2",
+      "opt": "O2",
+      "cc": "clang",
+      "instructions": 476,
+      "functions": 15,
+      "zlib_ratio": 0.5063025210084033
+    },
+    "compress_clang-O3": {
+      "project": "compress",
+      "compiler": "clang-O3",
+      "opt": "O3",
+      "cc": "clang",
+      "instructions": 479,
+      "functions": 15,
+      "zlib_ratio": 0.5052192066805845
+    },
+    "search_gcc-O0": {
+      "project": "search",
+      "compiler": "gcc-O0",
+      "opt": "O0",
+      "cc": "gcc",
+      "instructions": 533,
+      "functions": 20,
+      "zlib_ratio": 0.4540337711069418
+    },
+    "search_gcc-O2": {
+      "project": "search",
+      "compiler": "gcc-O2",
+      "opt": "O2",
+      "cc": "gcc",
+      "instructions": 491,
+      "functions": 16,
+      "zlib_ratio": 0.6130346232179226
+    },
+    "search_gcc-O3": {
+      "project": "search",
+      "compiler": "gcc-O3",
+      "opt": "O3",
+      "cc": "gcc",
+      "instructions": 493,
+      "functions": 16,
+      "zlib_ratio": 0.6085192697768763
+    },
+    "search_clang-O0": {
+      "project": "search",
+      "compiler": "clang-O0",
+      "opt": "O0",
+      "cc": "clang",
+      "instructions": 504,
+      "functions": 20,
+      "zlib_ratio": 0.4781746031746032
+    },
+    "search_clang-O2": {
+      "project": "search",
+      "compiler": "clang-O2",
+      "opt": "O2",
+      "cc": "clang",
+      "instructions": 429,
+      "functions": 14,
+      "zlib_ratio": 0.5710955710955711
+    },
+    "search_clang-O3": {
+      "project": "search",
+      "compiler": "clang-O3",
+      "opt": "O3",
+      "cc": "clang",
+      "instructions": 435,
+      "functions": 14,
+      "zlib_ratio": 0.5724137931034483
+    },
+    "matrix_gcc-O0": {
+      "project": "matrix",
+      "compiler": "gcc-O0",
+      "opt": "O0",
+      "cc": "gcc",
+      "instructions": 593,
+      "functions": 24,
+      "zlib_ratio": 0.3642495784148398
+    },
+    "matrix_gcc-O2": {
+      "project": "matrix",
+      "compiler": "gcc-O2",
+      "opt": "O2",
+      "cc": "gcc",
+      "instructions": 382,
+      "functions": 20,
+      "zlib_ratio": 0.5863874345549738
+    },
+    "matrix_gcc-O3": {
+      "project": "matrix",
+      "compiler": "gcc-O3",
+      "opt": "O3",
+      "cc": "gcc",
+      "instructions": 416,
+      "functions": 20,
+      "zlib_ratio": 0.5745192307692307
+    },
+    "matrix_clang-O0": {
+      "project": "matrix",
+      "compiler": "clang-O0",
+      "opt": "O0",
+      "cc": "clang",
+      "instructions": 457,
+      "functions": 24,
+      "zlib_ratio": 0.4420131291028446
+    },
+    "matrix_clang-O2": {
+      "project": "matrix",
+      "compiler": "clang-O2",
+      "opt": "O2",
+      "cc": "clang",
+      "instructions": 570,
+      "functions": 17,
+      "zlib_ratio": 0.40350877192982454
+    },
+    "matrix_clang-O3": {
+      "project": "matrix",
+      "compiler": "clang-O3",
+      "opt": "O3",
+      "cc": "clang",
+      "instructions": 1654,
+      "functions": 17,
+      "zlib_ratio": 0.17472793228536881
+    }
+  },
+  "by_opt_level": {
+    "O0": {
+      "n": 10,
+      "mean_insns": 499.1,
+      "mean_zlib_ratio": 0.4578006401080897
+    },
+    "O2": {
+      "n": 10,
+      "mean_insns": 434.0,
+      "mean_zlib_ratio": 0.5481785810566719
+    },
+    "O3": {
+      "n": 10,
+      "mean_insns": 600.7,
+      "mean_zlib_ratio": 0.4801154951766251
+    }
+  },
+  "d95_by_opt_level": {
+    "O0": 8,
+    "O2": 8,
+    "O3": 8
+  },
+  "d95_full_corpus": 17,
+  "project_opt_compression": {
+    "sort": {
+      "O0": 0.43882844378302677,
+      "O2": 0.5956982170635395,
+      "O3": 0.47082377447185825
+    },
+    "hash": {
+      "O0": 0.47813908171964437,
+      "O2": 0.47622587949038553,
+      "O3": 0.44648305084745765
+    },
+    "compress": {
+      "O0": 0.5028001341381623,
+      "O2": 0.5819556083302886,
+      "O3": 0.5181805375963476
+    },
+    "search": {
+      "O0": 0.4661041871407725,
+      "O2": 0.5920650971567468,
+      "O3": 0.5904665314401623
+    },
+    "matrix": {
+      "O0": 0.40313135375884224,
+      "O2": 0.49494810324239913,
+      "O3": 0.3746235815272998
+    }
+  }
+}

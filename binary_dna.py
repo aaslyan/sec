@@ -75,6 +75,14 @@ def main():
     clones_parser.add_argument('--corpus-dir', required=True, help='Corpus directory (contains corpus.pkl)')
     clones_parser.add_argument('--output-dir', required=True, help='Output directory for clone results')
 
+    # Compiler matrix experiment
+    cm_parser = subparsers.add_parser(
+        'compiler-matrix',
+        help='5 C projects × {gcc,clang} × {O0,O2,O3} — compiler fingerprinting experiment'
+    )
+    cm_parser.add_argument('--output-dir', default='results/compiler_matrix',
+                           help='Output directory (default: results/compiler_matrix)')
+
     # GitHub corpus builder command
     github_parser = subparsers.add_parser('github', help='Build corpus from GitHub repositories')
     github_parser.add_argument('--output-dir', required=True, help='Output directory for corpus')
@@ -124,6 +132,9 @@ def main():
         elif args.command == 'clones':
             from clone_detection.pipeline import run_clones_command
             return run_clones_command(args)
+        elif args.command == 'compiler-matrix':
+            from experiments.compiler_matrix import run_compiler_matrix
+            return run_compiler_matrix(args)
         elif args.command == 'github':
             from corpus.github_builder import run_github_corpus_builder
             return run_github_corpus_builder(args)

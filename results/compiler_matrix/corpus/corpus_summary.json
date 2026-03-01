@@ -1,0 +1,212 @@
+[
+  {
+    "name": "sort_gcc-O0",
+    "project": "sort",
+    "compiler": "gcc-O0",
+    "functions": 24,
+    "instructions": 637
+  },
+  {
+    "name": "sort_gcc-O2",
+    "project": "sort",
+    "compiler": "gcc-O2",
+    "functions": 19,
+    "instructions": 411
+  },
+  {
+    "name": "sort_gcc-O3",
+    "project": "sort",
+    "compiler": "gcc-O3",
+    "functions": 19,
+    "instructions": 454
+  },
+  {
+    "name": "sort_clang-O0",
+    "project": "sort",
+    "compiler": "clang-O0",
+    "functions": 23,
+    "instructions": 519
+  },
+  {
+    "name": "sort_clang-O2",
+    "project": "sort",
+    "compiler": "clang-O2",
+    "functions": 18,
+    "instructions": 366
+  },
+  {
+    "name": "sort_clang-O3",
+    "project": "sort",
+    "compiler": "clang-O3",
+    "functions": 18,
+    "instructions": 626
+  },
+  {
+    "name": "hash_gcc-O0",
+    "project": "hash",
+    "compiler": "gcc-O0",
+    "functions": 22,
+    "instructions": 414
+  },
+  {
+    "name": "hash_gcc-O2",
+    "project": "hash",
+    "compiler": "gcc-O2",
+    "functions": 19,
+    "instructions": 381
+  },
+  {
+    "name": "hash_gcc-O3",
+    "project": "hash",
+    "compiler": "gcc-O3",
+    "functions": 18,
+    "instructions": 400
+  },
+  {
+    "name": "hash_clang-O0",
+    "project": "hash",
+    "compiler": "clang-O0",
+    "functions": 21,
+    "instructions": 357
+  },
+  {
+    "name": "hash_clang-O2",
+    "project": "hash",
+    "compiler": "clang-O2",
+    "functions": 17,
+    "instructions": 466
+  },
+  {
+    "name": "hash_clang-O3",
+    "project": "hash",
+    "compiler": "clang-O3",
+    "functions": 17,
+    "instructions": 472
+  },
+  {
+    "name": "compress_gcc-O0",
+    "project": "compress",
+    "compiler": "gcc-O0",
+    "functions": 18,
+    "instructions": 497
+  },
+  {
+    "name": "compress_gcc-O2",
+    "project": "compress",
+    "compiler": "gcc-O2",
+    "functions": 14,
+    "instructions": 368
+  },
+  {
+    "name": "compress_gcc-O3",
+    "project": "compress",
+    "compiler": "gcc-O3",
+    "functions": 14,
+    "instructions": 578
+  },
+  {
+    "name": "compress_clang-O0",
+    "project": "compress",
+    "compiler": "clang-O0",
+    "functions": 18,
+    "instructions": 480
+  },
+  {
+    "name": "compress_clang-O2",
+    "project": "compress",
+    "compiler": "clang-O2",
+    "functions": 15,
+    "instructions": 476
+  },
+  {
+    "name": "compress_clang-O3",
+    "project": "compress",
+    "compiler": "clang-O3",
+    "functions": 15,
+    "instructions": 479
+  },
+  {
+    "name": "search_gcc-O0",
+    "project": "search",
+    "compiler": "gcc-O0",
+    "functions": 20,
+    "instructions": 533
+  },
+  {
+    "name": "search_gcc-O2",
+    "project": "search",
+    "compiler": "gcc-O2",
+    "functions": 16,
+    "instructions": 491
+  },
+  {
+    "name": "search_gcc-O3",
+    "project": "search",
+    "compiler": "gcc-O3",
+    "functions": 16,
+    "instructions": 493
+  },
+  {
+    "name": "search_clang-O0",
+    "project": "search",
+    "compiler": "clang-O0",
+    "functions": 20,
+    "instructions": 504
+  },
+  {
+    "name": "search_clang-O2",
+    "project": "search",
+    "compiler": "clang-O2",
+    "functions": 14,
+    "instructions": 429
+  },
+  {
+    "name": "search_clang-O3",
+    "project": "search",
+    "compiler": "clang-O3",
+    "functions": 14,
+    "instructions": 435
+  },
+  {
+    "name": "matrix_gcc-O0",
+    "project": "matrix",
+    "compiler": "gcc-O0",
+    "functions": 24,
+    "instructions": 593
+  },
+  {
+    "name": "matrix_gcc-O2",
+    "project": "matrix",
+    "compiler": "gcc-O2",
+    "functions": 20,
+    "instructions": 382
+  },
+  {
+    "name": "matrix_gcc-O3",
+    "project": "matrix",
+    "compiler": "gcc-O3",
+    "functions": 20,
+    "instructions": 416
+  },
+  {
+    "name": "matrix_clang-O0",
+    "project": "matrix",
+    "compiler": "clang-O0",
+    "functions": 24,
+    "instructions": 457
+  },
+  {
+    "name": "matrix_clang-O2",
+    "project": "matrix",
+    "compiler": "clang-O2",
+    "functions": 17,
+    "instructions": 570
+  },
+  {
+    "name": "matrix_clang-O3",
+    "project": "matrix",
+    "compiler": "clang-O3",
+    "functions": 17,
+    "instructions": 1654
+  }
+]
