@@ -73,6 +73,18 @@ def run_analysis_pipeline(args) -> int:
         from analysis.compiler_fingerprinting_simple import run_compiler_fingerprinting
         compiler_results = run_compiler_fingerprinting(binaries, output_dir)
 
+        # Run clone detection (Phase 7)
+        try:
+            from clone_detection.pipeline import run_clone_detection
+            clone_results = run_clone_detection(
+                binaries, output_dir / 'clones'
+            )
+            logger.info(
+                f"Clone detection: {clone_results.get('family_stats', {}).get('total_families', 0)} families"
+            )
+        except Exception as e:
+            logger.warning(f"Clone detection failed (non-fatal): {e}")
+
         # Generate all plots
         try:
             from visualization.plots import generate_all_plots

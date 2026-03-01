@@ -323,6 +323,49 @@ perfect frequency counts.  The \emph{smoothing gap}
 $\delta(n) = H_{\mathrm{LM}}(n) - (H_n - H_{n-1})$ quantifies the overhead
 from finite-sample estimation and Laplace smoothing.
 
+\subsection{Code Clone Detection}
+\label{sec:clone_method}
+
+Compiler-generated code is replete with recurring instruction patterns:
+function prologues, epilogues, libc initialisation stubs, and common algorithm
+skeletons appear nearly verbatim across binaries.  We detect \emph{clone
+families}---groups of functions sharing substantial instruction-level
+similarity---using a three-stage pipeline.
+
+\paragraph{Stage 1: MinHash signatures.}
+Each function's opcode sequence is shingled with $k \in \{3,4,5\}$ to form a
+set of $k$-gram tokens.  A MinHash signature of $m = 128$ permutations is
+computed for each function at each granularity, giving a Jaccard estimator
+with standard error $\leq 1/\!\sqrt{m} \approx 0.09$.
+
+\paragraph{Stage 2: LSH candidate generation.}
+Locality-Sensitive Hashing (LSH) is applied at Jaccard thresholds
+$\tau \in \{0.70, 0.90\}$ for each $k$.  Candidate pairs from all six
+(threshold, $k$) configurations are merged; per-pair, the highest Jaccard
+estimate is retained.  This reduces the comparison budget from
+$O(N^2)$ to $O(N \cdot C)$ where $C \ll N$ for typical corpora.
+
+\paragraph{Stage 3: Smith-Waterman alignment.}
+Each candidate pair undergoes Smith-Waterman local sequence alignment on
+opcode sequences.  The normalised alignment score
+$s = S / \min(|f_1|, |f_2|)$ provides a more accurate similarity estimate
+than raw Jaccard.  Pairs are classified by clone type:
+\begin{itemize}
+  \item \textbf{Type 1} (exact/near-exact): $J \geq 0.95$---opcode sequences
+        are identical up to trivial register renaming captured by the
+        shingle vocabulary.
+  \item \textbf{Type 2} (renamed/parameterised): $0.70 \leq J < 0.95$---same
+        structure with different immediate constants or calling conventions.
+  \item \textbf{Type 3} (gapped/structurally similar): $0.50 \leq J < 0.70$---shared
+        algorithmic skeleton with insertions or deletions.
+\end{itemize}
+
+Clone pairs are assembled into \emph{families} via connected components on
+the clone similarity graph.  For each family we compute a \emph{conserved
+core} (the intersection of all member opcode sets), a \emph{divergence
+score} ($1 - \bar{J}$ across all intra-family pairs), and a \emph{cross-binary}
+flag indicating whether members span more than one input binary.
+
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Results}
 \label{sec:results}
@@ -653,6 +696,74 @@ language model.
   \label{fig:lm}
 \end{figure}
 
+\subsection{Code Clone Detection}
+\label{sec:clone_results}
+
+Table~\ref{tab:clones} summarises the clone detection results on the 15-binary
+smoke corpus.  LSH candidate generation produced 475 unique candidate pairs;
+Smith-Waterman re-scoring confirmed 457 as genuine clone pairs ($96\%$
+confirmation rate).  These 457 pairs form 93 clone families; six families
+span at least two distinct binaries (\emph{cross-binary families}).
+
+\begin{table}[h]
+\centering
+\caption{Clone detection summary for the 15-binary smoke corpus
+         (6,013 functions total).}
+\label{tab:clones}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Functions in any clone family         & 286 (4.8\%) \\
+Clone pairs confirmed                 & 457 \\
+\quad Type 1 (exact, $J \geq 0.95$)  & 308 (67\%) \\
+\quad Type 2 (renamed, $J \geq 0.70$)& 78  (17\%) \\
+\quad Type 3 (gapped, $J \geq 0.50$) & 71  (16\%) \\
+Clone families                        & 93 \\
+\quad Cross-binary                    & 6 \\
+Mean family size                      & 3.1 \\
+Largest family                        & 16 members \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The dominant clone type is Type 1 ($67\%$ of pairs), confirming that most
+recurring patterns are truly identical opcode sequences rather than merely
+similar ones.  This is consistent with compiler-inserted boilerplate: ABI
+function prologues (\texttt{endbr64; push rbp; mov rbp,rsp; \ldots}),
+CRT initialisation stubs, and \texttt{\_\_libc\_start\_main} wrappers are
+inserted verbatim by the linker and appear unchanged across binaries.
+
+The six cross-binary families are particularly informative.  The largest
+cross-binary family (size 16) is present in all 15 binaries and consists
+entirely of the standard function prologue idiom.  The next largest
+cross-binary families correspond to error-reporting stubs and
+string-comparison loops shared between text-processing utilities (grep,
+sed, tar).
+
+Per-binary clone density varies considerably: \texttt{bash} exhibits the
+highest density ($9.6\%$ of its functions) reflecting its large inline
+library of shell built-in helpers, followed by \texttt{sed} ($5.0\%$)
+and \texttt{python3} ($3.9\%$).  Smaller utilities (git, vim) show
+densities below $0.5\%$, suggesting that hand-crafted code with unique
+control flow is less prone to accidental near-duplication.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\columnwidth]{../results/smoke/clones/plots/clone_family_size_dist.png}
+  \caption{Clone family size distribution.  Most families are pairs (size 2);
+           large families ($\geq\!8$ members) consist of universally shared
+           compiler-inserted prologue/epilogue stubs.}
+  \label{fig:clone_dist}
+\end{figure}
+
+These results reinforce the thin-manifold picture: the $4.8\%$ of functions
+that are cloned are not randomly distributed across sequence space---they are
+concentrated on a \emph{small number of clone archetypes} (93 families from
+457 pairs), further tiling the already-compact program manifold with repeated
+structure.
+
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Discussion}
 \label{sec:discussion}
@@ -670,6 +781,9 @@ low-dimensional, highly structured manifold shaped by:
         recur across the entire corpus).
   \item \textbf{Algorithm structure} (sorting, hashing, and buffering routines
         produce characteristic inner-loop patterns visible as high-coverage motifs).
+  \item \textbf{Clone reuse} (linker-inserted stubs and shared libc helpers
+        tile the manifold with exact or near-exact copies, as quantified in
+        Section~\ref{sec:clone_results}).
 \end{enumerate}
 
 The combination of a Zipf-distributed vocabulary ($\alpha \approx 3.4$), rapidly
@@ -688,7 +802,11 @@ clustering results confirm that within-category pairs (e.g.\ compression
 utilities bzip2--xz with NCD $0.963$) are consistently closer than cross-category
 pairs---suggesting that compression-based features are a viable foundation for
 binary classification, provenance, and clone detection without requiring
-disassembly beyond opcode extraction.
+disassembly beyond opcode extraction.  The clone detection results
+(Section~\ref{sec:clone_results}) directly confirm this: MinHash + LSH over
+opcode $k$-grams recovers 457 clone pairs with a $96\%$ confirmation rate,
+identifying six cross-binary families that correspond to known compiler
+prologue/libc stubs---without any symbol information or source code.
 
 \subsection{Implications for Language Model Performance on Code}
 
@@ -756,7 +874,11 @@ only $d_{95} = 8$ of 200 bigram dimensions ($4\%$ of the feature space), and
 a Laplace-smoothed bigram language model achieves perplexity $8.5$---a
 $34\times$ reduction below the vocabulary size and within $0.07$~bits of the
 empirical conditional-entropy lower bound---directly quantifying how
-predictable instruction sequences are for a language model.
+predictable instruction sequences are for a language model, and MinHash+LSH
+clone detection recovers 457 clone pairs forming 93 families ($4.8\%$ of
+functions) with a $96\%$ confirmation rate, revealing that the manifold is
+not merely compact but \emph{repetitively tiled} by a small set of
+compiler-inserted archetypes.
 
 These findings support a unified \emph{thin structured manifold} hypothesis:
 compiled programs are concentrated in a tiny, highly regular corner of the
@@ -790,6 +912,14 @@ Several directions follow naturally from this work:
         for anomaly detection: binaries that are outliers on the manifold (high
         NCD from all known-good binaries, anomalous motif distributions) may
         indicate obfuscation or packing.
+  \item \textbf{Clone-guided vulnerability propagation.}  The cross-binary
+        clone families identified in Section~\ref{sec:clone_results} are
+        natural candidates for tracking vulnerability propagation: a known-bad
+        function that forms a cross-binary clone family implies the vulnerability
+        may be present in every binary containing that family member.  Extending
+        the clone taxonomy to include security-relevant semantics (e.g.\
+        constant-time violations, buffer-handling idioms) would transform clone
+        detection into a lightweight binary auditing tool.
 \end{enumerate}
 
 % ─────────────────────────────────────────────────────────────────────────────

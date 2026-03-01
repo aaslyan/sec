@@ -70,6 +70,11 @@ def main():
     lm_parser.add_argument('--results-dir', required=True, help='Analysis results directory (contains ngram_analysis.json)')
     lm_parser.add_argument('--output', required=True, help='Output JSON path for LM analysis results')
 
+    # Clone detection command
+    clones_parser = subparsers.add_parser('clones', help='Detect code clones across binary corpus')
+    clones_parser.add_argument('--corpus-dir', required=True, help='Corpus directory (contains corpus.pkl)')
+    clones_parser.add_argument('--output-dir', required=True, help='Output directory for clone results')
+
     # GitHub corpus builder command
     github_parser = subparsers.add_parser('github', help='Build corpus from GitHub repositories')
     github_parser.add_argument('--output-dir', required=True, help='Output directory for corpus')
@@ -116,6 +121,9 @@ def main():
         elif args.command == 'lm':
             from analysis.lm import run_lm_command
             return run_lm_command(args)
+        elif args.command == 'clones':
+            from clone_detection.pipeline import run_clones_command
+            return run_clones_command(args)
         elif args.command == 'github':
             from corpus.github_builder import run_github_corpus_builder
             return run_github_corpus_builder(args)
