@@ -264,14 +264,6 @@
     "annotation": "Function call \u2014 subroutine invocation"
   },
   {
-    "motif": "mov push push push push push sub mov mov mov mov",
-    "frequency": 83,
-    "total_occurrences": 498,
-    "function_count": 83,
-    "function_coverage": 0.013803425910527191,
-    "annotation": "Data movement \u2014 bulk register/memory transfers"
-  },
-  {
     "motif": "mov mov call mov test je mov mov mov call mov",
     "frequency": 83,
     "total_occurrences": 352,
@@ -280,12 +272,12 @@
     "annotation": "Loop/branch \u2014 test and jump"
   },
   {
-    "motif": "mov sub jne add pop pop pop pop pop pop ret",
-    "frequency": 81,
-    "total_occurrences": 1143,
-    "function_count": 81,
-    "function_coverage": 0.013470813237984366,
-    "annotation": "Function epilogue \u2014 pop/ret"
+    "motif": "mov push push push push push sub mov mov mov mov",
+    "frequency": 83,
+    "total_occurrences": 498,
+    "function_count": 83,
+    "function_coverage": 0.013803425910527191,
+    "annotation": "Data movement \u2014 bulk register/memory transfers"
   },
   {
     "motif": "mov mov mov mov mov mov mov mov mov mov mov",
@@ -294,6 +286,14 @@
     "function_count": 81,
     "function_coverage": 0.013470813237984366,
     "annotation": "Data movement \u2014 bulk register/memory transfers"
+  },
+  {
+    "motif": "mov sub jne add pop pop pop pop pop pop ret",
+    "frequency": 81,
+    "total_occurrences": 1143,
+    "function_count": 81,
+    "function_coverage": 0.013470813237984366,
+    "annotation": "Function epilogue \u2014 pop/ret"
   },
   {
     "motif": "mov mov mov test je movaps movaps movaps movaps movaps movaps",
@@ -312,7 +312,7 @@
     "annotation": "Function call \u2014 subroutine invocation"
   },
   {
-    "motif": "cmp ja lea shr lea mov mov cmp je mov add",
+    "motif": "ja lea shr lea mov mov cmp je mov add mov",
     "frequency": 76,
     "total_occurrences": 92,
     "function_count": 76,
@@ -320,7 +320,7 @@
     "annotation": "Loop/branch \u2014 compare and jump"
   },
   {
-    "motif": "ja lea shr lea mov mov cmp je mov add mov",
+    "motif": "cmp ja lea shr lea mov mov cmp je mov add",
     "frequency": 76,
     "total_occurrences": 92,
     "function_count": 76,

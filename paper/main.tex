@@ -55,14 +55,18 @@ open-source toolkit that applies computational biology and information-theoretic
 techniques to the systematic study of program instruction sequences.
 
 Across a corpus of 15 system utilities totalling 3.1~million instructions, we
-find that opcode frequencies follow Zipf's power law with an exponent
-$\alpha\!\approx\!3.4$---substantially steeper than English text ($\alpha\!\approx\!1.0$),
-reflecting extreme concentration in a handful of opcodes.  N-gram entropy rates
-decrease by 1.82 bits/opcode from $n\!=\!1$ to $n\!=\!5$, and the gap between
-real and unigram-shuffled baselines confirms genuine higher-order sequential
-dependencies.  Binaries compress to roughly $22\%$ of their raw token volume
-under \zlib{} compared to $67\%$ for random sequences of the same vocabulary,
-evidencing extreme redundancy.  Motif discovery at lengths $k\!=\!4$--$12$
+find that opcode frequencies exhibit a highly concentrated, power-law-like
+distribution (OLS log-log exponent $\hat{\alpha}_{\text{OLS}}\!\approx\!3.4$;
+MLE exponent $\hat{\alpha}_{\text{MLE}}\!\approx\!1.4$, closer to English
+text's $\alpha\!\approx\!1.0$; the OLS--MLE discrepancy arises from the
+long-tail weighting bias of log-log regression).
+N-gram entropy rates decrease by 1.82~bits/opcode from $n\!=\!1$ to $n\!=\!5$,
+and the gap between real and unigram-shuffled baselines confirms genuine
+higher-order sequential dependencies.  Binaries compress to roughly $22\%$ of
+their raw token volume under \zlib{} compared to $36\%$ for unigram-shuffled
+sequences and $67\%$ for random sequences of the same vocabulary; the
+unigram--sequential decomposition attributes $69\%$ of the compression gain to
+the Zipfian frequency skew and $31\%$ to sequential structure.  Motif discovery at lengths $k\!=\!4$--$12$
 recovers 798 recurring patterns dominated by compiler-generated idioms:
 function prologues, epilogues, and call sequences.  Hierarchical clustering and
 dimensionality reduction show that binaries of similar functional category
@@ -106,9 +110,11 @@ sequences}---are amenable to the same treatment.
 \begin{enumerate}
   \item A reproducible, open-source analysis toolkit (\emph{Binary DNA}) that
         applies computational biology techniques to compiled binaries.
-  \item Empirical evidence that opcode frequencies obey Zipf's law with an
-        exponent $\alpha\!\approx\!3.4$, indicating greater concentration
-        than natural language.
+  \item Empirical evidence that opcode frequencies obey a Zipf-like power law
+        (OLS $\hat{\alpha}\!\approx\!3.4$; MLE $\hat{\alpha}\!\approx\!1.4$),
+        with a unigram--sequential decomposition of compression gains showing
+        that $69\%$ of compressibility advantage over random sequences comes
+        from Zipfian frequency skew and $31\%$ from sequential structure.
   \item Quantification of n-gram entropy structure and its deviation from
         unigram-shuffled baselines, revealing multi-scale sequential
         dependencies.
@@ -208,7 +214,14 @@ $r(v)$ its frequency rank.  We fit Zipf's power law
   \label{eq:zipf}
 \end{equation}
 via OLS on log-log coordinates.  A 95\% bootstrap confidence interval on
-$\alpha$ is obtained from 200 resamplings with replacement.
+$\alpha$ is obtained from 200 resamplings with replacement.  As a
+complementary estimator, we also apply maximum likelihood estimation (MLE)
+to the truncated discrete Zipf model: we maximise
+$\ell(\alpha) = -\alpha \sum_r f(r)\log r - N \log Z_V(\alpha)$
+where $Z_V(\alpha) = \sum_{r=1}^{V} r^{-\alpha}$ is the truncated Riemann
+zeta normalisation.  A 95\% CI on $\alpha_{\text{MLE}}$ is obtained via
+parametric bootstrap ($n=200$ resamples from the fitted distribution), and
+a Kolmogorov--Smirnov statistic is computed against the fitted rank-CDF.
 
 \subsection{N-gram Entropy and Shuffled Baseline}
 
@@ -234,10 +247,19 @@ We measure two proxies for Kolmogorov complexity:
         distinct phrases produced by the LZ78 factorisation of the integer-encoded
         sequence, normalised by $\log_2 N$.
 \end{enumerate}
-Both are compared to a random baseline: sequences of the same length drawn
-uniformly from $\mathcal{V}$, repeated ten times and averaged.  Binaries that
-are significantly more compressible than random sequences exhibit structural
-redundancy inconsistent with a high-entropy source.
+Both are compared to two baselines:
+\begin{itemize}
+  \item \emph{Uniform-random baseline}: sequences of the same length drawn
+        uniformly from $\mathcal{V}$ (ten replicates, averaged).  Captures
+        the maximum-entropy reference.
+  \item \emph{Unigram-shuffled baseline}: each binary's opcode sequence is
+        randomly permuted (five replicates), preserving the marginal frequency
+        distribution while destroying all sequential order.  The gap between
+        corpus and unigram-shuffled ratios isolates compression gains from
+        \emph{sequential} structure only, factoring out Zipfian skew.
+\end{itemize}
+Binaries that are significantly more compressible than random sequences exhibit
+structural redundancy inconsistent with a high-entropy source.
 
 \subsection{Motif Discovery}
 
@@ -400,13 +422,20 @@ consistent with prior work on x86-64 binaries~\cite{bilar2007opcodes}.
 
 \paragraph{Zipf's law.}
 Figure~\ref{fig:zipf} shows the rank-frequency distribution on log-log axes.
-The OLS fit yields $\hat{\alpha} = 3.356$ (95\% CI: $[3.086,\, 3.666]$,
-$R^2 = 0.92$) from 200 bootstrap resamples.  This exponent is substantially
-larger than the $\alpha \approx 1.0$ characteristic of natural language,
-reflecting a far more concentrated opcode distribution: a handful of high-frequency
-mnemonics (\texttt{mov}, \texttt{lea}, \texttt{call}, \texttt{push},
-\texttt{pop}) account for the vast majority of instructions, while the long
-tail of rarely-used opcodes drops off steeply.
+The OLS fit on log-log coordinates yields $\hat{\alpha}_{\text{OLS}} = 3.356$
+(95\% CI: $[3.086,\, 3.666]$, $R^2 = 0.92$) from 200 bootstrap resamples.
+As a statistically principled complement, the MLE of the truncated discrete
+Zipf model yields $\hat{\alpha}_{\text{MLE}} = 1.444$
+(95\% CI: $[1.370,\, 1.515]$, KS $= 0.114$).
+The two estimates diverge because OLS on log-log axes weights low-frequency
+(high-rank) opcodes heavily: the many near-zero-frequency opcodes in the long
+tail pull the fitted slope upward, overestimating the power-law exponent.
+MLE, which properly weights by observation count, yields an exponent substantially
+closer to the $\alpha \approx 1.0$ of natural language.
+Both estimators confirm a highly concentrated distribution: a handful of
+high-frequency mnemonics (\texttt{mov}, \texttt{lea}, \texttt{call},
+\texttt{push}, \texttt{pop}) account for over $50\%$ of all instructions,
+while the long tail of rarely-used opcodes drops off steeply.
 
 \begin{figure}[h]
   \centering
@@ -443,25 +472,32 @@ predictable local instruction streams than data-transform pipelines.
 
 \subsection{Compression and LZ78 Complexity}
 
-Table~\ref{tab:compression} summarises compression ratios.  Real binaries
-achieve a mean \zlib{} ratio of $0.223$ compared to $0.672$ for random sequences
-of the same length and vocabulary---a $67\%$ relative improvement---and $0.185$
-vs.\ $0.560$ under \lzma{}.  LZ78 normalised complexity (phrases / $\log_2 N$)
-has a median of $630$ for real binaries, versus a raw phrase count of $87{,}881$
-for the random baseline, consistent with near-minimal Kolmogorov complexity
-for the real instruction streams.
+Table~\ref{tab:compression} summarises compression ratios across three
+conditions: real binaries, a unigram-preserving shuffle, and a fully random
+(uniform-vocabulary) baseline.  Real binaries achieve a mean \zlib{} ratio of
+$0.223$ compared to $0.361$ for the unigram-shuffled sequences and $0.672$ for
+uniform-random sequences of the same length.  Decomposing the total compression
+advantage over random ($\Delta = 0.449$): the Zipfian frequency distribution
+alone (unigram skew) contributes $0.311$ ($69\%$), while sequential structure
+on top of the unigram distribution contributes the remaining $0.138$ ($31\%$).
+Under \lzma{} the pattern is consistent: real $0.185$ vs.\ shuffled $0.304$
+vs.\ random $0.560$.  LZ78 normalised complexity has a median of $630$ for real
+binaries vs.\ $45{,}187$ for unigram-shuffled sequences and $87{,}881$ for
+random sequences, consistent with near-minimal Kolmogorov complexity for real
+instruction streams once sequential structure is accounted for.
 
 \begin{table}[h]
 \centering
-\caption{Compression ratio $\rho = |C(s)|/|s|$ (lower is more compressible).}
+\caption{Compression ratio $\rho = |C(s)|/|s|$ (lower is more compressible).
+  ``Shuffled'' preserves unigram frequencies; ``Random'' draws uniformly from $\mathcal{V}$.}
 \label{tab:compression}
-\begin{tabular}{@{}lcc@{}}
+\begin{tabular}{@{}lccc@{}}
 \toprule
-& \textbf{Real} & \textbf{Random baseline} \\
+& \textbf{Real} & \textbf{Shuffled} & \textbf{Random} \\
 \midrule
-\zlib{}       & $0.223$           & $0.672$ \\
-\lzma{}       & $0.185$           & $0.560$ \\
-LZ78 (norm.)  & $630$ (med.)      & $\gg\!10^4$ \\
+\zlib{}       & $0.223$      & $0.361$      & $0.672$ \\
+\lzma{}       & $0.185$      & $0.304$      & $0.560$ \\
+LZ78 (norm.)  & $630$ (med.) & $45{,}187$   & $87{,}881$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -786,7 +822,8 @@ low-dimensional, highly structured manifold shaped by:
         Section~\ref{sec:clone_results}).
 \end{enumerate}
 
-The combination of a Zipf-distributed vocabulary ($\alpha \approx 3.4$), rapidly
+The combination of a highly concentrated vocabulary (MLE Zipf exponent
+$\hat{\alpha}_{\text{MLE}} \approx 1.4$, OLS $\approx 3.4$), rapidly
 decaying entropy rates, near-maximum compressibility, and a manifold
 dimensionality of $d_{95} \approx 8$ out of 200 features paints a consistent
 picture: programs are \emph{extraordinarily predictable} at the instruction
@@ -818,9 +855,9 @@ much easier prediction problem than one trained on natural language:
   \item The effective vocabulary size is $|\mathcal{V}| = 293$
         distinct mnemonics---smaller than a typical NLP vocabulary by two orders
         of magnitude.
-  \item Transition probabilities are highly non-uniform (Zipf, $\alpha \approx
-        3.4$), meaning a handful of high-frequency opcodes carry nearly all of
-        the probability mass.
+  \item Transition probabilities are highly non-uniform (Zipf-like;
+        MLE $\hat{\alpha} \approx 1.4$, OLS $\approx 3.4$), meaning a handful
+        of high-frequency opcodes carry nearly all of the probability mass.
   \item MI decays to near-baseline within $\approx 2$ steps; a modest
         context window suffices to capture most local structure.
   \item The low intrinsic dimensionality ($d_{95} \approx 8$) means that
@@ -863,11 +900,13 @@ could not be computed.
 We have presented \emph{Binary DNA}, a statistical analysis framework that
 treats compiled instruction sequences through the lens of computational biology.
 Across a 15-binary smoke corpus of GNU/Linux ELF x86-64 utilities spanning 3.12
-million instructions, we demonstrated that opcode frequencies obey Zipf's law
-($\alpha \approx 3.4$, steeper than natural language), entropy rates decrease
+million instructions, we demonstrated that opcode frequencies obey a Zipf-like
+power law (MLE $\hat{\alpha} \approx 1.4$; OLS $\approx 3.4$), entropy rates decrease
 by $1.82$ bits from $n=1$ to $n=5$ (vs.\ $1.09$ bits for a shuffled baseline,
-confirming genuine sequential dependencies), binaries compress to $22\%$ of
-raw token volume vs.\ $67\%$ for random sequences of the same vocabulary,
+confirming genuine sequential dependencies), binaries compress to $22\%$ of raw
+token volume vs.\ $36\%$ for unigram-shuffled sequences and $67\%$ for random
+sequences ($69\%$ of the compression gain attributed to Zipfian frequency skew,
+$31\%$ to sequential structure),
 7,623 unique k-mer motifs capture compiler-generated idioms, within-category
 pairs cluster closer under both NCD metrics, the corpus manifold occupies
 only $d_{95} = 8$ of 200 bigram dimensions ($4\%$ of the feature space), and

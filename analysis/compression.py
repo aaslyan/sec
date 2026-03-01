@@ -154,6 +154,81 @@ def generate_random_baseline(vocab_size: int, sequence_length: int, num_samples:
     
     return avg_result
 
+def generate_unigram_shuffled_baseline(binaries: List[Binary],
+                                       num_shuffles: int = 5,
+                                       rng_seed: int = 42) -> Dict:
+    """
+    Compression baseline using unigram-matched shuffled sequences.
+
+    For each binary, randomly permute its opcode-ID sequence and compress
+    the permuted bytes.  Averaging over *num_shuffles* permutations per
+    binary gives a stable estimate.
+
+    This baseline preserves the marginal (Zipfian) frequency distribution
+    while destroying all sequential structure, so the gap between the
+    corpus mean and this baseline isolates *sequential* redundancy from
+    the contribution of mere unigram skew.
+    """
+    vocab = build_vocabulary(binaries)
+    import struct
+
+    rng = np.random.default_rng(rng_seed)
+    shuffle_results: list = []
+
+    for binary in binaries:
+        encoded = np.array(encode_sequence(binary.full_opcode_sequence, vocab),
+                           dtype=np.int32)
+        if len(encoded) == 0:
+            continue
+
+        for _ in range(num_shuffles):
+            perm = rng.permutation(encoded)
+
+            # Pack identically to compute_compression_ratios
+            try:
+                if perm.max() > 255:
+                    perm_bytes = struct.pack(f'<{len(perm)}H', *perm.tolist())
+                else:
+                    perm_bytes = bytes(perm.tolist())
+            except (ValueError, struct.error):
+                perm_bytes = bytes((perm % 256).tolist())
+
+            n = len(perm_bytes)
+            try:
+                zlib_r = len(zlib.compress(perm_bytes)) / n
+            except Exception:
+                zlib_r = 1.0
+            try:
+                lzma_r = len(lzma.compress(perm_bytes)) / n
+            except Exception:
+                lzma_r = 1.0
+            try:
+                lz = compute_lz_complexity(perm.tolist())
+            except Exception:
+                lz = len(perm)
+
+            shuffle_results.append({
+                "zlib_ratio": zlib_r,
+                "lzma_ratio": lzma_r,
+                "lz_complexity": lz,
+            })
+
+    if not shuffle_results:
+        return {"zlib_ratio": 1.0, "lzma_ratio": 1.0, "lz_complexity": 0,
+                "num_samples": 0}
+
+    return {
+        "zlib_ratio": float(np.mean([r["zlib_ratio"] for r in shuffle_results])),
+        "lzma_ratio": float(np.mean([r["lzma_ratio"] for r in shuffle_results])),
+        "lz_complexity": float(np.mean([r["lz_complexity"] for r in shuffle_results])),
+        "num_samples": len(shuffle_results),
+        "description": (
+            "Sequences with identical unigram distribution but random order; "
+            "gap to corpus mean = sequential redundancy only."
+        ),
+    }
+
+
 def analyze_compression_vs_size(compression_results: List[Dict]) -> Dict:
     """Analyze correlation between binary size and compression ratio."""
     if len(compression_results) < 2:
@@ -191,10 +266,13 @@ def run_compression_analysis(binaries: List[Binary], output_dir: Path) -> Dict:
         logger.error("No compression results generated")
         return {}
     
-    # Generate random baseline
+    # Uniform-random baseline (legacy: uniform over vocab, ignores unigram skew)
     vocab = build_vocabulary(binaries)
     avg_length = int(np.mean([binary.instruction_count for binary in binaries]))
     random_baseline = generate_random_baseline(len(vocab), avg_length)
+
+    # Unigram-shuffled baseline (preserves marginal distribution; gap = sequential only)
+    unigram_shuffled_baseline = generate_unigram_shuffled_baseline(binaries)
     
     # Compute statistics
     zlib_ratios = [r["zlib_ratio"] for r in compression_results]
@@ -232,6 +310,7 @@ def run_compression_analysis(binaries: List[Binary], output_dir: Path) -> Dict:
     results = {
         "compression_statistics": statistics,
         "random_baseline": random_baseline,
+        "unigram_shuffled_baseline": unigram_shuffled_baseline,
         "size_correlation": size_correlation,
         "per_binary_results": compression_results,
         "interpretation": interpret_compression_results(statistics, random_baseline)

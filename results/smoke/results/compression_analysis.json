@@ -23,10 +23,17 @@
     }
   },
   "random_baseline": {
-    "zlib_ratio": 0.6719955046034589,
-    "lzma_ratio": 0.5599064419608766,
-    "lz_complexity": 87881.4,
+    "zlib_ratio": 0.6718852809382699,
+    "lzma_ratio": 0.5596653427019447,
+    "lz_complexity": 87887.2,
     "num_samples": 10
+  },
+  "unigram_shuffled_baseline": {
+    "zlib_ratio": 0.3612683755227088,
+    "lzma_ratio": 0.30409987848222575,
+    "lz_complexity": 45187.28,
+    "num_samples": 75,
+    "description": "Sequences with identical unigram distribution but random order; gap to corpus mean = sequential redundancy only."
   },
   "size_correlation": {
     "correlation": -0.2802389213012814,

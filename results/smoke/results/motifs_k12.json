@@ -152,20 +152,20 @@
     "annotation": "Loop/branch \u2014 compare and jump"
   },
   {
-    "motif": "push mov push push push push push sub mov mov mov mov",
-    "frequency": 68,
-    "total_occurrences": 382,
-    "function_count": 68,
-    "function_coverage": 0.011308830866456012,
-    "annotation": "Function prologue \u2014 stack frame setup"
-  },
-  {
     "motif": "mov call lea mov call mov test je mov mov mov call",
     "frequency": 68,
     "total_occurrences": 94,
     "function_count": 68,
     "function_coverage": 0.011308830866456012,
     "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "push mov push push push push push sub mov mov mov mov",
+    "frequency": 68,
+    "total_occurrences": 382,
+    "function_count": 68,
+    "function_coverage": 0.011308830866456012,
+    "annotation": "Function prologue \u2014 stack frame setup"
   },
   {
     "motif": "mov mov mov mov test je movaps movaps movaps movaps movaps movaps",

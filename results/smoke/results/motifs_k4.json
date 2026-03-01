@@ -352,20 +352,20 @@
     "annotation": "Loop/branch \u2014 compare and jump"
   },
   {
-    "motif": "je mov call mov",
-    "frequency": 732,
-    "total_occurrences": 4271,
-    "function_count": 732,
-    "function_coverage": 0.12173623815067354,
-    "annotation": "Function call \u2014 subroutine invocation"
-  },
-  {
     "motif": "mov call test jne",
     "frequency": 732,
     "total_occurrences": 9131,
     "function_count": 732,
     "function_coverage": 0.12173623815067354,
     "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "je mov call mov",
+    "frequency": 732,
+    "total_occurrences": 4271,
+    "function_count": 732,
+    "function_coverage": 0.12173623815067354,
+    "annotation": "Function call \u2014 subroutine invocation"
   },
   {
     "motif": "mov call mov jmp",
@@ -456,20 +456,20 @@
     "annotation": "Data movement \u2014 bulk register/memory transfers"
   },
   {
-    "motif": "test je cmp jne",
-    "frequency": 661,
-    "total_occurrences": 4000,
-    "function_count": 661,
-    "function_coverage": 0.10992848827540329,
-    "annotation": "Loop/branch \u2014 compare and jump"
-  },
-  {
     "motif": "call test jne mov",
     "frequency": 661,
     "total_occurrences": 7054,
     "function_count": 661,
     "function_coverage": 0.10992848827540329,
     "annotation": "Loop/branch \u2014 test and jump"
+  },
+  {
+    "motif": "test je cmp jne",
+    "frequency": 661,
+    "total_occurrences": 4000,
+    "function_count": 661,
+    "function_coverage": 0.10992848827540329,
+    "annotation": "Loop/branch \u2014 compare and jump"
   },
   {
     "motif": "mov mov jmp mov",
@@ -520,20 +520,20 @@
     "annotation": "Function epilogue \u2014 pop/ret"
   },
   {
-    "motif": "mov mov lea mov",
-    "frequency": 646,
-    "total_occurrences": 7856,
-    "function_count": 646,
-    "function_coverage": 0.10743389323133211,
-    "annotation": "Data movement \u2014 bulk register/memory transfers"
-  },
-  {
     "motif": "call mov mov call",
     "frequency": 646,
     "total_occurrences": 5863,
     "function_count": 646,
     "function_coverage": 0.10743389323133211,
     "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov lea mov",
+    "frequency": 646,
+    "total_occurrences": 7856,
+    "function_count": 646,
+    "function_coverage": 0.10743389323133211,
+    "annotation": "Data movement \u2014 bulk register/memory transfers"
   },
   {
     "motif": "push mov mov push",
@@ -792,11 +792,11 @@
     "annotation": "Function call \u2014 subroutine invocation"
   },
   {
-    "motif": "nop endbr64 push mov",
+    "motif": "je mov test jne",
     "frequency": 543,
-    "total_occurrences": 4517,
+    "total_occurrences": 4148,
     "function_count": 543,
     "function_coverage": 0.09030434059537669,
-    "annotation": "Generic pattern"
+    "annotation": "Loop/branch \u2014 test and jump"
   }
 ]

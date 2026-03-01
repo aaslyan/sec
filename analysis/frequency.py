@@ -9,6 +9,9 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent))
 
+from scipy.optimize import minimize_scalar
+from scipy.stats import lognorm
+
 from utils.helpers import Binary, save_json
 
 logger = logging.getLogger(__name__)
@@ -109,6 +112,113 @@ def fit_zipf_with_ci(rank_frequency: List[Tuple[str, int, int, float]],
     return point
 
 
+def fit_zipf_mle(rank_frequency: List[Tuple[str, int, int, float]],
+                 n_bootstrap: int = 200,
+                 rng_seed: int = 42) -> Dict:
+    """
+    MLE fit of the discrete Zipf model to rank-frequency data.
+
+    Model: P(rank = r | α) = r^{-α} / Z_V(α)   for r = 1..V
+    where Z_V(α) = Σ_{r=1}^{V} r^{-α}  (truncated Riemann zeta).
+
+    Fits α by maximising the weighted log-likelihood
+        ℓ(α) = Σ_r freq[r] · log P(r|α)
+               = −α · Σ_r freq[r]·log(r) − N · log Z_V(α)
+
+    Also computes:
+    - KS goodness-of-fit statistic (rank-CDF vs Zipf-CDF)
+    - 95% CI on α via parametric bootstrap (resample ranks, refit)
+    - Log-likelihood ratio vs a log-normal fit to the frequency values
+      (positive LLR → Zipf preferred; negative → log-normal preferred)
+
+    Returns a dict with keys:
+        alpha_mle, alpha_ci_low, alpha_ci_high,
+        ks_stat, loglikelihood_zipf, loglikelihood_lognormal,
+        loglikelihood_ratio, preferred_model,
+        method (always "mle")
+    """
+    if len(rank_frequency) < 5:
+        return {"alpha_mle": 0.0, "method": "mle", "error": "insufficient data"}
+
+    ranks = np.array([item[2] for item in rank_frequency], dtype=float)
+    freqs = np.array([item[1] for item in rank_frequency], dtype=float)
+    V = len(ranks)
+    N = float(freqs.sum())
+
+    log_ranks = np.log(ranks)
+    sum_wlogr = float(np.dot(freqs, log_ranks))  # Σ_r freq[r]·log(r)
+
+    def neg_log_lik(alpha: float) -> float:
+        # log Z_V(α) via logsumexp trick for numerical stability
+        log_terms = -alpha * log_ranks
+        shift = log_terms.max()
+        log_Z = np.log(np.sum(np.exp(log_terms - shift))) + shift
+        return alpha * sum_wlogr + N * log_Z
+
+    res = minimize_scalar(neg_log_lik, bounds=(0.01, 15.0), method='bounded')
+    alpha_mle = float(res.x)
+    ll_zipf = float(-res.fun)
+
+    # --- KS goodness-of-fit ---
+    probs = ranks ** (-alpha_mle)
+    probs /= probs.sum()
+    ks_stat = float(np.max(np.abs(np.cumsum(probs) - np.cumsum(freqs / N))))
+
+    # --- 95% CI via parametric bootstrap (resample V ranks with replacement,
+    #     weighted by fitted probs; refit α on each sample) ---
+    rng = np.random.default_rng(rng_seed)
+    boot_alphas: list = []
+    for _ in range(n_bootstrap):
+        # Draw V rank-observations (each with weight = freq[r]/N) and recount
+        sampled_ranks = rng.choice(ranks.astype(int), size=V, replace=True, p=probs)
+        b_freqs = np.bincount(sampled_ranks, minlength=int(ranks.max()) + 1
+                              ).astype(float)[1:]
+        b_freqs = b_freqs[:V]
+        if b_freqs.sum() == 0:
+            continue
+        b_sum = float(np.dot(b_freqs, log_ranks[:len(b_freqs)]))
+        b_N = float(b_freqs.sum())
+        def b_nll(a, _s=b_sum, _n=b_N, _lr=log_ranks[:len(b_freqs)]):
+            lt = -a * _lr
+            sh = lt.max()
+            return a * _s + _n * (np.log(np.sum(np.exp(lt - sh))) + sh)
+        try:
+            br = minimize_scalar(b_nll, bounds=(0.01, 15.0), method='bounded')
+            boot_alphas.append(float(br.x))
+        except Exception:
+            pass
+
+    ci_low = float(np.percentile(boot_alphas, 2.5)) if boot_alphas else alpha_mle
+    ci_high = float(np.percentile(boot_alphas, 97.5)) if boot_alphas else alpha_mle
+
+    # --- Log-normal comparison (fit log-normal to frequency values) ---
+    freq_vals = freqs.astype(float)
+    try:
+        ln_shape, ln_loc, ln_scale = lognorm.fit(freq_vals, floc=0)
+        ll_lognormal = float(np.sum(lognorm.logpdf(freq_vals, ln_shape,
+                                                    loc=ln_loc, scale=ln_scale)))
+    except Exception:
+        ll_lognormal = float('-inf')
+
+    llr = ll_zipf - ll_lognormal
+
+    logger.info(
+        f"Zipf MLE: α={alpha_mle:.3f} [95% CI {ci_low:.3f}–{ci_high:.3f}] "
+        f"KS={ks_stat:.4f}  LLR(Zipf vs logN)={llr:+.1f}"
+    )
+    return {
+        "alpha_mle": alpha_mle,
+        "alpha_ci_low": ci_low,
+        "alpha_ci_high": ci_high,
+        "ks_stat": ks_stat,
+        "loglikelihood_zipf": ll_zipf,
+        "loglikelihood_lognormal": ll_lognormal,
+        "loglikelihood_ratio": llr,
+        "preferred_model": "power_law" if llr > 0 else "log_normal",
+        "method": "mle",
+    }
+
+
 def analyze_per_binary_frequencies(binaries: List[Binary]) -> Dict[str, Dict]:
     """Analyze frequency distributions for each binary individually."""
     per_binary_stats = {}
@@ -139,7 +249,8 @@ def run_frequency_analysis(binaries: List[Binary], output_dir: Path) -> Dict:
     # Global frequency analysis
     frequencies = compute_frequency_distribution(binaries)
     rank_frequency = compute_rank_frequency(frequencies)
-    zipf_params = fit_zipf_with_ci(rank_frequency)
+    zipf_params = fit_zipf_with_ci(rank_frequency)   # OLS + bootstrap CI (kept)
+    zipf_mle = fit_zipf_mle(rank_frequency)           # MLE + KS + log-normal cmp
     
     # Per-binary analysis
     per_binary_stats = analyze_per_binary_frequencies(binaries)
@@ -153,11 +264,15 @@ def run_frequency_analysis(binaries: List[Binary], output_dir: Path) -> Dict:
             "vocabulary_size": len(frequencies)
         },
         "zipf_analysis": {
+            "global_zipf_ols": zipf_params,         # OLS on log-log (legacy)
+            "global_zipf_mle": zipf_mle,            # MLE: primary estimate
+            # backwards-compat alias used by older visualisation code
             "global_zipf": zipf_params,
-            "interpretation": interpret_zipf_alpha(zipf_params["alpha"]),
+            "interpretation": interpret_zipf_alpha(zipf_mle.get("alpha_mle",
+                                                                  zipf_params["alpha"])),
             "reference_values": {
                 "natural_language_alpha": 1.0,
-                "note": "English text α≈1.0; values >1 indicate heavier tail than natural language"
+                "note": "English text α≈1.0; values >1 indicate steeper drop-off than NL"
             },
         },
         "frequency_distribution": {

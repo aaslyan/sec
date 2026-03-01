@@ -6,17 +6,35 @@
     "vocabulary_size": 293
   },
   "zipf_analysis": {
-    "global_zipf": {
-      "alpha": 3.3563572362072125,
-      "constant": 419675422.8923582,
+    "global_zipf_ols": {
+      "alpha": 3.356357236207213,
+      "constant": 419675422.8923567,
       "r_squared": 0.9185865522674151,
-      "alpha_ci_low": 3.086094341120388,
-      "alpha_ci_high": 3.6655669061293787
+      "alpha_ci_low": 3.0860943411203876,
+      "alpha_ci_high": 3.6655669061293796
     },
-    "interpretation": "Extremely concentrated distribution - dominated by very few opcodes",
+    "global_zipf_mle": {
+      "alpha_mle": 1.4442616407491462,
+      "alpha_ci_low": 1.3702061565027233,
+      "alpha_ci_high": 1.5153423204102858,
+      "ks_stat": 0.11444965642864824,
+      "loglikelihood_zipf": -9084633.44959439,
+      "loglikelihood_lognormal": -1974.3713429927457,
+      "loglikelihood_ratio": -9082659.078251397,
+      "preferred_model": "log_normal",
+      "method": "mle"
+    },
+    "global_zipf": {
+      "alpha": 3.356357236207213,
+      "constant": 419675422.8923567,
+      "r_squared": 0.9185865522674151,
+      "alpha_ci_low": 3.0860943411203876,
+      "alpha_ci_high": 3.6655669061293796
+    },
+    "interpretation": "More concentrated than natural language - highly skewed distribution",
     "reference_values": {
       "natural_language_alpha": 1.0,
-      "note": "English text \u03b1\u22481.0; values >1 indicate heavier tail than natural language"
+      "note": "English text \u03b1\u22481.0; values >1 indicate steeper drop-off than NL"
     }
   },
   "frequency_distribution": {
@@ -457,7 +475,7 @@
     "sed": {
       "instruction_count": 18478,
       "unique_opcodes": 89,
-      "zipf_alpha": 2.164981097195131,
+      "zipf_alpha": 2.1649810971951315,
       "zipf_r_squared": 0.905510039772685,
       "top_10_opcodes": [
         [
@@ -525,7 +543,7 @@
     "gzip": {
       "instruction_count": 14709,
       "unique_opcodes": 94,
-      "zipf_alpha": 2.1139126127623595,
+      "zipf_alpha": 2.1139126127623586,
       "zipf_r_squared": 0.9163107980454284,
       "top_10_opcodes": [
         [
@@ -593,7 +611,7 @@
     "bzip2": {
       "instruction_count": 3258,
       "unique_opcodes": 54,
-      "zipf_alpha": 2.044711681002784,
+      "zipf_alpha": 2.0447116810027843,
       "zipf_r_squared": 0.9133569672881868,
       "top_10_opcodes": [
         [
@@ -661,7 +679,7 @@
     "xz": {
       "instruction_count": 13006,
       "unique_opcodes": 90,
-      "zipf_alpha": 2.244350705242979,
+      "zipf_alpha": 2.2443507052429794,
       "zipf_r_squared": 0.9117879734251995,
       "top_10_opcodes": [
         [
@@ -729,7 +747,7 @@
     "find": {
       "instruction_count": 32014,
       "unique_opcodes": 138,
-      "zipf_alpha": 2.2735997683366334,
+      "zipf_alpha": 2.273599768336636,
       "zipf_r_squared": 0.9390671336701327,
       "top_10_opcodes": [
         [
@@ -797,7 +815,7 @@
     "tar": {
       "instruction_count": 73607,
       "unique_opcodes": 131,
-      "zipf_alpha": 2.427931850543204,
+      "zipf_alpha": 2.427931850543206,
       "zipf_r_squared": 0.9164998692630936,
       "top_10_opcodes": [
         [
@@ -865,7 +883,7 @@
     "bash": {
       "instruction_count": 237253,
       "unique_opcodes": 112,
-      "zipf_alpha": 2.914771726851102,
+      "zipf_alpha": 2.9147717268511024,
       "zipf_r_squared": 0.8639085467576646,
       "top_10_opcodes": [
         [
@@ -933,7 +951,7 @@
     "python3": {
       "instruction_count": 866728,
       "unique_opcodes": 244,
-      "zipf_alpha": 3.0775895584699877,
+      "zipf_alpha": 3.077589558469984,
       "zipf_r_squared": 0.9152571060975063,
       "top_10_opcodes": [
         [
@@ -1001,7 +1019,7 @@
     "curl": {
       "instruction_count": 27233,
       "unique_opcodes": 105,
-      "zipf_alpha": 2.424442511474013,
+      "zipf_alpha": 2.4244425114740125,
       "zipf_r_squared": 0.9249282028518281,
       "top_10_opcodes": [
         [
@@ -1069,7 +1087,7 @@
     "git": {
       "instruction_count": 782270,
       "unique_opcodes": 159,
-      "zipf_alpha": 3.053760380076879,
+      "zipf_alpha": 3.0537603800768793,
       "zipf_r_squared": 0.8978002124577165,
       "top_10_opcodes": [
         [
@@ -1137,7 +1155,7 @@
     "vim": {
       "instruction_count": 784450,
       "unique_opcodes": 178,
-      "zipf_alpha": 3.053801353910025,
+      "zipf_alpha": 3.0538013539100235,
       "zipf_r_squared": 0.9015000074557259,
       "top_10_opcodes": [
         [
@@ -1205,7 +1223,7 @@
     "nano": {
       "instruction_count": 49357,
       "unique_opcodes": 89,
-      "zipf_alpha": 2.470692668766022,
+      "zipf_alpha": 2.4706926687660213,
       "zipf_r_squared": 0.9103357067443084,
       "top_10_opcodes": [
         [
@@ -1273,7 +1291,7 @@
     "gcc": {
       "instruction_count": 126762,
       "unique_opcodes": 137,
-      "zipf_alpha": 2.6258206608694388,
+      "zipf_alpha": 2.6258206608694374,
       "zipf_r_squared": 0.8948496264856383,
       "top_10_opcodes": [
         [
@@ -1341,7 +1359,7 @@
     "objdump": {
       "instruction_count": 61124,
       "unique_opcodes": 95,
-      "zipf_alpha": 2.5284320061208745,
+      "zipf_alpha": 2.528432006120873,
       "zipf_r_squared": 0.9233540592693208,
       "top_10_opcodes": [
         [

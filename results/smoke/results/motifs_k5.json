@@ -424,20 +424,20 @@
     "annotation": "Function prologue \u2014 save register"
   },
   {
-    "motif": "mov mov call test jne",
-    "frequency": 497,
-    "total_occurrences": 4622,
-    "function_count": 497,
-    "function_coverage": 0.08265424912689173,
-    "annotation": "Loop/branch \u2014 test and jump"
-  },
-  {
     "motif": "mov mov xor call mov",
     "frequency": 497,
     "total_occurrences": 4453,
     "function_count": 497,
     "function_coverage": 0.08265424912689173,
     "annotation": "Function call \u2014 subroutine invocation"
+  },
+  {
+    "motif": "mov mov call test jne",
+    "frequency": 497,
+    "total_occurrences": 4622,
+    "function_count": 497,
+    "function_coverage": 0.08265424912689173,
+    "annotation": "Loop/branch \u2014 test and jump"
   },
   {
     "motif": "mov mov call mov jmp",
@@ -544,20 +544,20 @@
     "annotation": "Function call \u2014 subroutine invocation"
   },
   {
-    "motif": "call mov test jne mov",
-    "frequency": 453,
-    "total_occurrences": 2698,
-    "function_count": 453,
-    "function_coverage": 0.07533677033094961,
-    "annotation": "Loop/branch \u2014 test and jump"
-  },
-  {
     "motif": "lea mov mov mov mov",
     "frequency": 453,
     "total_occurrences": 4105,
     "function_count": 453,
     "function_coverage": 0.07533677033094961,
     "annotation": "Data movement \u2014 bulk register/memory transfers"
+  },
+  {
+    "motif": "call mov test jne mov",
+    "frequency": 453,
+    "total_occurrences": 2698,
+    "function_count": 453,
+    "function_coverage": 0.07533677033094961,
+    "annotation": "Loop/branch \u2014 test and jump"
   },
   {
     "motif": "push mov push mov sub",
@@ -624,17 +624,17 @@
     "annotation": "Function call \u2014 subroutine invocation"
   },
   {
-    "motif": "mov cmp je mov mov",
+    "motif": "cmp jne mov mov mov",
     "frequency": 438,
-    "total_occurrences": 2738,
+    "total_occurrences": 2750,
     "function_count": 438,
     "function_coverage": 0.07284217528687843,
     "annotation": "Loop/branch \u2014 compare and jump"
   },
   {
-    "motif": "cmp jne mov mov mov",
+    "motif": "mov cmp je mov mov",
     "frequency": 438,
-    "total_occurrences": 2750,
+    "total_occurrences": 2738,
     "function_count": 438,
     "function_coverage": 0.07284217528687843,
     "annotation": "Loop/branch \u2014 compare and jump"
