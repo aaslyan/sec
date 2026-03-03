@@ -216,25 +216,87 @@ lifting~\cite{schulte2018evolving}, but systematic statistical characterisation
 of recurrent opcode patterns is absent from the literature.
 
 % ─────────────────────────────────────────────────────────────────────────────
+\section{Toolkit Architecture}
+\label{sec:toolkit}
+
+Binary DNA is structured as a modular Python pipeline with a unified CLI
+entry point (\texttt{binary\_dna.py}).  Figure~\ref{fig:arch} illustrates
+the data flow; Table~\ref{tab:modules} lists the primary modules.
+
+\begin{figure}[h]
+\centering
+\small
+\begin{tabular}{ccccc}
+\texttt{/usr/bin/*} & $\rightarrow$ &
+\textbf{Extraction} & $\rightarrow$ &
+\textbf{Analysis} \\
+& & \textit{objdump wrapper} & & \textit{freq, entropy, compress,} \\
+& & \textit{corpus manager} & & \textit{motif, clone, LM} \\
+& & & $\searrow$ & \\
+& & & & \textbf{Clustering} \\
+& & & & \textit{NCD, n-gram cosine} \\
+& & & & \textit{hierarchical, UMAP} \\
+& & $\downarrow$ & & $\downarrow$ \\
+\multicolumn{5}{c}{\textbf{Results} (JSON) $\rightarrow$ \textbf{Plots} (PNG) $\rightarrow$ \textbf{HTML report}}
+\end{tabular}
+\caption{Binary DNA data flow.  Each stage writes structured JSON that the
+next stage reads, enabling partial reruns and custom downstream analyses.}
+\label{fig:arch}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Binary DNA modules and their analytical roles.}
+\label{tab:modules}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Module} & \textbf{Function} \\
+\midrule
+\texttt{extraction/disassemble.py} & \texttt{objdump} wrapper; mnemonic extraction \\
+\texttt{analysis/frequency.py}     & Zipf OLS + MLE, bootstrap CI, KS test \\
+\texttt{analysis/ngrams.py}        & $n$-gram entropy, shuffled baseline \\
+\texttt{analysis/compression.py}   & \texttt{zlib}/\texttt{lzma} ratios, LZ78 complexity \\
+\texttt{analysis/motifs.py}        & $k$-mer motif discovery + annotation \\
+\texttt{analysis/information.py}   & MI decay, PCA/MLE intrinsic dimensionality \\
+\texttt{analysis/lm.py}            & $n$-gram LM training and perplexity eval \\
+\texttt{clustering/ncd.py}         & Normalised compression distance matrix \\
+\texttt{clustering/similarity.py}  & $n$-gram TF cosine similarity \\
+\texttt{clustering/hierarchical.py}& Agglomerative clustering, cophenetic $r$ \\
+\texttt{clones/}                   & MinHash + LSH + Smith-Waterman pipeline \\
+\texttt{visualization/report.py}   & Self-contained HTML report generator \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The CLI exposes subcommands for each stage (\texttt{extract}, \texttt{analyze},
+\texttt{lm}, \texttt{clones}, \texttt{compiler-matrix}, \texttt{report}),
+allowing users to run the full pipeline or individual analyses independently.
+All intermediate results are written as JSON, making them compatible with
+downstream tooling (pandas, R, Julia) without using Binary DNA as a dependency.
+The toolkit is pure Python ($\geq$3.10) with standard scientific dependencies
+(\texttt{numpy}, \texttt{scipy}, \texttt{scikit-learn}, \texttt{seaborn});
+no binary-analysis-specific libraries are required beyond \texttt{objdump}
+(GNU Binutils), which is pre-installed on Linux.
+
 \section{Methodology}
 \label{sec:methodology}
 
 \subsection{Corpus Design and Extraction}
 
-We analyse three corpora of GNU/Linux ELF x86-64 binaries drawn from
+We analyse two corpora of GNU/Linux ELF x86-64 binaries drawn from
 \texttt{/usr/bin}:
 \begin{itemize}
   \item \emph{Smoke} (15 binaries): grep, sed, gzip, bzip2, xz, find, tar,
         bash, python3, curl, git, vim, nano, gcc, objdump.  Verified to have
         distinct inodes, eliminating hard-link duplicates.
-  \item \emph{Coreutils-system} (up to 40 binaries): drawn from 11 functional
-        categories (text processing, compression, filesystem, networking,
-        shells, editors, compilers, interpreters, version control, archives,
-        utilities) with inode deduplication and a $10\,\text{MB}$ size cap to
-        exclude multi-call Rust reimplementations.
-  \item \emph{Mixed-system} (15 binaries): runtimes, compilers, debuggers, and
-        binary analysis tools (bash, python3, perl, gcc, git, vim, curl, tar,
-        xz, strace, objdump, nm, readelf, addr2line, gdb).
+  \item \emph{Coreutils-system} (39 binaries after inode deduplication):
+        drawn from 11 functional categories (text processing, compression,
+        filesystem, networking, shells, editors, compilers, interpreters,
+        version control, archives, utilities) with a $10\,\text{MB}$ size cap.
+        Adds awk, diff, zip, unzip, cp, mv, rm, chmod, chown, df, wget, ssh,
+        scp, nc, dash, clang, as, ld, perl, tar, ar, strace, nm, readelf,
+        addr2line to the smoke set.
 \end{itemize}
 
 Instruction sequences are extracted via \texttt{objdump -d} with a 60-second
@@ -451,21 +513,22 @@ flag indicating whether members span more than one input binary.
 
 \subsection{Corpus Statistics}
 
-Table~\ref{tab:corpus} summarises the smoke corpus after inode deduplication.
-We treat the smoke corpus as a controlled pilot; the coreutils-system and
-mixed-system corpora are prepared for scaling the same measurements.
-The smoke corpus already spans 8 distinct functional categories
-and over 3 million instructions.
+Table~\ref{tab:corpus} summarises both corpora after inode deduplication.
+The smoke corpus is a 15-binary pilot; the coreutils-system corpus
+scales to 39 binaries spanning 11 functional categories.
+Section~\ref{sec:scaling} reports a direct comparison of all key metrics
+across the two corpora, demonstrating measurement stability.
 
 \begin{table}[h]
 \centering
-\caption{Smoke corpus statistics.}
+\caption{Corpus statistics.}
 \label{tab:corpus}
-\begin{tabular}{@{}lccc@{}}
+\begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Corpus} & \textbf{Binaries} & \textbf{Categories} & \textbf{Instr.\ (M)} \\
+\textbf{Corpus} & \textbf{Binaries} & \textbf{Categories} & \textbf{Vocab} & \textbf{Instr.\ (M)} \\
 \midrule
-Smoke           & 15  & 8  & 3.12 \\
+Smoke             & 15  & 8   & 293 & 3.12 \\
+Coreutils-system  & 39  & 11  & 320 & 4.65 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1007,6 +1070,53 @@ that are cloned are not randomly distributed across sequence space---they are
 concentrated on a \emph{small number of clone archetypes} (93 families from
 457 pairs), further tiling the already-compact program manifold with repeated
 structure.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Scaling Validation: Smoke vs.\ Coreutils-system}
+\label{sec:scaling}
+
+To assess whether the toolkit's measurements are stable across corpus scale,
+we apply the full pipeline to the 39-binary coreutils-system corpus and
+compare key metrics against the 15-binary smoke corpus.
+Table~\ref{tab:scaling} summarises the comparison.
+
+\begin{table}[h]
+\centering
+\caption{Metric comparison across corpus scales.  Values are corpus-wide
+  aggregates.  ``Shuffled'' refers to the unigram-preserving permutation
+  baseline.}
+\label{tab:scaling}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} & \textbf{Smoke (15)} & \textbf{Coreutils (39)} \\
+\midrule
+Instructions (M)         & 3.12  & 4.65  \\
+Vocabulary $|\mathcal{V}|$   & 293   & 320   \\
+MLE $\hat{\alpha}$       & 1.444 & 1.447 \\
+KS goodness-of-fit       & 0.114 & 0.119 \\
+$h_r(1)$ (bits)          & 3.99  & 4.00  \\
+$h_r(5)$ (bits)          & 2.16  & 2.20  \\
+$\Delta h_r$ (1→5)       & 1.82  & 1.80  \\
+\zlib{} ratio (real)     & 0.223 & 0.224 \\
+\zlib{} ratio (shuffled) & 0.361 & 0.366 \\
+\zlib{} ratio (random)   & 0.672 & 0.682 \\
+Motifs discovered        & 798   & 780   \\
+PCA $d_{95}$ (bigram)    & 8/200 (4\%) & 14/200 (7\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The results show strong metric stability: $\hat{\alpha}_{\text{MLE}}$,
+entropy rates, and compression ratios are nearly identical across corpus
+sizes.  The PCA $d_{95}$ grows from 8 to 14 as expected---a larger, more
+categorically diverse corpus occupies more manifold dimensions.  This
+growth is bounded and interpretable: the compiler-matrix experiment showed
+$d_{95}$ doubling (8$\to$17) when compiler variation is added as an
+explicit axis; category breadth has a similarly modest effect.
+The consistency of opcode-level statistics across scales supports using
+the smoke corpus as a faithful representative pilot for toolkit development
+and parameter tuning.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Discussion}

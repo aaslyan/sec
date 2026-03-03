@@ -1,0 +1,2824 @@
+{
+  "entropy_analysis": {
+    "entropy_rates": [
+      {
+        "n": 1,
+        "entropy": 3.9961455842654314,
+        "entropy_rate": 3.9961455842654314,
+        "unique_ngrams": 320,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 0.48019467828861595
+      },
+      {
+        "n": 2,
+        "entropy": 7.028651204155844,
+        "entropy_rate": 3.032505619890413,
+        "unique_ngrams": 6896,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 0.8445940801235652
+      },
+      {
+        "n": 3,
+        "entropy": 9.768209067669279,
+        "entropy_rate": 2.7395578635134346,
+        "unique_ngrams": 46587,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 1.173791572853225
+      },
+      {
+        "n": 4,
+        "entropy": 12.250338449760896,
+        "entropy_rate": 2.4821293820916175,
+        "unique_ngrams": 172609,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 1.4720553109906083
+      },
+      {
+        "n": 5,
+        "entropy": 14.450964094024924,
+        "entropy_rate": 2.2006256442640275,
+        "unique_ngrams": 438732,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 1.736492304337859
+      }
+    ],
+    "shuffled_baseline_rates": [
+      {
+        "n": 1,
+        "entropy": 3.9961455842654323,
+        "entropy_rate": 3.9961455842654323,
+        "unique_ngrams": 320,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 0.48019467828861606
+      },
+      {
+        "n": 2,
+        "entropy": 7.987517610921946,
+        "entropy_rate": 3.991372026656514,
+        "unique_ngrams": 12376,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 0.9598157446024002
+      },
+      {
+        "n": 3,
+        "entropy": 11.932384016149356,
+        "entropy_rate": 3.94486640522741,
+        "unique_ngrams": 131329,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 1.4338484880060554
+      },
+      {
+        "n": 4,
+        "entropy": 15.63129337187324,
+        "entropy_rate": 3.698909355723883,
+        "unique_ngrams": 629917,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 1.8783259352452757
+      },
+      {
+        "n": 5,
+        "entropy": 18.65219013193159,
+        "entropy_rate": 3.020896760058351,
+        "unique_ngrams": 1697246,
+        "max_entropy": 8.321928094887362,
+        "normalized_entropy": 2.2413303647012643
+      }
+    ],
+    "entropy_gain_over_shuffled": [
+      {
+        "n": 1,
+        "real_entropy": 3.9961455842654314,
+        "shuffled_entropy": 3.9961455842654323,
+        "gain_bits": -8.881784197001252e-16
+      },
+      {
+        "n": 2,
+        "real_entropy": 7.028651204155844,
+        "shuffled_entropy": 7.987517610921946,
+        "gain_bits": -0.9588664067661021
+      },
+      {
+        "n": 3,
+        "real_entropy": 9.768209067669279,
+        "shuffled_entropy": 11.932384016149356,
+        "gain_bits": -2.1641749484800776
+      },
+      {
+        "n": 4,
+        "real_entropy": 12.250338449760896,
+        "shuffled_entropy": 15.63129337187324,
+        "gain_bits": -3.380954922112343
+      },
+      {
+        "n": 5,
+        "real_entropy": 14.450964094024924,
+        "shuffled_entropy": 18.65219013193159,
+        "gain_bits": -4.201226037906666
+      }
+    ],
+    "per_binary_entropy_rates": {
+      "grep": [
+        {
+          "n": 1,
+          "entropy": 4.109349400588152,
+          "entropy_rate": 4.109349400588152,
+          "unique_ngrams": 113,
+          "max_entropy": 6.820178962415188,
+          "normalized_entropy": 0.6025280895463384
+        },
+        {
+          "n": 2,
+          "entropy": 6.94327814042341,
+          "entropy_rate": 2.833928739835258,
+          "unique_ngrams": 1104,
+          "max_entropy": 6.820178962415188,
+          "normalized_entropy": 1.0180492592183579
+        },
+        {
+          "n": 3,
+          "entropy": 9.256642301979854,
+          "entropy_rate": 2.3133641615564438,
+          "unique_ngrams": 3933,
+          "max_entropy": 6.820178962415188,
+          "normalized_entropy": 1.3572433147270164
+        },
+        {
+          "n": 4,
+          "entropy": 11.029845624293472,
+          "entropy_rate": 1.773203322313618,
+          "unique_ngrams": 8472,
+          "max_entropy": 6.820178962415188,
+          "normalized_entropy": 1.6172369794219505
+        },
+        {
+          "n": 5,
+          "entropy": 12.270078826218402,
+          "entropy_rate": 1.24023320192493,
+          "unique_ngrams": 13541,
+          "max_entropy": 6.820178962415188,
+          "normalized_entropy": 1.7990845832399205
+        }
+      ],
+      "sed": [
+        {
+          "n": 1,
+          "entropy": 3.9937502488792003,
+          "entropy_rate": 3.9937502488792003,
+          "unique_ngrams": 89,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 0.6167255479945224
+        },
+        {
+          "n": 2,
+          "entropy": 6.864902096092802,
+          "entropy_rate": 2.8711518472136017,
+          "unique_ngrams": 849,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.060096461547573
+        },
+        {
+          "n": 3,
+          "entropy": 9.190119964860388,
+          "entropy_rate": 2.325217868767586,
+          "unique_ngrams": 2885,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.419162796435386
+        },
+        {
+          "n": 4,
+          "entropy": 10.92746822922342,
+          "entropy_rate": 1.7373482643630318,
+          "unique_ngrams": 5990,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.6874487416312123
+        },
+        {
+          "n": 5,
+          "entropy": 12.113200402507887,
+          "entropy_rate": 1.1857321732844675,
+          "unique_ngrams": 9299,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.870552661198747
+        }
+      ],
+      "awk": [
+        {
+          "n": 1,
+          "entropy": 3.8225828155999566,
+          "entropy_rate": 3.8225828155999566,
+          "unique_ngrams": 148,
+          "max_entropy": 7.20945336562895,
+          "normalized_entropy": 0.5302181208112269
+        },
+        {
+          "n": 2,
+          "entropy": 6.637189197781735,
+          "entropy_rate": 2.8146063821817786,
+          "unique_ngrams": 1902,
+          "max_entropy": 7.20945336562895,
+          "normalized_entropy": 0.9206230848824846
+        },
+        {
+          "n": 3,
+          "entropy": 9.089116627911137,
+          "entropy_rate": 2.451927430129402,
+          "unique_ngrams": 8013,
+          "max_entropy": 7.20945336562895,
+          "normalized_entropy": 1.2607220224550555
+        },
+        {
+          "n": 4,
+          "entropy": 11.158978236094569,
+          "entropy_rate": 2.069861608183432,
+          "unique_ngrams": 20414,
+          "max_entropy": 7.20945336562895,
+          "normalized_entropy": 1.5478258433981928
+        },
+        {
+          "n": 5,
+          "entropy": 12.808051625093212,
+          "entropy_rate": 1.6490733889986426,
+          "unique_ngrams": 37862,
+          "max_entropy": 7.20945336562895,
+          "normalized_entropy": 1.7765634890095223
+        }
+      ],
+      "diff": [
+        {
+          "n": 1,
+          "entropy": 4.038475237273888,
+          "entropy_rate": 4.038475237273888,
+          "unique_ngrams": 101,
+          "max_entropy": 6.658211482751795,
+          "normalized_entropy": 0.6065405473730631
+        },
+        {
+          "n": 2,
+          "entropy": 6.968490500217515,
+          "entropy_rate": 2.930015262943627,
+          "unique_ngrams": 985,
+          "max_entropy": 6.658211482751795,
+          "normalized_entropy": 1.0466009555673477
+        },
+        {
+          "n": 3,
+          "entropy": 9.379780273743705,
+          "entropy_rate": 2.4112897735261907,
+          "unique_ngrams": 3434,
+          "max_entropy": 6.658211482751795,
+          "normalized_entropy": 1.4087537318455834
+        },
+        {
+          "n": 4,
+          "entropy": 11.174073407996108,
+          "entropy_rate": 1.7942931342524027,
+          "unique_ngrams": 7366,
+          "max_entropy": 6.658211482751795,
+          "normalized_entropy": 1.6782394847238973
+        },
+        {
+          "n": 5,
+          "entropy": 12.358967904787459,
+          "entropy_rate": 1.184894496791351,
+          "unique_ngrams": 11424,
+          "max_entropy": 6.658211482751795,
+          "normalized_entropy": 1.8561993617660788
+        }
+      ],
+      "gzip": [
+        {
+          "n": 1,
+          "entropy": 4.158073184745649,
+          "entropy_rate": 4.158073184745649,
+          "unique_ngrams": 94,
+          "max_entropy": 6.554588851677638,
+          "normalized_entropy": 0.6343758973808702
+        },
+        {
+          "n": 2,
+          "entropy": 7.19791301797303,
+          "entropy_rate": 3.039839833227381,
+          "unique_ngrams": 864,
+          "max_entropy": 6.554588851677638,
+          "normalized_entropy": 1.0981486681854553
+        },
+        {
+          "n": 3,
+          "entropy": 9.63598141163447,
+          "entropy_rate": 2.43806839366144,
+          "unique_ngrams": 2899,
+          "max_entropy": 6.554588851677638,
+          "normalized_entropy": 1.470112257181189
+        },
+        {
+          "n": 4,
+          "entropy": 11.342176112099182,
+          "entropy_rate": 1.706194700464712,
+          "unique_ngrams": 5878,
+          "max_entropy": 6.554588851677638,
+          "normalized_entropy": 1.7304176308779715
+        },
+        {
+          "n": 5,
+          "entropy": 12.364671551587046,
+          "entropy_rate": 1.022495439487864,
+          "unique_ngrams": 8604,
+          "max_entropy": 6.554588851677638,
+          "normalized_entropy": 1.886414515293713
+        }
+      ],
+      "bzip2": [
+        {
+          "n": 1,
+          "entropy": 3.9062447411680092,
+          "entropy_rate": 3.9062447411680092,
+          "unique_ngrams": 54,
+          "max_entropy": 5.754887502163468,
+          "normalized_entropy": 0.6787699567888186
+        },
+        {
+          "n": 2,
+          "entropy": 6.423681611089659,
+          "entropy_rate": 2.51743686992165,
+          "unique_ngrams": 297,
+          "max_entropy": 5.754887502163468,
+          "normalized_entropy": 1.1162132376479588
+        },
+        {
+          "n": 3,
+          "entropy": 8.263371035773131,
+          "entropy_rate": 1.8396894246834723,
+          "unique_ngrams": 761,
+          "max_entropy": 5.754887502163468,
+          "normalized_entropy": 1.4358875013050445
+        },
+        {
+          "n": 4,
+          "entropy": 9.457070320828587,
+          "entropy_rate": 1.1936992850554553,
+          "unique_ngrams": 1321,
+          "max_entropy": 5.754887502163468,
+          "normalized_entropy": 1.6433110668580986
+        },
+        {
+          "n": 5,
+          "entropy": 10.147555494772277,
+          "entropy_rate": 0.6904851739436904,
+          "unique_ngrams": 1819,
+          "max_entropy": 5.754887502163468,
+          "normalized_entropy": 1.7632934598560697
+        }
+      ],
+      "xz": [
+        {
+          "n": 1,
+          "entropy": 3.980208960533845,
+          "entropy_rate": 3.980208960533845,
+          "unique_ngrams": 90,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 0.6131082914960216
+        },
+        {
+          "n": 2,
+          "entropy": 6.683572458829873,
+          "entropy_rate": 2.7033634982960275,
+          "unique_ngrams": 650,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.029532301433098
+        },
+        {
+          "n": 3,
+          "entropy": 8.72471720720061,
+          "entropy_rate": 2.041144748370738,
+          "unique_ngrams": 1940,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.3439486503681575
+        },
+        {
+          "n": 4,
+          "entropy": 10.221726774444235,
+          "entropy_rate": 1.4970095672436248,
+          "unique_ngrams": 3755,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.5745468393644542
+        },
+        {
+          "n": 5,
+          "entropy": 11.253064591844772,
+          "entropy_rate": 1.0313378174005372,
+          "unique_ngrams": 5704,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.7334133143288413
+        }
+      ],
+      "zip": [
+        {
+          "n": 1,
+          "entropy": 3.821774140048364,
+          "entropy_rate": 3.821774140048364,
+          "unique_ngrams": 95,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 0.581713566916469
+        },
+        {
+          "n": 2,
+          "entropy": 6.614807067202923,
+          "entropy_rate": 2.793032927154559,
+          "unique_ngrams": 915,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.0068420771401694
+        },
+        {
+          "n": 3,
+          "entropy": 8.954669961718732,
+          "entropy_rate": 2.339862894515809,
+          "unique_ngrams": 3152,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.362993419575874
+        },
+        {
+          "n": 4,
+          "entropy": 10.802488920819163,
+          "entropy_rate": 1.8478189591004313,
+          "unique_ngrams": 6723,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.644250584003855
+        },
+        {
+          "n": 5,
+          "entropy": 12.147523507591497,
+          "entropy_rate": 1.345034586772334,
+          "unique_ngrams": 10812,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.848978764797776
+        }
+      ],
+      "unzip": [
+        {
+          "n": 1,
+          "entropy": 4.08168020056562,
+          "entropy_rate": 4.08168020056562,
+          "unique_ngrams": 97,
+          "max_entropy": 6.599912842187128,
+          "normalized_entropy": 0.6184445610365064
+        },
+        {
+          "n": 2,
+          "entropy": 7.0912139951426045,
+          "entropy_rate": 3.009533794576985,
+          "unique_ngrams": 926,
+          "max_entropy": 6.599912842187128,
+          "normalized_entropy": 1.0744405516713862
+        },
+        {
+          "n": 3,
+          "entropy": 9.540436302762979,
+          "entropy_rate": 2.4492223076203743,
+          "unique_ngrams": 3317,
+          "max_entropy": 6.599912842187128,
+          "normalized_entropy": 1.44553974134019
+        },
+        {
+          "n": 4,
+          "entropy": 11.349185607487065,
+          "entropy_rate": 1.8087493047240866,
+          "unique_ngrams": 7152,
+          "max_entropy": 6.599912842187128,
+          "normalized_entropy": 1.7195962854148978
+        },
+        {
+          "n": 5,
+          "entropy": 12.5350901478589,
+          "entropy_rate": 1.1859045403718351,
+          "unique_ngrams": 11348,
+          "max_entropy": 6.599912842187128,
+          "normalized_entropy": 1.8992811644016998
+        }
+      ],
+      "cp": [
+        {
+          "n": 1,
+          "entropy": 4.026564647839451,
+          "entropy_rate": 4.026564647839451,
+          "unique_ngrams": 100,
+          "max_entropy": 6.643856189774724,
+          "normalized_entropy": 0.606058369239925
+        },
+        {
+          "n": 2,
+          "entropy": 6.821675983200232,
+          "entropy_rate": 2.7951113353607813,
+          "unique_ngrams": 854,
+          "max_entropy": 6.643856189774724,
+          "normalized_entropy": 1.0267645458219254
+        },
+        {
+          "n": 3,
+          "entropy": 9.068299492579138,
+          "entropy_rate": 2.2466235093789058,
+          "unique_ngrams": 2792,
+          "max_entropy": 6.643856189774724,
+          "normalized_entropy": 1.3649150784653905
+        },
+        {
+          "n": 4,
+          "entropy": 10.782272404464365,
+          "entropy_rate": 1.713972911885227,
+          "unique_ngrams": 5820,
+          "max_entropy": 6.643856189774724,
+          "normalized_entropy": 1.6228937075818861
+        },
+        {
+          "n": 5,
+          "entropy": 11.985904915059896,
+          "entropy_rate": 1.203632510595531,
+          "unique_ngrams": 9239,
+          "max_entropy": 6.643856189774724,
+          "normalized_entropy": 1.8040584523046859
+        }
+      ],
+      "mv": [
+        {
+          "n": 1,
+          "entropy": 4.004018559795796,
+          "entropy_rate": 4.004018559795796,
+          "unique_ngrams": 99,
+          "max_entropy": 6.6293566200796095,
+          "normalized_entropy": 0.6039829789316287
+        },
+        {
+          "n": 2,
+          "entropy": 6.78350373522038,
+          "entropy_rate": 2.7794851754245844,
+          "unique_ngrams": 859,
+          "max_entropy": 6.6293566200796095,
+          "normalized_entropy": 1.0232521983617349
+        },
+        {
+          "n": 3,
+          "entropy": 9.02388577051895,
+          "entropy_rate": 2.2403820352985697,
+          "unique_ngrams": 2799,
+          "max_entropy": 6.6293566200796095,
+          "normalized_entropy": 1.3612008355662402
+        },
+        {
+          "n": 4,
+          "entropy": 10.734132303356366,
+          "entropy_rate": 1.7102465328374166,
+          "unique_ngrams": 5788,
+          "max_entropy": 6.6293566200796095,
+          "normalized_entropy": 1.6191816066801765
+        },
+        {
+          "n": 5,
+          "entropy": 11.946877329107368,
+          "entropy_rate": 1.2127450257510013,
+          "unique_ngrams": 9172,
+          "max_entropy": 6.6293566200796095,
+          "normalized_entropy": 1.8021171606489774
+        }
+      ],
+      "rm": [
+        {
+          "n": 1,
+          "entropy": 3.995631199853898,
+          "entropy_rate": 3.995631199853898,
+          "unique_ngrams": 78,
+          "max_entropy": 6.285402218862249,
+          "normalized_entropy": 0.6357001605821125
+        },
+        {
+          "n": 2,
+          "entropy": 6.716070556238384,
+          "entropy_rate": 2.7204393563844858,
+          "unique_ngrams": 582,
+          "max_entropy": 6.285402218862249,
+          "normalized_entropy": 1.0685188190635941
+        },
+        {
+          "n": 3,
+          "entropy": 8.831200528577861,
+          "entropy_rate": 2.115129972339478,
+          "unique_ngrams": 1663,
+          "max_entropy": 6.285402218862249,
+          "normalized_entropy": 1.405033476151418
+        },
+        {
+          "n": 4,
+          "entropy": 10.363719982081543,
+          "entropy_rate": 1.5325194535036815,
+          "unique_ngrams": 3209,
+          "max_entropy": 6.285402218862249,
+          "normalized_entropy": 1.648855494240356
+        },
+        {
+          "n": 5,
+          "entropy": 11.366077428853455,
+          "entropy_rate": 1.0023574467719119,
+          "unique_ngrams": 4743,
+          "max_entropy": 6.285402218862249,
+          "normalized_entropy": 1.8083293690806765
+        }
+      ],
+      "chmod": [
+        {
+          "n": 1,
+          "entropy": 4.099867005976534,
+          "entropy_rate": 4.099867005976534,
+          "unique_ngrams": 86,
+          "max_entropy": 6.426264754702098,
+          "normalized_entropy": 0.6379860093651855
+        },
+        {
+          "n": 2,
+          "entropy": 6.8725690475201295,
+          "entropy_rate": 2.772702041543596,
+          "unique_ngrams": 624,
+          "max_entropy": 6.426264754702098,
+          "normalized_entropy": 1.06945003199432
+        },
+        {
+          "n": 3,
+          "entropy": 8.994094722466812,
+          "entropy_rate": 2.1215256749466826,
+          "unique_ngrams": 1746,
+          "max_entropy": 6.426264754702098,
+          "normalized_entropy": 1.3995835941688883
+        },
+        {
+          "n": 4,
+          "entropy": 10.486085209866678,
+          "entropy_rate": 1.4919904873998657,
+          "unique_ngrams": 3269,
+          "max_entropy": 6.426264754702098,
+          "normalized_entropy": 1.6317543098724667
+        },
+        {
+          "n": 5,
+          "entropy": 11.426170592728878,
+          "entropy_rate": 0.9400853828622004,
+          "unique_ngrams": 4694,
+          "max_entropy": 6.426264754702098,
+          "normalized_entropy": 1.7780423043367999
+        }
+      ],
+      "chown": [
+        {
+          "n": 1,
+          "entropy": 4.055757514325182,
+          "entropy_rate": 4.055757514325182,
+          "unique_ngrams": 79,
+          "max_entropy": 6.303780748177103,
+          "normalized_entropy": 0.6433849266565952
+        },
+        {
+          "n": 2,
+          "entropy": 6.802101594123446,
+          "entropy_rate": 2.7463440797982637,
+          "unique_ngrams": 597,
+          "max_entropy": 6.303780748177103,
+          "normalized_entropy": 1.0790511069234832
+        },
+        {
+          "n": 3,
+          "entropy": 8.901663215580735,
+          "entropy_rate": 2.0995616214572888,
+          "unique_ngrams": 1711,
+          "max_entropy": 6.303780748177103,
+          "normalized_entropy": 1.4121149784841223
+        },
+        {
+          "n": 4,
+          "entropy": 10.412303909491488,
+          "entropy_rate": 1.5106406939107533,
+          "unique_ngrams": 3279,
+          "max_entropy": 6.303780748177103,
+          "normalized_entropy": 1.6517554028988821
+        },
+        {
+          "n": 5,
+          "entropy": 11.386961423000265,
+          "entropy_rate": 0.9746575135087774,
+          "unique_ngrams": 4787,
+          "max_entropy": 6.303780748177103,
+          "normalized_entropy": 1.8063701575111242
+        }
+      ],
+      "df": [
+        {
+          "n": 1,
+          "entropy": 4.259547202916684,
+          "entropy_rate": 4.259547202916684,
+          "unique_ngrams": 119,
+          "max_entropy": 6.894817763307944,
+          "normalized_entropy": 0.6177896717712623
+        },
+        {
+          "n": 2,
+          "entropy": 7.133377694683391,
+          "entropy_rate": 2.8738304917667072,
+          "unique_ngrams": 825,
+          "max_entropy": 6.894817763307944,
+          "normalized_entropy": 1.034599889303092
+        },
+        {
+          "n": 3,
+          "entropy": 9.265008385949308,
+          "entropy_rate": 2.131630691265917,
+          "unique_ngrams": 2206,
+          "max_entropy": 6.894817763307944,
+          "normalized_entropy": 1.3437640709308918
+        },
+        {
+          "n": 4,
+          "entropy": 10.720897554928253,
+          "entropy_rate": 1.4558891689789455,
+          "unique_ngrams": 4003,
+          "max_entropy": 6.894817763307944,
+          "normalized_entropy": 1.5549210904429565
+        },
+        {
+          "n": 5,
+          "entropy": 11.623637984249061,
+          "entropy_rate": 0.9027404293208079,
+          "unique_ngrams": 5704,
+          "max_entropy": 6.894817763307944,
+          "normalized_entropy": 1.6858513717514645
+        }
+      ],
+      "find": [
+        {
+          "n": 1,
+          "entropy": 4.110486742883345,
+          "entropy_rate": 4.110486742883345,
+          "unique_ngrams": 138,
+          "max_entropy": 7.108524456778169,
+          "normalized_entropy": 0.5782475347558079
+        },
+        {
+          "n": 2,
+          "entropy": 6.994245797951917,
+          "entropy_rate": 2.8837590550685723,
+          "unique_ngrams": 1222,
+          "max_entropy": 7.108524456778169,
+          "normalized_entropy": 0.9839237158820936
+        },
+        {
+          "n": 3,
+          "entropy": 9.325856970241107,
+          "entropy_rate": 2.3316111722891897,
+          "unique_ngrams": 4061,
+          "max_entropy": 7.108524456778169,
+          "normalized_entropy": 1.311925847191628
+        },
+        {
+          "n": 4,
+          "entropy": 11.09705043401277,
+          "entropy_rate": 1.771193463771663,
+          "unique_ngrams": 8425,
+          "max_entropy": 7.108524456778169,
+          "normalized_entropy": 1.5610905612671044
+        },
+        {
+          "n": 5,
+          "entropy": 12.36656057959863,
+          "entropy_rate": 1.2695101455858602,
+          "unique_ngrams": 13371,
+          "max_entropy": 7.108524456778169,
+          "normalized_entropy": 1.7396803872295583
+        }
+      ],
+      "curl": [
+        {
+          "n": 1,
+          "entropy": 3.921743713377339,
+          "entropy_rate": 3.921743713377339,
+          "unique_ngrams": 105,
+          "max_entropy": 6.714245517666122,
+          "normalized_entropy": 0.5840929860337518
+        },
+        {
+          "n": 2,
+          "entropy": 6.666027175495469,
+          "entropy_rate": 2.7442834621181302,
+          "unique_ngrams": 915,
+          "max_entropy": 6.714245517666122,
+          "normalized_entropy": 0.9928185017893993
+        },
+        {
+          "n": 3,
+          "entropy": 8.892180300118694,
+          "entropy_rate": 2.2261531246232247,
+          "unique_ngrams": 2997,
+          "max_entropy": 6.714245517666122,
+          "normalized_entropy": 1.3243752074186323
+        },
+        {
+          "n": 4,
+          "entropy": 10.621989796690093,
+          "entropy_rate": 1.7298094965713986,
+          "unique_ngrams": 6276,
+          "max_entropy": 6.714245517666122,
+          "normalized_entropy": 1.5820079514134755
+        },
+        {
+          "n": 5,
+          "entropy": 11.90475545475442,
+          "entropy_rate": 1.2827656580643279,
+          "unique_ngrams": 10154,
+          "max_entropy": 6.714245517666122,
+          "normalized_entropy": 1.773059299578983
+        }
+      ],
+      "wget": [
+        {
+          "n": 1,
+          "entropy": 4.207901371512101,
+          "entropy_rate": 4.207901371512101,
+          "unique_ngrams": 143,
+          "max_entropy": 7.159871336778389,
+          "normalized_entropy": 0.5877062831977455
+        },
+        {
+          "n": 2,
+          "entropy": 7.240514197035065,
+          "entropy_rate": 3.032612825522964,
+          "unique_ngrams": 1689,
+          "max_entropy": 7.159871336778389,
+          "normalized_entropy": 1.011263171705675
+        },
+        {
+          "n": 3,
+          "entropy": 9.728837866467552,
+          "entropy_rate": 2.4883236694324875,
+          "unique_ngrams": 6493,
+          "max_entropy": 7.159871336778389,
+          "normalized_entropy": 1.3588006556057863
+        },
+        {
+          "n": 4,
+          "entropy": 11.66692787983732,
+          "entropy_rate": 1.9380900133697683,
+          "unique_ngrams": 15002,
+          "max_entropy": 7.159871336778389,
+          "normalized_entropy": 1.6294884825523832
+        },
+        {
+          "n": 5,
+          "entropy": 13.086970384431368,
+          "entropy_rate": 1.420042504594047,
+          "unique_ngrams": 25362,
+          "max_entropy": 7.159871336778389,
+          "normalized_entropy": 1.8278220052931704
+        }
+      ],
+      "ssh": [
+        {
+          "n": 1,
+          "entropy": 4.028409077984068,
+          "entropy_rate": 4.028409077984068,
+          "unique_ngrams": 146,
+          "max_entropy": 7.189824558880018,
+          "normalized_entropy": 0.5602930982521201
+        },
+        {
+          "n": 2,
+          "entropy": 6.8723937960793124,
+          "entropy_rate": 2.8439847180952444,
+          "unique_ngrams": 2020,
+          "max_entropy": 7.189824558880018,
+          "normalized_entropy": 0.9558499988141362
+        },
+        {
+          "n": 3,
+          "entropy": 9.255393122323971,
+          "entropy_rate": 2.3829993262446587,
+          "unique_ngrams": 8055,
+          "max_entropy": 7.189824558880018,
+          "normalized_entropy": 1.2872905376936923
+        },
+        {
+          "n": 4,
+          "entropy": 11.18963210936987,
+          "entropy_rate": 1.934238987045898,
+          "unique_ngrams": 18783,
+          "max_entropy": 7.189824558880018,
+          "normalized_entropy": 1.556315041867018
+        },
+        {
+          "n": 5,
+          "entropy": 12.722008220198658,
+          "entropy_rate": 1.532376110828789,
+          "unique_ngrams": 33275,
+          "max_entropy": 7.189824558880018,
+          "normalized_entropy": 1.769446266179881
+        }
+      ],
+      "scp": [
+        {
+          "n": 1,
+          "entropy": 3.88429748327755,
+          "entropy_rate": 3.88429748327755,
+          "unique_ngrams": 108,
+          "max_entropy": 6.754887502163468,
+          "normalized_entropy": 0.5750351108043591
+        },
+        {
+          "n": 2,
+          "entropy": 6.670467335132974,
+          "entropy_rate": 2.786169851855424,
+          "unique_ngrams": 851,
+          "max_entropy": 6.754887502163468,
+          "normalized_entropy": 0.9875023578107769
+        },
+        {
+          "n": 3,
+          "entropy": 8.94073014129173,
+          "entropy_rate": 2.2702628061587564,
+          "unique_ngrams": 2609,
+          "max_entropy": 6.754887502163468,
+          "normalized_entropy": 1.323594232831883
+        },
+        {
+          "n": 4,
+          "entropy": 10.669597992367128,
+          "entropy_rate": 1.7288678510753979,
+          "unique_ngrams": 5456,
+          "max_entropy": 6.754887502163468,
+          "normalized_entropy": 1.5795374814088095
+        },
+        {
+          "n": 5,
+          "entropy": 11.884449729233985,
+          "entropy_rate": 1.2148517368668568,
+          "unique_ngrams": 8767,
+          "max_entropy": 6.754887502163468,
+          "normalized_entropy": 1.7593852933046792
+        }
+      ],
+      "nc": [
+        {
+          "n": 1,
+          "entropy": 3.8883784060697932,
+          "entropy_rate": 3.8883784060697932,
+          "unique_ngrams": 59,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 0.6609917299829386
+        },
+        {
+          "n": 2,
+          "entropy": 6.393749051893849,
+          "entropy_rate": 2.5053706458240557,
+          "unique_ngrams": 368,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.0868837354643595
+        },
+        {
+          "n": 3,
+          "entropy": 8.207992394269967,
+          "entropy_rate": 1.814243342376118,
+          "unique_ngrams": 945,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.395289893572649
+        },
+        {
+          "n": 4,
+          "entropy": 9.44925595094982,
+          "entropy_rate": 1.2412635566798524,
+          "unique_ngrams": 1642,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.6062942918107006
+        },
+        {
+          "n": 5,
+          "entropy": 10.230483406263616,
+          "entropy_rate": 0.7812274553137968,
+          "unique_ngrams": 2292,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.7390964096272057
+        }
+      ],
+      "bash": [
+        {
+          "n": 1,
+          "entropy": 3.907913830588939,
+          "entropy_rate": 3.907913830588939,
+          "unique_ngrams": 112,
+          "max_entropy": 6.807354922057604,
+          "normalized_entropy": 0.574072290240998
+        },
+        {
+          "n": 2,
+          "entropy": 6.770260399802619,
+          "entropy_rate": 2.86234656921368,
+          "unique_ngrams": 1721,
+          "max_entropy": 6.807354922057604,
+          "normalized_entropy": 0.9945508170677587
+        },
+        {
+          "n": 3,
+          "entropy": 9.301772989952354,
+          "entropy_rate": 2.5315125901497355,
+          "unique_ngrams": 8964,
+          "max_entropy": 6.807354922057604,
+          "normalized_entropy": 1.3664298536590456
+        },
+        {
+          "n": 4,
+          "entropy": 11.507093150936278,
+          "entropy_rate": 2.2053201609839235,
+          "unique_ngrams": 26630,
+          "max_entropy": 6.807354922057604,
+          "normalized_entropy": 1.6903912433962123
+        },
+        {
+          "n": 5,
+          "entropy": 13.332793623983296,
+          "entropy_rate": 1.8257004730470179,
+          "unique_ngrams": 55069,
+          "max_entropy": 6.807354922057604,
+          "normalized_entropy": 1.9585865254038055
+        }
+      ],
+      "dash": [
+        {
+          "n": 1,
+          "entropy": 4.069465808013764,
+          "entropy_rate": 4.069465808013764,
+          "unique_ngrams": 90,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 0.6268573468359186
+        },
+        {
+          "n": 2,
+          "entropy": 6.960946401044429,
+          "entropy_rate": 2.891480593030665,
+          "unique_ngrams": 847,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.072258767682215
+        },
+        {
+          "n": 3,
+          "entropy": 9.319340275038654,
+          "entropy_rate": 2.358393873994225,
+          "unique_ngrams": 3048,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.435543925093987
+        },
+        {
+          "n": 4,
+          "entropy": 11.126551653442753,
+          "entropy_rate": 1.8072113784040997,
+          "unique_ngrams": 6541,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.7139253597302466
+        },
+        {
+          "n": 5,
+          "entropy": 12.380086818028191,
+          "entropy_rate": 1.253535164585438,
+          "unique_ngrams": 10470,
+          "max_entropy": 6.491853096329675,
+          "normalized_entropy": 1.9070189411752971
+        }
+      ],
+      "vim": [
+        {
+          "n": 1,
+          "entropy": 3.9539407610330404,
+          "entropy_rate": 3.9539407610330404,
+          "unique_ngrams": 178,
+          "max_entropy": 7.475733430966398,
+          "normalized_entropy": 0.5289033908906927
+        },
+        {
+          "n": 2,
+          "entropy": 6.8874200057425226,
+          "entropy_rate": 2.933479244709482,
+          "unique_ngrams": 3031,
+          "max_entropy": 7.475733430966398,
+          "normalized_entropy": 0.9213035843698051
+        },
+        {
+          "n": 3,
+          "entropy": 9.538424320536869,
+          "entropy_rate": 2.6510043147943465,
+          "unique_ngrams": 17650,
+          "max_entropy": 7.475733430966398,
+          "normalized_entropy": 1.2759181970060995
+        },
+        {
+          "n": 4,
+          "entropy": 11.897586754661633,
+          "entropy_rate": 2.359162434124764,
+          "unique_ngrams": 58747,
+          "max_entropy": 7.475733430966398,
+          "normalized_entropy": 1.5914942479595098
+        },
+        {
+          "n": 5,
+          "entropy": 13.920508450730663,
+          "entropy_rate": 2.02292169606903,
+          "unique_ngrams": 134303,
+          "max_entropy": 7.475733430966398,
+          "normalized_entropy": 1.8620926734851675
+        }
+      ],
+      "nano": [
+        {
+          "n": 1,
+          "entropy": 3.832344753393926,
+          "entropy_rate": 3.832344753393926,
+          "unique_ngrams": 89,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 0.5918008815909538
+        },
+        {
+          "n": 2,
+          "entropy": 6.606695158722834,
+          "entropy_rate": 2.7743504053289083,
+          "unique_ngrams": 968,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.020223458725183
+        },
+        {
+          "n": 3,
+          "entropy": 8.952357909743306,
+          "entropy_rate": 2.3456627510204715,
+          "unique_ngrams": 3786,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.3824469467711415
+        },
+        {
+          "n": 4,
+          "entropy": 10.87006026627621,
+          "entropy_rate": 1.9177023565329048,
+          "unique_ngrams": 8975,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.6785836511269165
+        },
+        {
+          "n": 5,
+          "entropy": 12.337314637973712,
+          "entropy_rate": 1.4672543716975017,
+          "unique_ngrams": 15974,
+          "max_entropy": 6.475733430966398,
+          "normalized_entropy": 1.9051609782110146
+        }
+      ],
+      "gcc": [
+        {
+          "n": 1,
+          "entropy": 3.9570252676708733,
+          "entropy_rate": 3.9570252676708733,
+          "unique_ngrams": 137,
+          "max_entropy": 7.098032082960526,
+          "normalized_entropy": 0.5574820205687818
+        },
+        {
+          "n": 2,
+          "entropy": 6.920698614358655,
+          "entropy_rate": 2.963673346687782,
+          "unique_ngrams": 1807,
+          "max_entropy": 7.098032082960526,
+          "normalized_entropy": 0.9750165304229075
+        },
+        {
+          "n": 3,
+          "entropy": 9.470633102384067,
+          "entropy_rate": 2.5499344880254116,
+          "unique_ngrams": 8183,
+          "max_entropy": 7.098032082960526,
+          "normalized_entropy": 1.3342618054825626
+        },
+        {
+          "n": 4,
+          "entropy": 11.548600387248564,
+          "entropy_rate": 2.0779672848644974,
+          "unique_ngrams": 20669,
+          "max_entropy": 7.098032082960526,
+          "normalized_entropy": 1.6270143967046913
+        },
+        {
+          "n": 5,
+          "entropy": 13.1244389283516,
+          "entropy_rate": 1.5758385411030353,
+          "unique_ngrams": 37119,
+          "max_entropy": 7.098032082960526,
+          "normalized_entropy": 1.8490250219998319
+        }
+      ],
+      "clang": [
+        {
+          "n": 1,
+          "entropy": 3.8486824642596744,
+          "entropy_rate": 3.8486824642596744,
+          "unique_ngrams": 74,
+          "max_entropy": 6.20945336562895,
+          "normalized_entropy": 0.6198101890197294
+        },
+        {
+          "n": 2,
+          "entropy": 6.160960104302429,
+          "entropy_rate": 2.3122776400427547,
+          "unique_ngrams": 552,
+          "max_entropy": 6.20945336562895,
+          "normalized_entropy": 0.9921904137979448
+        },
+        {
+          "n": 3,
+          "entropy": 7.887996416564304,
+          "entropy_rate": 1.727036312261875,
+          "unique_ngrams": 1658,
+          "max_entropy": 6.20945336562895,
+          "normalized_entropy": 1.27032058252125
+        },
+        {
+          "n": 4,
+          "entropy": 9.186509576532814,
+          "entropy_rate": 1.2985131599685094,
+          "unique_ngrams": 3183,
+          "max_entropy": 6.20945336562895,
+          "normalized_entropy": 1.479439337991118
+        },
+        {
+          "n": 5,
+          "entropy": 10.07068066215647,
+          "entropy_rate": 0.884171085623656,
+          "unique_ngrams": 4866,
+          "max_entropy": 6.20945336562895,
+          "normalized_entropy": 1.6218304686690275
+        }
+      ],
+      "as": [
+        {
+          "n": 1,
+          "entropy": 3.9730558258445092,
+          "entropy_rate": 3.9730558258445092,
+          "unique_ngrams": 114,
+          "max_entropy": 6.832890014164741,
+          "normalized_entropy": 0.5814605266012289
+        },
+        {
+          "n": 2,
+          "entropy": 6.988931981649011,
+          "entropy_rate": 3.0158761558045017,
+          "unique_ngrams": 1474,
+          "max_entropy": 6.832890014164741,
+          "normalized_entropy": 1.0228368914413655
+        },
+        {
+          "n": 3,
+          "entropy": 9.6138683813358,
+          "entropy_rate": 2.6249363996867894,
+          "unique_ngrams": 6721,
+          "max_entropy": 6.832890014164741,
+          "normalized_entropy": 1.4069988484237308
+        },
+        {
+          "n": 4,
+          "entropy": 11.790774520212418,
+          "entropy_rate": 2.1769061388766175,
+          "unique_ngrams": 17758,
+          "max_entropy": 6.832890014164741,
+          "normalized_entropy": 1.7255911474895491
+        },
+        {
+          "n": 5,
+          "entropy": 13.448641603648314,
+          "entropy_rate": 1.657867083435896,
+          "unique_ngrams": 33034,
+          "max_entropy": 6.832890014164741,
+          "normalized_entropy": 1.9682215835128276
+        }
+      ],
+      "ld": [
+        {
+          "n": 1,
+          "entropy": 3.8196413536114604,
+          "entropy_rate": 3.8196413536114604,
+          "unique_ngrams": 126,
+          "max_entropy": 6.977279923499917,
+          "normalized_entropy": 0.5474398899701112
+        },
+        {
+          "n": 2,
+          "entropy": 6.653262820302032,
+          "entropy_rate": 2.833621466690572,
+          "unique_ngrams": 1303,
+          "max_entropy": 6.977279923499917,
+          "normalized_entropy": 0.9535611145388371
+        },
+        {
+          "n": 3,
+          "entropy": 9.034162300415602,
+          "entropy_rate": 2.3808994801135697,
+          "unique_ngrams": 5171,
+          "max_entropy": 6.977279923499917,
+          "normalized_entropy": 1.2947971701677006
+        },
+        {
+          "n": 4,
+          "entropy": 10.978585697847638,
+          "entropy_rate": 1.9444233974320362,
+          "unique_ngrams": 12063,
+          "max_entropy": 6.977279923499917,
+          "normalized_entropy": 1.5734764576194045
+        },
+        {
+          "n": 5,
+          "entropy": 12.474756046422751,
+          "entropy_rate": 1.496170348575113,
+          "unique_ngrams": 21004,
+          "max_entropy": 6.977279923499917,
+          "normalized_entropy": 1.787911074687858
+        }
+      ],
+      "python3": [
+        {
+          "n": 1,
+          "entropy": 3.9293842452989174,
+          "entropy_rate": 3.9293842452989174,
+          "unique_ngrams": 244,
+          "max_entropy": 7.930737337562887,
+          "normalized_entropy": 0.49546266356444685
+        },
+        {
+          "n": 2,
+          "entropy": 6.832584947230695,
+          "entropy_rate": 2.903200701931778,
+          "unique_ngrams": 3901,
+          "max_entropy": 7.930737337562887,
+          "normalized_entropy": 0.8615321194498602
+        },
+        {
+          "n": 3,
+          "entropy": 9.341829369561811,
+          "entropy_rate": 2.5092444223311157,
+          "unique_ngrams": 20533,
+          "max_entropy": 7.930737337562887,
+          "normalized_entropy": 1.177926965922257
+        },
+        {
+          "n": 4,
+          "entropy": 11.511038894747008,
+          "entropy_rate": 2.169209525185197,
+          "unique_ngrams": 58668,
+          "max_entropy": 7.930737337562887,
+          "normalized_entropy": 1.4514462407204558
+        },
+        {
+          "n": 5,
+          "entropy": 13.33589115997498,
+          "entropy_rate": 1.824852265227971,
+          "unique_ngrams": 120162,
+          "max_entropy": 7.930737337562887,
+          "normalized_entropy": 1.6815449298530287
+        }
+      ],
+      "perl": [
+        {
+          "n": 1,
+          "entropy": 3.870403899522026,
+          "entropy_rate": 3.870403899522026,
+          "unique_ngrams": 177,
+          "max_entropy": 7.467605550082998,
+          "normalized_entropy": 0.5182924932984722
+        },
+        {
+          "n": 2,
+          "entropy": 6.7425820506703396,
+          "entropy_rate": 2.8721781511483138,
+          "unique_ngrams": 2592,
+          "max_entropy": 7.467605550082998,
+          "normalized_entropy": 0.9029108467834647
+        },
+        {
+          "n": 3,
+          "entropy": 9.284674855952233,
+          "entropy_rate": 2.542092805281893,
+          "unique_ngrams": 13287,
+          "max_entropy": 7.467605550082998,
+          "normalized_entropy": 1.2433268995908655
+        },
+        {
+          "n": 4,
+          "entropy": 11.498634124549719,
+          "entropy_rate": 2.2139592685974865,
+          "unique_ngrams": 39891,
+          "max_entropy": 7.467605550082998,
+          "normalized_entropy": 1.539802021870574
+        },
+        {
+          "n": 5,
+          "entropy": 13.341773147192306,
+          "entropy_rate": 1.8431390226425872,
+          "unique_ngrams": 83686,
+          "max_entropy": 7.467605550082998,
+          "normalized_entropy": 1.7866199624113812
+        }
+      ],
+      "git": [
+        {
+          "n": 1,
+          "entropy": 3.931605242481435,
+          "entropy_rate": 3.931605242481435,
+          "unique_ngrams": 159,
+          "max_entropy": 7.312882955284356,
+          "normalized_entropy": 0.5376272622605591
+        },
+        {
+          "n": 2,
+          "entropy": 6.857842396502143,
+          "entropy_rate": 2.9262371540207077,
+          "unique_ngrams": 2784,
+          "max_entropy": 7.312882955284356,
+          "normalized_entropy": 0.9377754899723376
+        },
+        {
+          "n": 3,
+          "entropy": 9.45279034377982,
+          "entropy_rate": 2.594947947277678,
+          "unique_ngrams": 16112,
+          "max_entropy": 7.312882955284356,
+          "normalized_entropy": 1.2926215832497563
+        },
+        {
+          "n": 4,
+          "entropy": 11.731555986930669,
+          "entropy_rate": 2.278765643150848,
+          "unique_ngrams": 51998,
+          "max_entropy": 7.312882955284356,
+          "normalized_entropy": 1.6042313351198025
+        },
+        {
+          "n": 5,
+          "entropy": 13.681791743914259,
+          "entropy_rate": 1.9502357569835898,
+          "unique_ngrams": 115554,
+          "max_entropy": 7.312882955284356,
+          "normalized_entropy": 1.8709162757798101
+        }
+      ],
+      "tar": [
+        {
+          "n": 1,
+          "entropy": 4.04817834244439,
+          "entropy_rate": 4.04817834244439,
+          "unique_ngrams": 131,
+          "max_entropy": 7.03342300153745,
+          "normalized_entropy": 0.5755630425696693
+        },
+        {
+          "n": 2,
+          "entropy": 6.99622187787709,
+          "entropy_rate": 2.9480435354327,
+          "unique_ngrams": 1581,
+          "max_entropy": 7.03342300153745,
+          "normalized_entropy": 0.9947108081438827
+        },
+        {
+          "n": 3,
+          "entropy": 9.4818060339134,
+          "entropy_rate": 2.4855841560363103,
+          "unique_ngrams": 6275,
+          "max_entropy": 7.03342300153745,
+          "normalized_entropy": 1.348106893590895
+        },
+        {
+          "n": 4,
+          "entropy": 11.479338579768488,
+          "entropy_rate": 1.997532545855087,
+          "unique_ngrams": 14843,
+          "max_entropy": 7.03342300153745,
+          "normalized_entropy": 1.6321126395013061
+        },
+        {
+          "n": 5,
+          "entropy": 12.995440348473801,
+          "entropy_rate": 1.5161017687053135,
+          "unique_ngrams": 25800,
+          "max_entropy": 7.03342300153745,
+          "normalized_entropy": 1.8476693845419367
+        }
+      ],
+      "ar": [
+        {
+          "n": 1,
+          "entropy": 3.7848027267476905,
+          "entropy_rate": 3.7848027267476905,
+          "unique_ngrams": 68,
+          "max_entropy": 6.087462841250339,
+          "normalized_entropy": 0.6217373026248005
+        },
+        {
+          "n": 2,
+          "entropy": 6.371735771396635,
+          "entropy_rate": 2.5869330446489442,
+          "unique_ngrams": 458,
+          "max_entropy": 6.087462841250339,
+          "normalized_entropy": 1.0466980969838506
+        },
+        {
+          "n": 3,
+          "entropy": 8.27729804883992,
+          "entropy_rate": 1.9055622774432859,
+          "unique_ngrams": 1223,
+          "max_entropy": 6.087462841250339,
+          "normalized_entropy": 1.3597287186298124
+        },
+        {
+          "n": 4,
+          "entropy": 9.619354033565108,
+          "entropy_rate": 1.342055984725187,
+          "unique_ngrams": 2179,
+          "max_entropy": 6.087462841250339,
+          "normalized_entropy": 1.5801910064044569
+        },
+        {
+          "n": 5,
+          "entropy": 10.478136035280636,
+          "entropy_rate": 0.8587820017155288,
+          "unique_ngrams": 3081,
+          "max_entropy": 6.087462841250339,
+          "normalized_entropy": 1.7212648862967797
+        }
+      ],
+      "strace": [
+        {
+          "n": 1,
+          "entropy": 3.839238114227605,
+          "entropy_rate": 3.839238114227605,
+          "unique_ngrams": 125,
+          "max_entropy": 6.965784284662087,
+          "normalized_entropy": 0.5511566188865764
+        },
+        {
+          "n": 2,
+          "entropy": 6.5908396902271305,
+          "entropy_rate": 2.7516015759995254,
+          "unique_ngrams": 1483,
+          "max_entropy": 6.965784284662087,
+          "normalized_entropy": 0.9461733842001762
+        },
+        {
+          "n": 3,
+          "entropy": 8.865555703455607,
+          "entropy_rate": 2.2747160132284767,
+          "unique_ngrams": 6362,
+          "max_entropy": 6.965784284662087,
+          "normalized_entropy": 1.2727290052573998
+        },
+        {
+          "n": 4,
+          "entropy": 10.698207631339919,
+          "entropy_rate": 1.8326519278843119,
+          "unique_ngrams": 16124,
+          "max_entropy": 6.965784284662087,
+          "normalized_entropy": 1.5358224134066611
+        },
+        {
+          "n": 5,
+          "entropy": 12.150282863880633,
+          "entropy_rate": 1.4520752325407145,
+          "unique_ngrams": 30226,
+          "max_entropy": 6.965784284662087,
+          "normalized_entropy": 1.7442806678114133
+        }
+      ],
+      "objdump": [
+        {
+          "n": 1,
+          "entropy": 3.6715227067362357,
+          "entropy_rate": 3.6715227067362357,
+          "unique_ngrams": 95,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 0.5588437441578682
+        },
+        {
+          "n": 2,
+          "entropy": 6.402667240714158,
+          "entropy_rate": 2.7311445339779223,
+          "unique_ngrams": 1014,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 0.9745522005986272
+        },
+        {
+          "n": 3,
+          "entropy": 8.667373989391661,
+          "entropy_rate": 2.2647067486775034,
+          "unique_ngrams": 3956,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.3192640000186522
+        },
+        {
+          "n": 4,
+          "entropy": 10.551144472019466,
+          "entropy_rate": 1.8837704826278046,
+          "unique_ngrams": 9301,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.605993358307604
+        },
+        {
+          "n": 5,
+          "entropy": 12.034756869455848,
+          "entropy_rate": 1.4836123974363815,
+          "unique_ngrams": 16806,
+          "max_entropy": 6.569855608330948,
+          "normalized_entropy": 1.8318145157094619
+        }
+      ],
+      "nm": [
+        {
+          "n": 1,
+          "entropy": 3.826766498228242,
+          "entropy_rate": 3.826766498228242,
+          "unique_ngrams": 59,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 0.650518222186433
+        },
+        {
+          "n": 2,
+          "entropy": 6.477944123194538,
+          "entropy_rate": 2.651177624966296,
+          "unique_ngrams": 408,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.1011961917181556
+        },
+        {
+          "n": 3,
+          "entropy": 8.409706703933251,
+          "entropy_rate": 1.931762580738713,
+          "unique_ngrams": 1119,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.4295796351005097
+        },
+        {
+          "n": 4,
+          "entropy": 9.713527678244128,
+          "entropy_rate": 1.3038209743108773,
+          "unique_ngrams": 2014,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.6512182698723947
+        },
+        {
+          "n": 5,
+          "entropy": 10.513396762165808,
+          "entropy_rate": 0.7998690839216795,
+          "unique_ngrams": 2829,
+          "max_entropy": 5.882643049361842,
+          "normalized_entropy": 1.7871893082661743
+        }
+      ],
+      "readelf": [
+        {
+          "n": 1,
+          "entropy": 3.757873221294383,
+          "entropy_rate": 3.757873221294383,
+          "unique_ngrams": 106,
+          "max_entropy": 6.727920454563199,
+          "normalized_entropy": 0.5585489969260282
+        },
+        {
+          "n": 2,
+          "entropy": 6.502527182729015,
+          "entropy_rate": 2.744653961434632,
+          "unique_ngrams": 1245,
+          "max_entropy": 6.727920454563199,
+          "normalized_entropy": 0.9664988203477776
+        },
+        {
+          "n": 3,
+          "entropy": 8.732511210154636,
+          "entropy_rate": 2.229984027425621,
+          "unique_ngrams": 5421,
+          "max_entropy": 6.727920454563199,
+          "normalized_entropy": 1.2979510190599575
+        },
+        {
+          "n": 4,
+          "entropy": 10.565924342465848,
+          "entropy_rate": 1.8334131323112128,
+          "unique_ngrams": 13641,
+          "max_entropy": 6.727920454563199,
+          "normalized_entropy": 1.5704591654765376
+        },
+        {
+          "n": 5,
+          "entropy": 11.994838747066025,
+          "entropy_rate": 1.4289144046001763,
+          "unique_ngrams": 25372,
+          "max_entropy": 6.727920454563199,
+          "normalized_entropy": 1.7828449114511378
+        }
+      ],
+      "addr2line": [
+        {
+          "n": 1,
+          "entropy": 3.803580692421497,
+          "entropy_rate": 3.803580692421497,
+          "unique_ngrams": 43,
+          "max_entropy": 5.426264754702098,
+          "normalized_entropy": 0.7009574475933056
+        },
+        {
+          "n": 2,
+          "entropy": 6.174505514719204,
+          "entropy_rate": 2.370924822297707,
+          "unique_ngrams": 242,
+          "max_entropy": 5.426264754702098,
+          "normalized_entropy": 1.1378924165778537
+        },
+        {
+          "n": 3,
+          "entropy": 7.7694811421294885,
+          "entropy_rate": 1.5949756274102844,
+          "unique_ngrams": 589,
+          "max_entropy": 5.426264754702098,
+          "normalized_entropy": 1.4318286138539205
+        },
+        {
+          "n": 4,
+          "entropy": 8.754978693590001,
+          "entropy_rate": 0.9854975514605124,
+          "unique_ngrams": 952,
+          "max_entropy": 5.426264754702098,
+          "normalized_entropy": 1.6134448076834853
+        },
+        {
+          "n": 5,
+          "entropy": 9.288823583718418,
+          "entropy_rate": 0.5338448901284174,
+          "unique_ngrams": 1224,
+          "max_entropy": 5.426264754702098,
+          "normalized_entropy": 1.7118264595676507
+        }
+      ]
+    },
+    "predictability_analysis": {
+      "final_entropy_rate": 2.2006256442640275,
+      "predictability_ratio": 0.2644369933472506,
+      "interpretation": "Highly predictable - sequences are very constrained"
+    }
+  },
+  "detailed_ngram_analysis": {
+    "2gram": {
+      "n": 2,
+      "total_ngrams": 6896,
+      "unique_ngrams": 6896,
+      "entropy": 7.028651204155844,
+      "max_entropy": 8.321928094887362,
+      "normalized_entropy": 0.8445940801235652,
+      "top_ngrams": [
+        {
+          "ngram": "mov mov",
+          "count": 620454,
+          "frequency": 0.133387251146076
+        },
+        {
+          "ngram": "mov call",
+          "count": 205456,
+          "frequency": 0.04416960978810386
+        },
+        {
+          "ngram": "call mov",
+          "count": 172451,
+          "frequency": 0.03707408582649471
+        },
+        {
+          "ngram": "test je",
+          "count": 138600,
+          "frequency": 0.029796685989366065
+        },
+        {
+          "ngram": "mov test",
+          "count": 136239,
+          "frequency": 0.02928911040768574
+        },
+        {
+          "ngram": "je mov",
+          "count": 122864,
+          "frequency": 0.026413708711381476
+        },
+        {
+          "ngram": "mov lea",
+          "count": 101651,
+          "frequency": 0.02185326787521681
+        },
+        {
+          "ngram": "lea mov",
+          "count": 98662,
+          "frequency": 0.02121068277837543
+        },
+        {
+          "ngram": "pop pop",
+          "count": 90807,
+          "frequency": 0.01952198892234029
+        },
+        {
+          "ngram": "mov jmp",
+          "count": 89829,
+          "frequency": 0.019311735250640436
+        },
+        {
+          "ngram": "cmp je",
+          "count": 85631,
+          "frequency": 0.01840923533878359
+        },
+        {
+          "ngram": "jne mov",
+          "count": 79545,
+          "frequency": 0.017100846948226
+        },
+        {
+          "ngram": "test jne",
+          "count": 78725,
+          "frequency": 0.016924560638620804
+        },
+        {
+          "ngram": "mov xor",
+          "count": 75407,
+          "frequency": 0.01621124603463295
+        },
+        {
+          "ngram": "jmp mov",
+          "count": 73750,
+          "frequency": 0.015855018699247818
+        },
+        {
+          "ngram": "jmp nop",
+          "count": 70401,
+          "frequency": 0.015135039612823668
+        },
+        {
+          "ngram": "cmp jne",
+          "count": 66800,
+          "frequency": 0.014360884733691582
+        },
+        {
+          "ngram": "mov cmp",
+          "count": 62781,
+          "frequency": 0.013496866833321724
+        },
+        {
+          "ngram": "xor mov",
+          "count": 59822,
+          "frequency": 0.012860731235612242
+        },
+        {
+          "ngram": "push mov",
+          "count": 53553,
+          "frequency": 0.011513000900350078
+        },
+        {
+          "ngram": "call test",
+          "count": 45744,
+          "frequency": 0.00983419627631718
+        },
+        {
+          "ngram": "lea call",
+          "count": 43275,
+          "frequency": 0.009303402497762023
+        },
+        {
+          "ngram": "xor call",
+          "count": 42356,
+          "frequency": 0.009105832841021566
+        },
+        {
+          "ngram": "mov push",
+          "count": 41725,
+          "frequency": 0.008970178375947324
+        },
+        {
+          "ngram": "nop mov",
+          "count": 40288,
+          "frequency": 0.008661247367529438
+        },
+        {
+          "ngram": "mov sub",
+          "count": 38882,
+          "frequency": 0.008358980841547846
+        },
+        {
+          "ngram": "mov add",
+          "count": 36773,
+          "frequency": 0.007905581052575456
+        },
+        {
+          "ngram": "call jmp",
+          "count": 36471,
+          "frequency": 0.00784065609464769
+        },
+        {
+          "ngram": "sub mov",
+          "count": 36291,
+          "frequency": 0.007801959099856305
+        },
+        {
+          "ngram": "push push",
+          "count": 35773,
+          "frequency": 0.007690597748178876
+        },
+        {
+          "ngram": "je cmp",
+          "count": 35272,
+          "frequency": 0.007582891112676189
+        },
+        {
+          "ngram": "add mov",
+          "count": 34198,
+          "frequency": 0.007351999043754262
+        },
+        {
+          "ngram": "lea lea",
+          "count": 29267,
+          "frequency": 0.006291916369774724
+        },
+        {
+          "ngram": "lea xor",
+          "count": 27279,
+          "frequency": 0.005864529560634321
+        },
+        {
+          "ngram": "endbr64 push",
+          "count": 24611,
+          "frequency": 0.005290954104504244
+        },
+        {
+          "ngram": "pop ret",
+          "count": 20154,
+          "frequency": 0.004332773516808684
+        },
+        {
+          "ngram": "ret nop",
+          "count": 19962,
+          "frequency": 0.004291496722364541
+        },
+        {
+          "ngram": "call lea",
+          "count": 19842,
+          "frequency": 0.004265698725836951
+        },
+        {
+          "ngram": "nop endbr64",
+          "count": 18826,
+          "frequency": 0.004047275688570026
+        },
+        {
+          "ngram": "xor lea",
+          "count": 18232,
+          "frequency": 0.003919575605758457
+        },
+        {
+          "ngram": "je lea",
+          "count": 17255,
+          "frequency": 0.0037095369173629975
+        },
+        {
+          "ngram": "jne cmp",
+          "count": 17212,
+          "frequency": 0.0037002926352739446
+        },
+        {
+          "ngram": "xor xor",
+          "count": 17050,
+          "frequency": 0.0036654653399616987
+        },
+        {
+          "ngram": "add cmp",
+          "count": 16368,
+          "frequency": 0.003518846726363231
+        },
+        {
+          "ngram": "test js",
+          "count": 16301,
+          "frequency": 0.0035044428449686597
+        },
+        {
+          "ngram": "jne jmp",
+          "count": 15427,
+          "frequency": 0.0033165474369260483
+        },
+        {
+          "ngram": "call cmp",
+          "count": 14926,
+          "frequency": 0.0032088408014233614
+        },
+        {
+          "ngram": "je test",
+          "count": 14842,
+          "frequency": 0.0031907822038540487
+        },
+        {
+          "ngram": "xor jmp",
+          "count": 14649,
+          "frequency": 0.003149290426105509
+        },
+        {
+          "ngram": "lea cmp",
+          "count": 14465,
+          "frequency": 0.003109733498096538
+        }
+      ]
+    },
+    "3gram": {
+      "n": 3,
+      "total_ngrams": 46587,
+      "unique_ngrams": 46587,
+      "entropy": 9.768209067669279,
+      "max_entropy": 8.321928094887362,
+      "normalized_entropy": 1.173791572853225,
+      "top_ngrams": [
+        {
+          "ngram": "mov mov mov",
+          "count": 271797,
+          "frequency": 0.05843230710192551
+        },
+        {
+          "ngram": "mov call mov",
+          "count": 112082,
+          "frequency": 0.024095960752318884
+        },
+        {
+          "ngram": "mov mov call",
+          "count": 108071,
+          "frequency": 0.023233655488516032
+        },
+        {
+          "ngram": "mov test je",
+          "count": 76500,
+          "frequency": 0.016446360678364007
+        },
+        {
+          "ngram": "test je mov",
+          "count": 76253,
+          "frequency": 0.016393259356958047
+        },
+        {
+          "ngram": "call mov mov",
+          "count": 72155,
+          "frequency": 0.015512250388854312
+        },
+        {
+          "ngram": "pop pop pop",
+          "count": 63351,
+          "frequency": 0.013619521507647558
+        },
+        {
+          "ngram": "je mov mov",
+          "count": 49769,
+          "frequency": 0.0106995937856405
+        },
+        {
+          "ngram": "mov mov test",
+          "count": 41686,
+          "frequency": 0.00896186916651349
+        },
+        {
+          "ngram": "mov lea mov",
+          "count": 38514,
+          "frequency": 0.008279936407405377
+        },
+        {
+          "ngram": "test jne mov",
+          "count": 38294,
+          "frequency": 0.0082326396838859
+        },
+        {
+          "ngram": "mov test jne",
+          "count": 35607,
+          "frequency": 0.007654974701627544
+        },
+        {
+          "ngram": "lea mov mov",
+          "count": 35340,
+          "frequency": 0.007597573678083451
+        },
+        {
+          "ngram": "cmp je mov",
+          "count": 34156,
+          "frequency": 0.007343031311505896
+        },
+        {
+          "ngram": "mov jmp mov",
+          "count": 33206,
+          "frequency": 0.007138795459944512
+        },
+        {
+          "ngram": "mov call test",
+          "count": 33098,
+          "frequency": 0.007115577068398587
+        },
+        {
+          "ngram": "mov mov xor",
+          "count": 32241,
+          "frequency": 0.006931334831779529
+        },
+        {
+          "ngram": "mov mov lea",
+          "count": 31708,
+          "frequency": 0.0068167477697982475
+        },
+        {
+          "ngram": "mov mov jmp",
+          "count": 31106,
+          "frequency": 0.0066873267354404025
+        },
+        {
+          "ngram": "call mov test",
+          "count": 30961,
+          "frequency": 0.006656153894938928
+        },
+        {
+          "ngram": "cmp jne mov",
+          "count": 29211,
+          "frequency": 0.00627992995785217
+        },
+        {
+          "ngram": "jmp mov mov",
+          "count": 28837,
+          "frequency": 0.006199525527869057
+        },
+        {
+          "ngram": "jne mov mov",
+          "count": 28682,
+          "frequency": 0.006166202836298516
+        },
+        {
+          "ngram": "push mov push",
+          "count": 28600,
+          "frequency": 0.006148574057532164
+        },
+        {
+          "ngram": "jmp nop mov",
+          "count": 26785,
+          "frequency": 0.00575837608849647
+        },
+        {
+          "ngram": "mov jmp nop",
+          "count": 24866,
+          "frequency": 0.005345819668342476
+        },
+        {
+          "ngram": "mov cmp je",
+          "count": 23654,
+          "frequency": 0.005085257718771532
+        },
+        {
+          "ngram": "call test je",
+          "count": 22935,
+          "frequency": 0.004930683426905601
+        },
+        {
+          "ngram": "mov xor call",
+          "count": 22551,
+          "frequency": 0.004848129145853421
+        },
+        {
+          "ngram": "mov xor mov",
+          "count": 22478,
+          "frequency": 0.0048324352330492305
+        },
+        {
+          "ngram": "xor mov mov",
+          "count": 21631,
+          "frequency": 0.004650342847499239
+        },
+        {
+          "ngram": "lea mov call",
+          "count": 21579,
+          "frequency": 0.00463916362194009
+        },
+        {
+          "ngram": "mov mov cmp",
+          "count": 21235,
+          "frequency": 0.004565208745164179
+        },
+        {
+          "ngram": "xor call mov",
+          "count": 19423,
+          "frequency": 0.004175655731449204
+        },
+        {
+          "ngram": "mov call jmp",
+          "count": 19416,
+          "frequency": 0.004174150835700857
+        },
+        {
+          "ngram": "lea call mov",
+          "count": 19063,
+          "frequency": 0.004098261092962785
+        },
+        {
+          "ngram": "je mov test",
+          "count": 18974,
+          "frequency": 0.004079127418448087
+        },
+        {
+          "ngram": "cmp je cmp",
+          "count": 18644,
+          "frequency": 0.00400818233316887
+        },
+        {
+          "ngram": "pop pop ret",
+          "count": 18299,
+          "frequency": 0.003934012471286052
+        },
+        {
+          "ngram": "mov push mov",
+          "count": 17535,
+          "frequency": 0.0037697638496093184
+        },
+        {
+          "ngram": "push push push",
+          "count": 17442,
+          "frequency": 0.0037497702346669932
+        },
+        {
+          "ngram": "je cmp je",
+          "count": 17238,
+          "frequency": 0.0037059132728580226
+        },
+        {
+          "ngram": "call test jne",
+          "count": 16816,
+          "frequency": 0.0036151895577433875
+        },
+        {
+          "ngram": "mov push push",
+          "count": 16120,
+          "frequency": 0.003465559923336311
+        },
+        {
+          "ngram": "mov lea call",
+          "count": 16018,
+          "frequency": 0.0034436314424318255
+        },
+        {
+          "ngram": "call mov call",
+          "count": 15961,
+          "frequency": 0.0034313772913381426
+        },
+        {
+          "ngram": "mov cmp jne",
+          "count": 15863,
+          "frequency": 0.003410308750861284
+        },
+        {
+          "ngram": "endbr64 push mov",
+          "count": 15737,
+          "frequency": 0.0033832206273910373
+        },
+        {
+          "ngram": "call mov jmp",
+          "count": 15660,
+          "frequency": 0.00336666677415922
+        },
+        {
+          "ngram": "lea xor call",
+          "count": 15306,
+          "frequency": 0.0032905620463142414
+        }
+      ]
+    },
+    "4gram": {
+      "n": 4,
+      "total_ngrams": 172609,
+      "unique_ngrams": 172609,
+      "entropy": 12.250338449760896,
+      "max_entropy": 8.321928094887362,
+      "normalized_entropy": 1.4720553109906083,
+      "top_ngrams": [
+        {
+          "ngram": "mov mov mov mov",
+          "count": 126664,
+          "frequency": 0.027231101898205417
+        },
+        {
+          "ngram": "mov mov call mov",
+          "count": 63799,
+          "frequency": 0.013715949835814497
+        },
+        {
+          "ngram": "mov mov mov call",
+          "count": 53313,
+          "frequency": 0.011461597103352377
+        },
+        {
+          "ngram": "mov call mov mov",
+          "count": 49093,
+          "frequency": 0.010554352345485683
+        },
+        {
+          "ngram": "mov test je mov",
+          "count": 43785,
+          "frequency": 0.009413201830140563
+        },
+        {
+          "ngram": "pop pop pop pop",
+          "count": 41105,
+          "frequency": 0.008837036912822378
+        },
+        {
+          "ngram": "test je mov mov",
+          "count": 31113,
+          "frequency": 0.006688887713627118
+        },
+        {
+          "ngram": "call mov mov mov",
+          "count": 29314,
+          "frequency": 0.0063021262635318135
+        },
+        {
+          "ngram": "mov mov test je",
+          "count": 22225,
+          "frequency": 0.004778084062461436
+        },
+        {
+          "ngram": "mov call mov test",
+          "count": 22048,
+          "frequency": 0.004740031379489303
+        },
+        {
+          "ngram": "je mov mov mov",
+          "count": 21160,
+          "frequency": 0.004549123003900293
+        },
+        {
+          "ngram": "call mov test je",
+          "count": 19105,
+          "frequency": 0.004107324904986535
+        },
+        {
+          "ngram": "mov mov call test",
+          "count": 17949,
+          "frequency": 0.0038588000376657064
+        },
+        {
+          "ngram": "mov test jne mov",
+          "count": 17906,
+          "frequency": 0.003849555600559482
+        },
+        {
+          "ngram": "pop pop pop ret",
+          "count": 17251,
+          "frequency": 0.003708739174871642
+        },
+        {
+          "ngram": "mov call test je",
+          "count": 15725,
+          "frequency": 0.0033806691510553924
+        },
+        {
+          "ngram": "lea mov mov mov",
+          "count": 14874,
+          "frequency": 0.0031977152911159237
+        },
+        {
+          "ngram": "mov mov mov test",
+          "count": 14771,
+          "frequency": 0.0031755716394428744
+        },
+        {
+          "ngram": "mov lea mov mov",
+          "count": 14561,
+          "frequency": 0.003130424388458987
+        },
+        {
+          "ngram": "test jne mov mov",
+          "count": 14204,
+          "frequency": 0.003053674061786378
+        },
+        {
+          "ngram": "call test je mov",
+          "count": 13862,
+          "frequency": 0.0029801485387554753
+        },
+        {
+          "ngram": "mov mov mov jmp",
+          "count": 13319,
+          "frequency": 0.0028634106469257086
+        },
+        {
+          "ngram": "mov jmp mov mov",
+          "count": 13225,
+          "frequency": 0.002843201877437683
+        },
+        {
+          "ngram": "mov mov lea mov",
+          "count": 13098,
+          "frequency": 0.0028158985399379033
+        },
+        {
+          "ngram": "mov mov xor call",
+          "count": 12969,
+          "frequency": 0.0027881652286192295
+        },
+        {
+          "ngram": "cmp je mov mov",
+          "count": 12799,
+          "frequency": 0.002751617454013225
+        },
+        {
+          "ngram": "mov call test jne",
+          "count": 12700,
+          "frequency": 0.002730333749977964
+        },
+        {
+          "ngram": "jmp mov mov mov",
+          "count": 12551,
+          "frequency": 0.0026983007004703482
+        },
+        {
+          "ngram": "push mov push mov",
+          "count": 12312,
+          "frequency": 0.0026469188291124955
+        },
+        {
+          "ngram": "jne mov mov mov",
+          "count": 12114,
+          "frequency": 0.002604351421041973
+        },
+        {
+          "ngram": "push mov push push",
+          "count": 11917,
+          "frequency": 0.002561998999880897
+        },
+        {
+          "ngram": "test je mov test",
+          "count": 11840,
+          "frequency": 0.0025454450078534717
+        },
+        {
+          "ngram": "mov jmp nop mov",
+          "count": 11684,
+          "frequency": 0.002511907049979727
+        },
+        {
+          "ngram": "mov mov mov lea",
+          "count": 11572,
+          "frequency": 0.0024878285161216533
+        },
+        {
+          "ngram": "mov mov jmp mov",
+          "count": 11444,
+          "frequency": 0.0024603101917124266
+        },
+        {
+          "ngram": "mov mov mov xor",
+          "count": 11359,
+          "frequency": 0.0024420363044094246
+        },
+        {
+          "ngram": "je mov test je",
+          "count": 11231,
+          "frequency": 0.002414517980000198
+        },
+        {
+          "ngram": "cmp jne mov mov",
+          "count": 11027,
+          "frequency": 0.002370660650472993
+        },
+        {
+          "ngram": "endbr64 push mov push",
+          "count": 10852,
+          "frequency": 0.002333037941319753
+        },
+        {
+          "ngram": "mov mov test jne",
+          "count": 10517,
+          "frequency": 0.00226101732665498
+        },
+        {
+          "ngram": "mov xor call mov",
+          "count": 10338,
+          "frequency": 0.002222534669863952
+        },
+        {
+          "ngram": "mov cmp je mov",
+          "count": 10310,
+          "frequency": 0.0022165150363994334
+        },
+        {
+          "ngram": "mov call mov jmp",
+          "count": 10162,
+          "frequency": 0.002184696973801265
+        },
+        {
+          "ngram": "jmp nop mov mov",
+          "count": 10009,
+          "frequency": 0.0021518039766558615
+        },
+        {
+          "ngram": "cmp je cmp je",
+          "count": 9884,
+          "frequency": 0.002124930612974976
+        },
+        {
+          "ngram": "mov call mov call",
+          "count": 9844,
+          "frequency": 0.0021163311365970925
+        },
+        {
+          "ngram": "call mov mov test",
+          "count": 9707,
+          "frequency": 0.002086877930002842
+        },
+        {
+          "ngram": "lea mov call mov",
+          "count": 9673,
+          "frequency": 0.0020795683750816415
+        },
+        {
+          "ngram": "pop pop ret nop",
+          "count": 9617,
+          "frequency": 0.0020675291081526047
+        },
+        {
+          "ngram": "call test jne mov",
+          "count": 9491,
+          "frequency": 0.002040440757562272
+        }
+      ]
+    },
+    "5gram": {
+      "n": 5,
+      "total_ngrams": 438732,
+      "unique_ngrams": 438732,
+      "entropy": 14.450964094024924,
+      "max_entropy": 8.321928094887362,
+      "normalized_entropy": 1.736492304337859,
+      "top_ngrams": [
+        {
+          "ngram": "mov mov mov mov mov",
+          "count": 62915,
+          "frequency": 0.013526014816592056
+        },
+        {
+          "ngram": "mov mov mov call mov",
+          "count": 33001,
+          "frequency": 0.00709484248529531
+        },
+        {
+          "ngram": "mov mov call mov mov",
+          "count": 31824,
+          "frequency": 0.006841800771250506
+        },
+        {
+          "ngram": "mov mov mov mov call",
+          "count": 24460,
+          "frequency": 0.005258623895952343
+        },
+        {
+          "ngram": "pop pop pop pop pop",
+          "count": 23446,
+          "frequency": 0.00504062534196642
+        },
+        {
+          "ngram": "mov call mov mov mov",
+          "count": 20435,
+          "frequency": 0.004393294330081199
+        },
+        {
+          "ngram": "mov test je mov mov",
+          "count": 18018,
+          "frequency": 0.0038736666131344772
+        },
+        {
+          "ngram": "pop pop pop pop ret",
+          "count": 13772,
+          "frequency": 0.0029608245419074273
+        },
+        {
+          "ngram": "mov call mov test je",
+          "count": 13395,
+          "frequency": 0.0028797737974767634
+        },
+        {
+          "ngram": "test je mov mov mov",
+          "count": 13083,
+          "frequency": 0.0028126973193272485
+        },
+        {
+          "ngram": "call mov mov mov mov",
+          "count": 12940,
+          "frequency": 0.002781953933508721
+        },
+        {
+          "ngram": "mov mov call mov test",
+          "count": 12446,
+          "frequency": 0.002675749509771989
+        },
+        {
+          "ngram": "mov mov test je mov",
+          "count": 12393,
+          "frequency": 0.0026643551080350525
+        },
+        {
+          "ngram": "call mov test je mov",
+          "count": 12057,
+          "frequency": 0.0025921189007971136
+        },
+        {
+          "ngram": "je mov mov mov mov",
+          "count": 9341,
+          "frequency": 0.002008209558957107
+        },
+        {
+          "ngram": "pop pop pop ret nop",
+          "count": 9228,
+          "frequency": 0.0019839158344991097
+        },
+        {
+          "ngram": "mov call test je mov",
+          "count": 9044,
+          "frequency": 0.0019443579114878573
+        },
+        {
+          "ngram": "mov mov mov call test",
+          "count": 8993,
+          "frequency": 0.0019333934871749558
+        },
+        {
+          "ngram": "mov mov mov test je",
+          "count": 8621,
+          "frequency": 0.0018534176863043805
+        },
+        {
+          "ngram": "mov mov call test je",
+          "count": 7912,
+          "frequency": 0.0017009906894838486
+        },
+        {
+          "ngram": "mov test je mov test",
+          "count": 7717,
+          "frequency": 0.0016590678906404019
+        },
+        {
+          "ngram": "mov call mov mov test",
+          "count": 7663,
+          "frequency": 0.0016474585001914474
+        },
+        {
+          "ngram": "test je mov test je",
+          "count": 7381,
+          "frequency": 0.001586831683402463
+        },
+        {
+          "ngram": "mov call test jne mov",
+          "count": 7341,
+          "frequency": 0.001578232134921756
+        },
+        {
+          "ngram": "mov pop pop pop pop",
+          "count": 7253,
+          "frequency": 0.0015593131282642006
+        },
+        {
+          "ngram": "je mov test je mov",
+          "count": 6845,
+          "frequency": 0.0014715977337609889
+        },
+        {
+          "ngram": "push mov push mov push",
+          "count": 6826,
+          "frequency": 0.001467512948232653
+        },
+        {
+          "ngram": "mov mov call test jne",
+          "count": 6753,
+          "frequency": 0.0014518187722553626
+        },
+        {
+          "ngram": "mov lea mov mov mov",
+          "count": 6495,
+          "frequency": 0.0013963516845548025
+        },
+        {
+          "ngram": "mov test jne mov mov",
+          "count": 6490,
+          "frequency": 0.0013952767409947141
+        },
+        {
+          "ngram": "mov mov mov mov test",
+          "count": 6469,
+          "frequency": 0.001390761978042343
+        },
+        {
+          "ngram": "mov call mov call mov",
+          "count": 6460,
+          "frequency": 0.0013888270796341838
+        },
+        {
+          "ngram": "mov mov mov mov jmp",
+          "count": 6423,
+          "frequency": 0.0013808724972895299
+        },
+        {
+          "ngram": "lea mov mov mov mov",
+          "count": 6381,
+          "frequency": 0.0013718429713847873
+        },
+        {
+          "ngram": "push mov push push push",
+          "count": 6334,
+          "frequency": 0.0013617385019199567
+        },
+        {
+          "ngram": "endbr64 push mov push push",
+          "count": 6300,
+          "frequency": 0.0013544288857113558
+        },
+        {
+          "ngram": "mov test js sub mov",
+          "count": 6176,
+          "frequency": 0.001327770285421164
+        },
+        {
+          "ngram": "mov mov xor call mov",
+          "count": 6164,
+          "frequency": 0.001325190420876952
+        },
+        {
+          "ngram": "add pop pop pop pop",
+          "count": 6066,
+          "frequency": 0.0013041215270992196
+        },
+        {
+          "ngram": "mov call mov mov call",
+          "count": 6055,
+          "frequency": 0.0013017566512670252
+        },
+        {
+          "ngram": "nop endbr64 jmp nop endbr64",
+          "count": 5931,
+          "frequency": 0.0012750980509768335
+        },
+        {
+          "ngram": "test jne mov mov mov",
+          "count": 5925,
+          "frequency": 0.0012738081187047274
+        },
+        {
+          "ngram": "jmp nop endbr64 jmp nop",
+          "count": 5918,
+          "frequency": 0.0012723031977206036
+        },
+        {
+          "ngram": "endbr64 jmp nop endbr64 jmp",
+          "count": 5866,
+          "frequency": 0.0012611237846956846
+        },
+        {
+          "ngram": "mov jmp mov mov mov",
+          "count": 5866,
+          "frequency": 0.0012611237846956846
+        },
+        {
+          "ngram": "call test je mov mov",
+          "count": 5819,
+          "frequency": 0.0012510193152308537
+        },
+        {
+          "ngram": "endbr64 push jmp xchg endbr64",
+          "count": 5796,
+          "frequency": 0.0012460745748544473
+        },
+        {
+          "ngram": "je mov mov mov call",
+          "count": 5785,
+          "frequency": 0.0012437096990222528
+        },
+        {
+          "ngram": "push jmp xchg endbr64 push",
+          "count": 5758,
+          "frequency": 0.0012379050037977755
+        },
+        {
+          "ngram": "jmp xchg endbr64 push jmp",
+          "count": 5758,
+          "frequency": 0.0012379050037977755
+        }
+      ]
+    }
+  },
+  "summary": {
+    "most_predictable_n": {
+      "n": 5,
+      "entropy_rate": 2.2006256442640275,
+      "interpretation": "Context of 4 previous tokens provides maximum predictability"
+    },
+    "entropy_decay": {
+      "decay_rate": 0.2743210004855481,
+      "interpretation": "Slow entropy decay - mostly local dependencies",
+      "rates_by_n": {
+        "2gram": 3.032505619890413,
+        "3gram": 2.7395578635134346,
+        "4gram": 2.4821293820916175,
+        "5gram": 2.2006256442640275
+      }
+    }
+  }
+}

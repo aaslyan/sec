@@ -1,0 +1,327 @@
+{
+  "num_binaries": 39,
+  "vocab_size": 320,
+  "total_instructions": 4651563,
+  "total_functions": 10483,
+  "seq_length": {
+    "min": 1968,
+    "max": 866728,
+    "mean": 119270.84615384616
+  },
+  "categories": [],
+  "compilers": [],
+  "binaries": [
+    {
+      "name": "grep",
+      "category": null,
+      "compiler": null,
+      "file_size": 186824,
+      "function_count": 139,
+      "instruction_count": 32960
+    },
+    {
+      "name": "sed",
+      "category": null,
+      "compiler": null,
+      "file_size": 121560,
+      "function_count": 119,
+      "instruction_count": 18478
+    },
+    {
+      "name": "awk",
+      "category": null,
+      "compiler": null,
+      "file_size": 930456,
+      "function_count": 285,
+      "instruction_count": 163513
+    },
+    {
+      "name": "diff",
+      "category": null,
+      "compiler": null,
+      "file_size": 146048,
+      "function_count": 117,
+      "instruction_count": 23031
+    },
+    {
+      "name": "gzip",
+      "category": null,
+      "compiler": null,
+      "file_size": 101760,
+      "function_count": 71,
+      "instruction_count": 14709
+    },
+    {
+      "name": "bzip2",
+      "category": null,
+      "compiler": null,
+      "file_size": 39448,
+      "function_count": 52,
+      "instruction_count": 3258
+    },
+    {
+      "name": "xz",
+      "category": null,
+      "compiler": null,
+      "file_size": 105560,
+      "function_count": 119,
+      "instruction_count": 13006
+    },
+    {
+      "name": "zip",
+      "category": null,
+      "compiler": null,
+      "file_size": 216232,
+      "function_count": 104,
+      "instruction_count": 25540
+    },
+    {
+      "name": "unzip",
+      "category": null,
+      "compiler": null,
+      "file_size": 195184,
+      "function_count": 89,
+      "instruction_count": 23834
+    },
+    {
+      "name": "cp",
+      "category": null,
+      "compiler": null,
+      "file_size": 133816,
+      "function_count": 147,
+      "instruction_count": 20820
+    },
+    {
+      "name": "mv",
+      "category": null,
+      "compiler": null,
+      "file_size": 129720,
+      "function_count": 147,
+      "instruction_count": 20765
+    },
+    {
+      "name": "rm",
+      "category": null,
+      "compiler": null,
+      "file_size": 60072,
+      "function_count": 68,
+      "instruction_count": 8642
+    },
+    {
+      "name": "chmod",
+      "category": null,
+      "compiler": null,
+      "file_size": 60072,
+      "function_count": 62,
+      "instruction_count": 8157
+    },
+    {
+      "name": "chown",
+      "category": null,
+      "compiler": null,
+      "file_size": 68232,
+      "function_count": 71,
+      "instruction_count": 8838
+    },
+    {
+      "name": "df",
+      "category": null,
+      "compiler": null,
+      "file_size": 72848,
+      "function_count": 86,
+      "instruction_count": 9940
+    },
+    {
+      "name": "find",
+      "category": null,
+      "compiler": null,
+      "file_size": 233088,
+      "function_count": 145,
+      "instruction_count": 32014
+    },
+    {
+      "name": "curl",
+      "category": null,
+      "compiler": null,
+      "file_size": 317960,
+      "function_count": 138,
+      "instruction_count": 27233
+    },
+    {
+      "name": "wget",
+      "category": null,
+      "compiler": null,
+      "file_size": 531536,
+      "function_count": 251,
+      "instruction_count": 70633
+    },
+    {
+      "name": "ssh",
+      "category": null,
+      "compiler": null,
+      "file_size": 920704,
+      "function_count": 386,
+      "instruction_count": 141862
+    },
+    {
+      "name": "scp",
+      "category": null,
+      "compiler": null,
+      "file_size": 137976,
+      "function_count": 113,
+      "instruction_count": 21965
+    },
+    {
+      "name": "nc",
+      "category": null,
+      "compiler": null,
+      "file_size": 43328,
+      "function_count": 70,
+      "instruction_count": 4148
+    },
+    {
+      "name": "bash",
+      "category": null,
+      "compiler": null,
+      "file_size": 1544408,
+      "function_count": 1902,
+      "instruction_count": 237253
+    },
+    {
+      "name": "dash",
+      "category": null,
+      "compiler": null,
+      "file_size": 138120,
+      "function_count": 92,
+      "instruction_count": 20778
+    },
+    {
+      "name": "vim",
+      "category": null,
+      "compiler": null,
+      "file_size": 4357672,
+      "function_count": 335,
+      "instruction_count": 784450
+    },
+    {
+      "name": "nano",
+      "category": null,
+      "compiler": null,
+      "file_size": 291496,
+      "function_count": 184,
+      "instruction_count": 49357
+    },
+    {
+      "name": "gcc",
+      "category": null,
+      "compiler": null,
+      "file_size": 1305304,
+      "function_count": 149,
+      "instruction_count": 126762
+    },
+    {
+      "name": "clang",
+      "category": null,
+      "compiler": null,
+      "file_size": 132528,
+      "function_count": 24,
+      "instruction_count": 18373
+    },
+    {
+      "name": "as",
+      "category": null,
+      "compiler": null,
+      "file_size": 826608,
+      "function_count": 151,
+      "instruction_count": 91875
+    },
+    {
+      "name": "ld",
+      "category": null,
+      "compiler": null,
+      "file_size": 1885960,
+      "function_count": 285,
+      "instruction_count": 72280
+    },
+    {
+      "name": "python3",
+      "category": null,
+      "compiler": null,
+      "file_size": 6906704,
+      "function_count": 2015,
+      "instruction_count": 866728
+    },
+    {
+      "name": "perl",
+      "category": null,
+      "compiler": null,
+      "file_size": 4064520,
+      "function_count": 1442,
+      "instruction_count": 459060
+    },
+    {
+      "name": "git",
+      "category": null,
+      "compiler": null,
+      "file_size": 4695000,
+      "function_count": 257,
+      "instruction_count": 782270
+    },
+    {
+      "name": "tar",
+      "category": null,
+      "compiler": null,
+      "file_size": 448528,
+      "function_count": 228,
+      "instruction_count": 73607
+    },
+    {
+      "name": "ar",
+      "category": null,
+      "compiler": null,
+      "file_size": 55944,
+      "function_count": 93,
+      "instruction_count": 5979
+    },
+    {
+      "name": "strace",
+      "category": null,
+      "compiler": null,
+      "file_size": 2345592,
+      "function_count": 155,
+      "instruction_count": 192395
+    },
+    {
+      "name": "objdump",
+      "category": null,
+      "compiler": null,
+      "file_size": 415760,
+      "function_count": 160,
+      "instruction_count": 61124
+    },
+    {
+      "name": "nm",
+      "category": null,
+      "compiler": null,
+      "file_size": 52808,
+      "function_count": 74,
+      "instruction_count": 5186
+    },
+    {
+      "name": "readelf",
+      "category": null,
+      "compiler": null,
+      "file_size": 810088,
+      "function_count": 98,
+      "instruction_count": 108772
+    },
+    {
+      "name": "addr2line",
+      "category": null,
+      "compiler": null,
+      "file_size": 31592,
+      "function_count": 60,
+      "instruction_count": 1968
+    }
+  ]
+}

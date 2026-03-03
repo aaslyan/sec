@@ -1,0 +1,252 @@
+[
+  {
+    "ngram": "mov mov mov mov",
+    "count": 126664,
+    "frequency": 0.027231101898205417
+  },
+  {
+    "ngram": "mov mov call mov",
+    "count": 63799,
+    "frequency": 0.013715949835814497
+  },
+  {
+    "ngram": "mov mov mov call",
+    "count": 53313,
+    "frequency": 0.011461597103352377
+  },
+  {
+    "ngram": "mov call mov mov",
+    "count": 49093,
+    "frequency": 0.010554352345485683
+  },
+  {
+    "ngram": "mov test je mov",
+    "count": 43785,
+    "frequency": 0.009413201830140563
+  },
+  {
+    "ngram": "pop pop pop pop",
+    "count": 41105,
+    "frequency": 0.008837036912822378
+  },
+  {
+    "ngram": "test je mov mov",
+    "count": 31113,
+    "frequency": 0.006688887713627118
+  },
+  {
+    "ngram": "call mov mov mov",
+    "count": 29314,
+    "frequency": 0.0063021262635318135
+  },
+  {
+    "ngram": "mov mov test je",
+    "count": 22225,
+    "frequency": 0.004778084062461436
+  },
+  {
+    "ngram": "mov call mov test",
+    "count": 22048,
+    "frequency": 0.004740031379489303
+  },
+  {
+    "ngram": "je mov mov mov",
+    "count": 21160,
+    "frequency": 0.004549123003900293
+  },
+  {
+    "ngram": "call mov test je",
+    "count": 19105,
+    "frequency": 0.004107324904986535
+  },
+  {
+    "ngram": "mov mov call test",
+    "count": 17949,
+    "frequency": 0.0038588000376657064
+  },
+  {
+    "ngram": "mov test jne mov",
+    "count": 17906,
+    "frequency": 0.003849555600559482
+  },
+  {
+    "ngram": "pop pop pop ret",
+    "count": 17251,
+    "frequency": 0.003708739174871642
+  },
+  {
+    "ngram": "mov call test je",
+    "count": 15725,
+    "frequency": 0.0033806691510553924
+  },
+  {
+    "ngram": "lea mov mov mov",
+    "count": 14874,
+    "frequency": 0.0031977152911159237
+  },
+  {
+    "ngram": "mov mov mov test",
+    "count": 14771,
+    "frequency": 0.0031755716394428744
+  },
+  {
+    "ngram": "mov lea mov mov",
+    "count": 14561,
+    "frequency": 0.003130424388458987
+  },
+  {
+    "ngram": "test jne mov mov",
+    "count": 14204,
+    "frequency": 0.003053674061786378
+  },
+  {
+    "ngram": "call test je mov",
+    "count": 13862,
+    "frequency": 0.0029801485387554753
+  },
+  {
+    "ngram": "mov mov mov jmp",
+    "count": 13319,
+    "frequency": 0.0028634106469257086
+  },
+  {
+    "ngram": "mov jmp mov mov",
+    "count": 13225,
+    "frequency": 0.002843201877437683
+  },
+  {
+    "ngram": "mov mov lea mov",
+    "count": 13098,
+    "frequency": 0.0028158985399379033
+  },
+  {
+    "ngram": "mov mov xor call",
+    "count": 12969,
+    "frequency": 0.0027881652286192295
+  },
+  {
+    "ngram": "cmp je mov mov",
+    "count": 12799,
+    "frequency": 0.002751617454013225
+  },
+  {
+    "ngram": "mov call test jne",
+    "count": 12700,
+    "frequency": 0.002730333749977964
+  },
+  {
+    "ngram": "jmp mov mov mov",
+    "count": 12551,
+    "frequency": 0.0026983007004703482
+  },
+  {
+    "ngram": "push mov push mov",
+    "count": 12312,
+    "frequency": 0.0026469188291124955
+  },
+  {
+    "ngram": "jne mov mov mov",
+    "count": 12114,
+    "frequency": 0.002604351421041973
+  },
+  {
+    "ngram": "push mov push push",
+    "count": 11917,
+    "frequency": 0.002561998999880897
+  },
+  {
+    "ngram": "test je mov test",
+    "count": 11840,
+    "frequency": 0.0025454450078534717
+  },
+  {
+    "ngram": "mov jmp nop mov",
+    "count": 11684,
+    "frequency": 0.002511907049979727
+  },
+  {
+    "ngram": "mov mov mov lea",
+    "count": 11572,
+    "frequency": 0.0024878285161216533
+  },
+  {
+    "ngram": "mov mov jmp mov",
+    "count": 11444,
+    "frequency": 0.0024603101917124266
+  },
+  {
+    "ngram": "mov mov mov xor",
+    "count": 11359,
+    "frequency": 0.0024420363044094246
+  },
+  {
+    "ngram": "je mov test je",
+    "count": 11231,
+    "frequency": 0.002414517980000198
+  },
+  {
+    "ngram": "cmp jne mov mov",
+    "count": 11027,
+    "frequency": 0.002370660650472993
+  },
+  {
+    "ngram": "endbr64 push mov push",
+    "count": 10852,
+    "frequency": 0.002333037941319753
+  },
+  {
+    "ngram": "mov mov test jne",
+    "count": 10517,
+    "frequency": 0.00226101732665498
+  },
+  {
+    "ngram": "mov xor call mov",
+    "count": 10338,
+    "frequency": 0.002222534669863952
+  },
+  {
+    "ngram": "mov cmp je mov",
+    "count": 10310,
+    "frequency": 0.0022165150363994334
+  },
+  {
+    "ngram": "mov call mov jmp",
+    "count": 10162,
+    "frequency": 0.002184696973801265
+  },
+  {
+    "ngram": "jmp nop mov mov",
+    "count": 10009,
+    "frequency": 0.0021518039766558615
+  },
+  {
+    "ngram": "cmp je cmp je",
+    "count": 9884,
+    "frequency": 0.002124930612974976
+  },
+  {
+    "ngram": "mov call mov call",
+    "count": 9844,
+    "frequency": 0.0021163311365970925
+  },
+  {
+    "ngram": "call mov mov test",
+    "count": 9707,
+    "frequency": 0.002086877930002842
+  },
+  {
+    "ngram": "lea mov call mov",
+    "count": 9673,
+    "frequency": 0.0020795683750816415
+  },
+  {
+    "ngram": "pop pop ret nop",
+    "count": 9617,
+    "frequency": 0.0020675291081526047
+  },
+  {
+    "ngram": "call test jne mov",
+    "count": 9491,
+    "frequency": 0.002040440757562272
+  }
+]
