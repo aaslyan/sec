@@ -46,3 +46,4 @@ test_manual_compiler/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+results/**/corpus.json
