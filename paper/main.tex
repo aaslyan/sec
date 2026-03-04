@@ -48,48 +48,36 @@
 % ── Abstract ─────────────────────────────────────────────────────────────────
 \begin{abstract}
 \noindent
-We present \emph{Binary DNA}, an open-source toolkit available at
-\url{https://github.com/aaslyan/sec} that applies computational biology and
-information-theoretic techniques---k-mer analysis, entropy profiling,
-compression-based similarity, motif discovery, and intrinsic dimensionality
-estimation---to compiled machine-code instruction sequences.
-The toolkit provides a reproducible pipeline for corpus construction,
-statistical characterisation, clustering, and clone detection, filling a gap
-between the binary analysis literature (which targets discriminative tasks)
-and the naturalness-of-software literature (which operates at source level).
+Compiled binary executables, when viewed as flat sequences of machine opcodes,
+exhibit rich statistical structure that shares several properties observed
+in natural language and biological sequences.  We present \emph{Binary DNA}
+(\url{https://github.com/aaslyan/sec}), an open-source toolkit that applies
+computational biology and information-theoretic techniques to the systematic
+study of program instruction sequences.
 
 Across a corpus of 15 system utilities totalling 3.1~million instructions, we
-apply the toolkit to validate its measurements against known properties of the
-domain.  Opcode frequencies are highly concentrated: MLE fitting of a truncated
-discrete Zipf model yields $\hat{\alpha}_{\text{MLE}}\!=\!1.4$ (OLS on
-log-log axes gives $\hat{\alpha}_{\text{OLS}}\!\approx\!3.4$, inflated by
-long-tail weighting bias); a KS goodness-of-fit statistic of $0.114$ indicates
-the distribution is approximately but not strictly a power law, consistent with
-prior observations on English text and source code.
+find that opcode frequencies exhibit a highly concentrated, heavy-tailed
+distribution (MLE exponent $\hat{\alpha}_{\text{MLE}}\!\approx\!1.4$, closer to
+English text's $\alpha\!\approx\!1.0$; OLS log-log exponent
+$\hat{\alpha}_{\text{OLS}}\!\approx\!3.4$, inflated by long-tail weighting
+bias; KS $=0.114$, indicating approximately but not strictly a power law).
 N-gram entropy rates decrease by 1.82~bits/opcode from $n\!=\!1$ to $n\!=\!5$,
 and the gap between real and unigram-shuffled baselines confirms genuine
 higher-order sequential dependencies.  Binaries compress to roughly $22\%$ of
 their raw token volume under \zlib{} compared to $36\%$ for unigram-shuffled
-sequences and $67\%$ for random sequences of the same vocabulary; the
+sequences and $67\%$ for random sequences; the
 unigram--sequential decomposition attributes $69\%$ of the compression gain to
-the Zipfian frequency skew and $31\%$ to sequential structure.  Motif discovery at lengths $k\!=\!4$--$12$
-recovers 798 recurring patterns dominated by compiler-generated idioms:
-function prologues, epilogues, and call sequences.  Hierarchical clustering and
-dimensionality reduction show that binaries of similar functional category
-group together in both compression-based and n-gram similarity spaces.  Finally,
-PCA on per-binary bigram frequency vectors reveals that the corpus manifold
-occupies only 4\% of the dimensions required to represent the
-theoretical bigram space ($d_{95}\!=\!8$ out of 200), supporting a \emph{thin
-structured manifold} hypothesis for compiled programs.
-To close the loop, we train simple Laplace-smoothed $n$-gram language models
-and evaluate their perplexity on held-out sequences.  A bigram LM achieves
-perplexity $8.5$---a $34\times$ reduction below the vocabulary size---with a
-smoothing gap of only $0.07$ bits from the empirical conditional entropy lower
-bound, directly validating the information-theoretic analysis.
-
-All measurements are produced by the open-source Binary DNA toolkit; the
-results serve as a worked example of the toolkit's output and a baseline for
-future studies on larger corpora and additional architectures.
+frequency skew and $31\%$ to sequential structure.  Motif discovery at lengths
+$k\!=\!4$--$12$ recovers 798 recurring patterns dominated by compiler-generated
+idioms.  PCA on per-binary bigram frequency vectors reveals that the corpus
+manifold occupies only 4\% of the theoretical bigram space
+($d_{95}\!=\!8$ out of 200); Levina--Bickel MLE corroborates this at
+$\hat{d}\!=\!8.0$.  A bigram language model achieves perplexity $8.5$---a
+$34\times$ reduction below vocabulary size---with a smoothing gap of only
+$0.07$~bits from the empirical conditional entropy lower bound.
+Scaling to 39 binaries (4.65~million instructions) confirms that all
+opcode-level statistics are stable across corpus size while $d_{95}$ grows
+modestly to 14, reflecting greater categorical diversity.
 \end{abstract}
 
 % ─────────────────────────────────────────────────────────────────────────────
@@ -216,69 +204,6 @@ lifting~\cite{schulte2018evolving}, but systematic statistical characterisation
 of recurrent opcode patterns is absent from the literature.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{Toolkit Architecture}
-\label{sec:toolkit}
-
-Binary DNA is structured as a modular Python pipeline with a unified CLI
-entry point (\texttt{binary\_dna.py}).  Figure~\ref{fig:arch} illustrates
-the data flow; Table~\ref{tab:modules} lists the primary modules.
-
-\begin{figure}[h]
-\centering
-\small
-\begin{tabular}{ccccc}
-\texttt{/usr/bin/*} & $\rightarrow$ &
-\textbf{Extraction} & $\rightarrow$ &
-\textbf{Analysis} \\
-& & \textit{objdump wrapper} & & \textit{freq, entropy, compress,} \\
-& & \textit{corpus manager} & & \textit{motif, clone, LM} \\
-& & & $\searrow$ & \\
-& & & & \textbf{Clustering} \\
-& & & & \textit{NCD, n-gram cosine} \\
-& & & & \textit{hierarchical, UMAP} \\
-& & $\downarrow$ & & $\downarrow$ \\
-\multicolumn{5}{c}{\textbf{Results} (JSON) $\rightarrow$ \textbf{Plots} (PNG) $\rightarrow$ \textbf{HTML report}}
-\end{tabular}
-\caption{Binary DNA data flow.  Each stage writes structured JSON that the
-next stage reads, enabling partial reruns and custom downstream analyses.}
-\label{fig:arch}
-\end{figure}
-
-\begin{table}[h]
-\centering
-\caption{Binary DNA modules and their analytical roles.}
-\label{tab:modules}
-\small
-\begin{tabular}{@{}ll@{}}
-\toprule
-\textbf{Module} & \textbf{Function} \\
-\midrule
-\texttt{extraction/disassemble.py} & \texttt{objdump} wrapper; mnemonic extraction \\
-\texttt{analysis/frequency.py}     & Zipf OLS + MLE, bootstrap CI, KS test \\
-\texttt{analysis/ngrams.py}        & $n$-gram entropy, shuffled baseline \\
-\texttt{analysis/compression.py}   & \texttt{zlib}/\texttt{lzma} ratios, LZ78 complexity \\
-\texttt{analysis/motifs.py}        & $k$-mer motif discovery + annotation \\
-\texttt{analysis/information.py}   & MI decay, PCA/MLE intrinsic dimensionality \\
-\texttt{analysis/lm.py}            & $n$-gram LM training and perplexity eval \\
-\texttt{clustering/ncd.py}         & Normalised compression distance matrix \\
-\texttt{clustering/similarity.py}  & $n$-gram TF cosine similarity \\
-\texttt{clustering/hierarchical.py}& Agglomerative clustering, cophenetic $r$ \\
-\texttt{clones/}                   & MinHash + LSH + Smith-Waterman pipeline \\
-\texttt{visualization/report.py}   & Self-contained HTML report generator \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The CLI exposes subcommands for each stage (\texttt{extract}, \texttt{analyze},
-\texttt{lm}, \texttt{clones}, \texttt{compiler-matrix}, \texttt{report}),
-allowing users to run the full pipeline or individual analyses independently.
-All intermediate results are written as JSON, making them compatible with
-downstream tooling (pandas, R, Julia) without using Binary DNA as a dependency.
-The toolkit is pure Python ($\geq$3.10) with standard scientific dependencies
-(\texttt{numpy}, \texttt{scipy}, \texttt{scikit-learn}, \texttt{seaborn});
-no binary-analysis-specific libraries are required beyond \texttt{objdump}
-(GNU Binutils), which is pre-installed on Linux.
-
 \section{Methodology}
 \label{sec:methodology}
 
