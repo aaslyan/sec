@@ -448,12 +448,13 @@ across the two corpora, demonstrating measurement stability.
 \centering
 \caption{Corpus statistics.}
 \label{tab:corpus}
+\small
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Corpus} & \textbf{Binaries} & \textbf{Categories} & \textbf{Vocab} & \textbf{Instr.\ (M)} \\
+\textbf{Corpus} & \textbf{Bins} & \textbf{Cats} & \textbf{Vocab} & \textbf{Instr.\ (M)} \\
 \midrule
-Smoke             & 15  & 8   & 293 & 3.12 \\
-Coreutils-system  & 39  & 11  & 320 & 4.65 \\
+Smoke            & 15  & 8   & 293 & 3.12 \\
+Coreutils-sys    & 39  & 11  & 320 & 4.65 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -877,9 +878,10 @@ larger, more complex codebases may differ.
 \caption{Mean instruction count and \zlib{} ratio by optimisation level
   (averaged over 5 projects $\times$ 2 compilers $=$ 10 binaries per row).}
 \label{tab:compiler_matrix}
+\small
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Opt level} & \textbf{Mean instructions} & \textbf{Mean \zlib{} ratio} \\
+\textbf{Opt} & \textbf{Mean instr.} & \textbf{Mean \zlib{}} \\
 \midrule
 \texttt{-O0} & $499$ & $0.458$ \\
 \texttt{-O2} & $434$ & $0.548$ \\
@@ -911,13 +913,14 @@ within-project is the tightest ($p < 10^{-4}$, $r = 0.51$) and is
 \caption{lzma NCD distances by pair type. One-sided Mann--Whitney U,
   $H_1$: row group $<$ between.}
 \label{tab:proj_vs_cc}
-\begin{tabular}{@{}lccccc@{}}
+\footnotesize
+\begin{tabular}{@{}lccccr@{}}
 \toprule
-\textbf{Pair type} & $n$ & \textbf{Mean NCD} & $U$ & $p$ & $r$ \\
+\textbf{Pair type} & $n$ & \textbf{NCD} & $U$ & $p$ & $r$ \\
 \midrule
-Within-project  & 75  & $0.501$ & $18{,}162$ & $<0.0001$ & $0.506$ \\
-Within-compiler & 60  & $0.544$ & $14{,}040$ & $<0.0001$ & $0.532$ \\
-Between         & 300 & $0.582$ & ---        & ---       & ---    \\
+Within-proj.  & 75  & $0.501$ & $18{,}162$ & $<0.0001$ & $0.506$ \\
+Within-comp.  & 60  & $0.544$ & $14{,}040$ & $<0.0001$ & $0.532$ \\
+Between       & 300 & $0.582$ & ---        & ---       & ---    \\
 \bottomrule
 \end{tabular}
 \end{table}
